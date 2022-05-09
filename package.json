@@ -1,0 +1,22 @@
+{
+    "name": "accretence",
+    "author": "Accretence",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "stop": "taskkill -F -IM node.exe",
+        "update": "npx npm-check-updates -u"
+    },
+    "dependencies": {
+        "@geist-ui/core": "^2.3.8",
+        "@react-three/drei": "^9.7.1",
+        "@react-three/fiber": "^8.0.13",
+        "next": "^12.1.6",
+        "react": "18.1.0",
+        "three": "^0.140.1"
+    }
+}
