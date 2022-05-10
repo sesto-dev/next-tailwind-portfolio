@@ -1,1 +1,1 @@
-<img src="https://c.tenor.com/pf2GzFb3txcAAAAC/rick-and-morty-ricks-toilet.gif" width="100%" />
+<img src="https://user-images.githubusercontent.com/45223699/167655509-14c96314-cfe3-4338-ac5d-4e32741c5275.gif" width="100%" />
