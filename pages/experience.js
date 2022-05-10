@@ -27,7 +27,7 @@ const CV = () => {
             <div className="PageWrapper">
                 <div className="PageContent">
                     {config.experiences.map((exp) => (
-                        <Card key={exp.title} mt={1} className="WikiContent">
+                        <Card key={exp.title} mt={1} className="Justify Invert">
                             <Text h3>{exp.title}</Text>
                             <Text small b>
                                 {exp.employer}, {exp.period}
@@ -41,7 +41,7 @@ const CV = () => {
             <Footer />
             <style jsx global>
                 {`
-                    .card:hover {
+                    .Invert:hover {
                         filter: invert(1);
                     }
                     .PageHeader {
@@ -62,7 +62,7 @@ const CV = () => {
                         transform: translateY(-35px);
                         box-sizing: border-box;
                     }
-                    .WikiContent .content {
+                    .Justify .content {
                         text-align: justify;
                     }
                     .content small {

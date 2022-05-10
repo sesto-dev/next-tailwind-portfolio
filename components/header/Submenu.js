@@ -28,6 +28,7 @@ const Submenu = () => {
                         >
                             <Tabs.Item ml={0} label={'HOME'} value="/" />
                             <Tabs.Item label="THREE" value="/three" />
+                            <Tabs.Item label="WALLET" value="/wallet" />
                             <Tabs.Item label="PROJECTS" value="/projects" />
                             <Tabs.Item label="EXPERIENCE" value="/experience" />
                         </Tabs>

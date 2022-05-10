@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Components
-import Meta from '../components/meta'
-import Header from '../components/header/Header'
-import Footer from '../components/Footer'
-import Badged from '../components/Badged'
+import Meta from '../../components/meta'
+import Header from '../../components/header/Header'
+import Footer from '../../components/Footer'
 
 // Additional Libraries
 import {
@@ -12,24 +11,30 @@ import {
     Text,
     Image,
     Link,
+    Input,
+    Button,
     Spacer,
     Card,
     Description,
     Grid,
 } from '@geist-ui/core'
 
-const config = require('../config.json')
+const config = require('../../config.json')
 
-const Tech = () => {
+const Wallet = () => {
     const theme = useTheme()
+    const [value, setValue] = useState()
+    const handler = (e) => {
+        setValue(e.target.value)
+    }
 
     return (
         <>
-            <Meta title="PROJECTS" />
+            <Meta title="WALLET" />
             <Header />
             <div className="PageHeader">
                 <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
-                    <Text h2>PROJECTS</Text>
+                    <Text h2>WALLET</Text>
                     <Grid.Container gap={3}>
                         <Grid xs={24}>
                             <Text small>
@@ -42,42 +47,29 @@ const Tech = () => {
             <Spacer />
             <div className="PageWrapper">
                 <div className="PageContent">
-                    {config.projects.map((project) => (
-                        <Card
-                            key={project.name}
-                            mt={1}
-                            className="Justify Invert"
-                        >
+                    <Card>
+                        <Card.Content>
                             <div className="Flex">
-                                <Text h3>{project.name}</Text>
-                                <div>
-                                    <Text mr={0.333} small b>
-                                        <Link
-                                            target="_blank"
-                                            rel="noopener"
-                                            href={project.website}
-                                        >
-                                            WEB
-                                        </Link>
-                                    </Text>
-                                    <Text small b>
-                                        <Link
-                                            target="_blank"
-                                            rel="noopener"
-                                            href={project.twitter}
-                                        >
-                                            TWITTER
-                                        </Link>
-                                    </Text>
-                                </div>
+                                <Input
+                                    placeholder="Target Ethereum Address"
+                                    height="3rem"
+                                    width="100%"
+                                    value={value}
+                                    onChange={handler}
+                                    mr={1}
+                                />
+                                <Link href={`/wallet/${value}`}>
+                                    <Button
+                                        disabled={value ? false : true}
+                                        height="3rem"
+                                        type="secondary"
+                                    >
+                                        Scan
+                                    </Button>
+                                </Link>
                             </div>
-                            <Text small b>
-                                {project.position}, {project.period}
-                            </Text>
-                            <br />
-                            <Text small>{project.description}</Text>
-                        </Card>
-                    ))}
+                        </Card.Content>
+                    </Card>
                 </div>
             </div>
             <Footer />
@@ -118,4 +110,4 @@ const Tech = () => {
     )
 }
 
-export default Tech
+export default Wallet

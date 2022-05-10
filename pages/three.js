@@ -59,7 +59,7 @@ const Three = () => {
                             <Card
                                 width={'100%'}
                                 height={'20rem'}
-                                className="WikiContent"
+                                className="Justify"
                             >
                                 <Card.Content>
                                     <ThreeSceneOne
@@ -74,7 +74,7 @@ const Three = () => {
                             <Card
                                 width={'100%'}
                                 height={'20rem'}
-                                className="WikiContent"
+                                className="Justify"
                             >
                                 <Card.Content>
                                     <ThreeSceneTwo
@@ -112,11 +112,6 @@ const Three = () => {
                 {`
                     .content {
                         height: 100% !important;
-                    }
-                    .ProjectHeader {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
                     }
                     small {
                         text-align: justify;
