@@ -5,7 +5,7 @@ import { GeistProvider, CssBaseline } from '@geist-ui/core'
 import { ThemeContext, themes } from '../state/Context'
 
 export default function App({ Component, pageProps }) {
-    const [themeType, setThemeType] = useState('dark')
+    const [themeType, setThemeType] = useState('light')
 
     useEffect(() => {
         if (typeof window !== 'undefined' && window.localStorage) {

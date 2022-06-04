@@ -3,7 +3,7 @@ const config = {
         title: 'Accretence',
         description: "I'm a self-taught Full-Stack Web & Solidity developer.",
         url: 'https://accretence.com',
-        image: 'https://accretence-og.vercel.app/accretence',
+        image: 'https://user-images.githubusercontent.com/45223699/172024380-b4aa82ee-1356-49ff-8772-eb28871dc44c.jpg',
         handle: '@accretence',
     },
     links: {
@@ -74,7 +74,8 @@ const config = {
             period: 'December 2020',
             description: 'Commercial Tower',
             links: {
-                PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
+                PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
+                YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
         },
         {
@@ -83,7 +84,7 @@ const config = {
             period: 'May 2021',
             description: 'Sports Complex',
             links: {
-                PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
+                PDF: 'https://drive.google.com/file/d/1VZS0hZqh7dN6i7iohI6amYI2_9VPVdyH/view?usp=sharing',
             },
         },
     ],

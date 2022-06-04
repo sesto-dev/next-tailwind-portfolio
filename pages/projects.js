@@ -1,12 +1,4 @@
 import React from 'react'
-
-// Components
-import Helmet from '../components/Helmet'
-import Header from '../components/header/Header'
-import Footer from '../components/Footer'
-import Badged from '../components/Badged'
-
-// Additional Libraries
 import {
     useTheme,
     Text,
@@ -18,7 +10,13 @@ import {
     Grid,
 } from '@geist-ui/core'
 
+import Helmet from '../components/Helmet'
+import Header from '../components/header/Header'
+import Footer from '../components/Footer'
+import Badged from '../components/Badged'
 import config from '../config'
+import Banner from '../components/Banner'
+import Wrapper from '../components/Wrapper'
 
 const Tech = () => {
     const theme = useTheme()
@@ -27,54 +25,38 @@ const Tech = () => {
         <>
             <Helmet title="PROJECTS" />
             <Header />
-            <div className="PageHeader">
-                <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
-                    <Text h2>PROJECTS</Text>
-                    <Grid.Container gap={3}>
-                        <Grid xs={24}>
-                            <Text small>
-                                Interesting projects I've been a part of.
-                            </Text>
-                        </Grid>
-                    </Grid.Container>
-                </div>
-            </div>
-            <Spacer />
-            <div className="PageWrapper">
-                <div className="PageContent">
-                    {config.projects.map((project) => (
-                        <Card
-                            key={project.name}
-                            mt={1}
-                            className="Justify Invert"
-                        >
-                            <div className="Flex">
-                                <Text h3>{project.name}</Text>
-                                <div>
-                                    <Text mr={0.333} small b>
-                                        {Object.keys(project.links).map(
-                                            (key) => (
-                                                <Link
-                                                    target="_blank"
-                                                    rel="noopener"
-                                                    href={project.links[key]}
-                                                >
-                                                    {key}
-                                                </Link>
-                                            )
-                                        )}
-                                    </Text>
-                                </div>
+            <Banner
+                header="PROJECTS"
+                small="Interesting projects I've been a part of."
+            />
+            <Wrapper>
+                {config.projects.map((project) => (
+                    <Card key={project.name} mt={1} className="Justify Invert">
+                        <div className="Flex">
+                            <Text h3>{project.name}</Text>
+                            <div>
+                                <Text mr={0.333} small b>
+                                    {Object.keys(project.links).map((key) => (
+                                        <Link
+                                            mx={0.333}
+                                            target="_blank"
+                                            rel="noopener"
+                                            href={project.links[key]}
+                                        >
+                                            {key}
+                                        </Link>
+                                    ))}
+                                </Text>
                             </div>
-                            <Text small b>
-                                {project.position}, {project.period}
-                            </Text>
-                            <br />
-                            <Text small>{project.description}</Text>
-                        </Card>
-                    ))}
-                </div>
-            </div>
+                        </div>
+                        <Text small b>
+                            {project.position}, {project.period}
+                        </Text>
+                        <br />
+                        <Text small>{project.description}</Text>
+                    </Card>
+                ))}
+            </Wrapper>
             <Footer />
             <style jsx global>
                 {`
@@ -88,24 +70,6 @@ const Tech = () => {
                     }
                     .Invert:hover {
                         filter: invert(1);
-                    }
-                    .PageHeader {
-                        width: ${theme.layout.pageWidthWithMargin};
-                        max-width: 100%;
-                        margin: 0 auto;
-                        padding: 0 ${theme.layout.pageMargin};
-                        box-sizing: border-box;
-                    }
-                    .PageWrapper {
-                        background-color: ${theme.palette.accents_1};
-                    }
-                    .PageContent {
-                        width: ${theme.layout.pageWidthWithMargin};
-                        max-width: 100%;
-                        margin: 0 auto;
-                        padding: 0 ${theme.layout.pageMargin};
-                        transform: translateY(-35px);
-                        box-sizing: border-box;
                     }
                 `}
             </style>

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { Text, useTheme } from '@geist-ui/core'
 
 // Components
-import { Text, useTheme } from '@geist-ui/core'
 import Submenu from './Submenu'
 import HeaderOptions from './HeaderOptions'
 import config from '../../config'

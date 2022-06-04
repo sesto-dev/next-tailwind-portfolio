@@ -1,13 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
-
-// Components
-import Helmet from '../../components/Helmet'
-import Header from '../../components/header/Header'
-import Footer from '../../components/Footer'
-
-// Additional Libraries
 import {
     useTheme,
     Text,
@@ -18,6 +11,12 @@ import {
     Description,
     Grid,
 } from '@geist-ui/core'
+
+import Helmet from '../../components/Helmet'
+import Header from '../../components/header/Header'
+import Footer from '../../components/Footer'
+import Banner from '../../components/Banner'
+import Wrapper from '../../components/Wrapper'
 
 const Wallet = () => {
     const theme = useTheme()
@@ -43,8 +42,6 @@ const Wallet = () => {
 
     const { assets } = data
 
-    console.log(assets)
-
     return (
         <>
             <Helmet
@@ -52,91 +49,53 @@ const Wallet = () => {
                 image={`https://accretence-og.vercel.app/${wallet}`}
             />
             <Header />
-            <div className="PageHeader">
-                <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
-                    <Text h2>WALLET</Text>
-                    <Grid.Container gap={3}>
-                        <Grid xs={24}>
-                            <Text small>
-                                Interesting projects I've been a part of.
-                            </Text>
-                        </Grid>
-                    </Grid.Container>
-                </div>
-            </div>
+            <Banner />
             <Spacer />
-            <div className="PageWrapper">
-                <div className="PageContent">
-                    <Grid.Container gap={1}>
-                        {assets.map((asset) => (
-                            <Grid key={asset.id} xs={12} sm={8} md={6} lg={6}>
-                                <Card width="100%">
-                                    <Image
-                                        src={asset.image_preview_url}
-                                        height="20rem"
-                                        width="100%"
-                                        draggable={false}
-                                        style={{ objectFit: 'contain' }}
-                                    />
+            <Wrapper>
+                <Grid.Container gap={1}>
+                    {assets.map((asset) => (
+                        <Grid key={asset.id} xs={12} sm={8} md={6} lg={6}>
+                            <Card width="100%">
+                                <Image
+                                    src={asset.image_preview_url}
+                                    height="20rem"
+                                    width="100%"
+                                    draggable={false}
+                                    style={{ objectFit: 'contain' }}
+                                />
 
-                                    <Card.Body>
-                                        <Text h3>{asset.name}</Text>
+                                <Card.Body>
+                                    <Text h3>{asset.name}</Text>
 
-                                        <Text small>
-                                            {asset.collection.name}
-                                        </Text>
-                                        <br />
-                                        <Text small>
-                                            {asset.collection.description}
-                                        </Text>
-                                        <br />
-                                        <Text mr={0.333} small b>
-                                            <Link
-                                                target="_blank"
-                                                rel="noopener"
-                                                href={asset.permalink}
-                                            >
-                                                OpenSea
-                                            </Link>
-                                        </Text>
-                                    </Card.Body>
-                                </Card>
-                            </Grid>
-                        ))}
-                    </Grid.Container>
-                </div>
-            </div>
+                                    <Text small>{asset.collection.name}</Text>
+                                    <br />
+                                    <Text small>
+                                        {asset.collection.description}
+                                    </Text>
+                                    <br />
+                                    <Text mr={0.333} small b>
+                                        <Link
+                                            target="_blank"
+                                            rel="noopener"
+                                            href={asset.permalink}
+                                        >
+                                            OpenSea
+                                        </Link>
+                                    </Text>
+                                </Card.Body>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid.Container>
+            </Wrapper>
             <Footer />
             <style jsx global>
                 {`
-                    .Flex {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                    }
                     small {
                         text-align: justify;
                     }
                     .Invert:hover {
                         filter: invert(1);
-                    }
-                    .PageHeader {
-                        width: ${theme.layout.pageWidthWithMargin};
-                        max-width: 100%;
-                        margin: 0 auto;
-                        padding: 0 ${theme.layout.pageMargin};
-                        box-sizing: border-box;
-                    }
-                    .PageWrapper {
-                        background-color: ${theme.palette.accents_1};
-                    }
-                    .PageContent {
-                        width: ${theme.layout.pageWidthWithMargin};
-                        max-width: 100%;
-                        margin: 0 auto;
-                        padding: 0 ${theme.layout.pageMargin};
-                        transform: translateY(-35px);
-                        box-sizing: border-box;
                     }
                 `}
             </style>

@@ -1,14 +1,4 @@
 import React, { useRef, useState, Suspense } from 'react'
-
-// Components
-import Helmet from '../components/Helmet'
-import Header from '../components/header/Header'
-import Footer from '../components/Footer'
-import Badged from '../components/Badged'
-import Room from '../components/three/Room'
-import Soft from '../components/three/Soft'
-
-// Additional Libraries
 import {
     useTheme,
     Text,
@@ -20,6 +10,15 @@ import {
     Description,
     Grid,
 } from '@geist-ui/core'
+
+import Helmet from '../components/Helmet'
+import Header from '../components/header/Header'
+import Footer from '../components/Footer'
+import Badged from '../components/Badged'
+import Room from '../components/three/Room'
+import Soft from '../components/three/Soft'
+import Banner from '../components/Banner'
+import Wrapper from '../components/Wrapper'
 
 const Three = () => {
     const theme = useTheme()
@@ -37,19 +36,9 @@ const Three = () => {
         <>
             <Helmet title="THREE" />
             <Header />
-            <div className="PageHeader">
-                <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
-                    <Text h2>THREE</Text>
-                    <Grid.Container gap={3}>
-                        <Grid xs={24}>
-                            <Text small>Three.js Experiments</Text>
-                        </Grid>
-                    </Grid.Container>
-                </div>
-            </div>
-            <Spacer />
-            <div className="PageWrapper">
-                <div className="PageContent">
+            <Banner header="THREE" small="3 Dimensional." />
+            <Wrapper>
+                <>
                     <Grid.Container mt={1} gap={1}>
                         <Grid xs={24}>
                             <Card
@@ -63,7 +52,6 @@ const Three = () => {
                             </Card>
                         </Grid>
                     </Grid.Container>
-
                     <Card mt={1} padding={1}>
                         <Grid.Container mt={1} gap={1}>
                             <Grid width="100%" xs={24} sm={12}>
@@ -87,8 +75,8 @@ const Three = () => {
                             </Grid>
                         </Grid.Container>
                     </Card>
-                </div>
-            </div>
+                </>
+            </Wrapper>
             <Footer />
             <style jsx global>
                 {`
@@ -97,24 +85,6 @@ const Three = () => {
                     }
                     small {
                         text-align: justify;
-                    }
-                    .PageHeader {
-                        width: ${theme.layout.pageWidthWithMargin};
-                        max-width: 100%;
-                        margin: 0 auto;
-                        padding: 0 ${theme.layout.pageMargin};
-                        box-sizing: border-box;
-                    }
-                    .PageWrapper {
-                        background-color: ${theme.palette.accents_1};
-                    }
-                    .PageContent {
-                        width: ${theme.layout.pageWidthWithMargin};
-                        max-width: 100%;
-                        margin: 0 auto;
-                        padding: 0 ${theme.layout.pageMargin};
-                        transform: translateY(-35px);
-                        box-sizing: border-box;
                     }
                 `}
             </style>
