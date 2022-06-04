@@ -30,7 +30,6 @@ const Wallet = () => {
             <Helmet title="WALLET" />
             <Header />
             <Banner />
-            <Spacer />
             <Wrapper>
                 <Card>
                     <Card.Content>

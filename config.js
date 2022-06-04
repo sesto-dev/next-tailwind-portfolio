@@ -64,6 +64,7 @@ const config = {
             name: "Bachelor's Thesis",
             period: 'July 2019',
             description: 'Community Center',
+            image: 'https://user-images.githubusercontent.com/45223699/172026317-e65ddf28-ea7b-4827-968c-5e0b511f08b2.png',
             links: {
                 PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
             },
@@ -73,6 +74,7 @@ const config = {
             name: 'Masters Architectural Design 01 Project',
             period: 'December 2020',
             description: 'Commercial Tower',
+            image: 'https://user-images.githubusercontent.com/45223699/172026334-a74c5130-b6eb-45fe-9924-e62b4678147e.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
@@ -83,6 +85,7 @@ const config = {
             name: 'Masters Architectural Design 02 Project',
             period: 'May 2021',
             description: 'Sports Complex',
+            image: 'https://user-images.githubusercontent.com/45223699/172026128-6d48caeb-343c-4496-99c6-6ad61fac441f.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1VZS0hZqh7dN6i7iohI6amYI2_9VPVdyH/view?usp=sharing',
             },

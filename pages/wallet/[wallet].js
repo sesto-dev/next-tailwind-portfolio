@@ -50,7 +50,6 @@ const Wallet = () => {
             />
             <Header />
             <Banner />
-            <Spacer />
             <Wrapper>
                 <Grid.Container gap={1}>
                     {assets.map((asset) => (

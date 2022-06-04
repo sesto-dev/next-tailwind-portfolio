@@ -25,7 +25,6 @@ const Submenu = () => {
                             onChange={(route) => router.push(route)}
                         >
                             <Tabs.Item ml={0} label={'HOME'} value="/" />
-                            <Tabs.Item label="THREE" value="/three" />
                             <Tabs.Item label="PROJECTS" value="/projects" />
                             <Tabs.Item label="EXPERIENCE" value="/experience" />
                         </Tabs>

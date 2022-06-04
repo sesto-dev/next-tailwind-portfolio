@@ -18,7 +18,6 @@ const CV = () => {
             <Helmet title="EXPERIENCE" />
             <Header />
             <Banner header="EXPERIENCES" small="My professional experience" />
-            <Spacer />
             <Wrapper>
                 {config.experiences.map((exp) => (
                     <Card key={exp.title} mt={1} className="Justify Invert">
