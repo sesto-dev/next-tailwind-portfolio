@@ -1,9 +1,9 @@
 import React from 'react'
 import Head from 'next/head'
 
-const config = require('../config.json')
+import config from '../config'
 
-const Meta = ({ title, url, description, keywords, image }) => {
+const Helmet = ({ title, url, description, keywords, image }) => {
     return (
         <Head>
             <meta name="twitter:card" content="summary_large_image" />
@@ -35,11 +35,11 @@ const Meta = ({ title, url, description, keywords, image }) => {
     )
 }
 
-Meta.defaultProps = {
+Helmet.defaultProps = {
     title: config.meta.title,
     url: config.meta.url,
     description: config.meta.description,
     image: config.meta.image,
 }
 
-export default Meta
+export default Helmet

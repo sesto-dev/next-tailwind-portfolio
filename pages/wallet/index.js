@@ -1,11 +1,4 @@
 import React, { useState } from 'react'
-
-// Components
-import Meta from '../../components/meta'
-import Header from '../../components/header/Header'
-import Footer from '../../components/Footer'
-
-// Additional Libraries
 import {
     useTheme,
     Text,
@@ -19,7 +12,9 @@ import {
     Grid,
 } from '@geist-ui/core'
 
-const config = require('../../config.json')
+import Helmet from '../../components/Helmet'
+import Header from '../../components/header/Header'
+import Footer from '../../components/Footer'
 
 const Wallet = () => {
     const theme = useTheme()
@@ -30,7 +25,7 @@ const Wallet = () => {
 
     return (
         <>
-            <Meta title="WALLET" />
+            <Helmet title="WALLET" />
             <Header />
             <div className="PageHeader">
                 <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>

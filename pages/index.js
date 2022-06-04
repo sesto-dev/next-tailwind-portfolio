@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Meta from '../components/meta'
+import Helmet from '../components/Helmet'
 import Header from '../components/header/Header.js'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'
@@ -22,7 +22,7 @@ const Index = () => {
 
     return (
         <>
-            <Meta />
+            <Helmet />
             <Header />
             <div className="PageHeader">
                 <div style={{ marginTop: '2rem', marginBottom: '3rem' }}>

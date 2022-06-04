@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Components
-import Meta from '../components/meta'
+import Helmet from '../components/Helmet'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'
@@ -18,14 +18,14 @@ import {
     Grid,
 } from '@geist-ui/core'
 
-const config = require('../config.json')
+import config from '../config'
 
 const Tech = () => {
     const theme = useTheme()
 
     return (
         <>
-            <Meta title="PROJECTS" />
+            <Helmet title="PROJECTS" />
             <Header />
             <div className="PageHeader">
                 <div style={{ marginTop: '2rem', marginBottom: '2rem' }}>
@@ -52,22 +52,17 @@ const Tech = () => {
                                 <Text h3>{project.name}</Text>
                                 <div>
                                     <Text mr={0.333} small b>
-                                        <Link
-                                            target="_blank"
-                                            rel="noopener"
-                                            href={project.website}
-                                        >
-                                            WEB
-                                        </Link>
-                                    </Text>
-                                    <Text small b>
-                                        <Link
-                                            target="_blank"
-                                            rel="noopener"
-                                            href={project.twitter}
-                                        >
-                                            TWITTER
-                                        </Link>
+                                        {Object.keys(project.links).map(
+                                            (key) => (
+                                                <Link
+                                                    target="_blank"
+                                                    rel="noopener"
+                                                    href={project.links[key]}
+                                                >
+                                                    {key}
+                                                </Link>
+                                            )
+                                        )}
                                     </Text>
                                 </div>
                             </div>

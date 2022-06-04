@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react'
-
-// Libraries
 import {
     useToasts,
     Text,
@@ -10,14 +8,9 @@ import {
     Popover,
 } from '@geist-ui/core'
 
-// Utilities
-const config = require('../../config.json')
-
-// Context API
 import { themePreference } from '../../state/Context'
 
 const HeaderOptions = () => {
-    // Hooks
     const theme = useTheme()
     const {
         toasts,
@@ -27,7 +20,6 @@ const HeaderOptions = () => {
         removeToastOneByID,
     } = useToasts()
 
-    // Local State
     const [sticky, setSticky] = useState(false)
 
     // Global State

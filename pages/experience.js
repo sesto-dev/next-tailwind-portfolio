@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 // Components
-import Meta from '../components/meta'
+import Helmet from '../components/Helmet'
 import Header from '../components/header/Header'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'
@@ -10,14 +10,14 @@ import Badged from '../components/Badged'
 // Libraries
 import { useTheme, Text, Card, Spacer } from '@geist-ui/core'
 
-const config = require('../config.json')
+import config from '../config'
 
 const CV = () => {
     const theme = useTheme()
 
     return (
         <>
-            <Meta title="EXPERIENCE" />
+            <Helmet title="EXPERIENCE" />
             <Header />
             <div className="PageHeader">
                 <Text h2>EXPERIENCE</Text>

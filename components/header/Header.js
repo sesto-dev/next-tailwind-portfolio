@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Text, useTheme } from '@geist-ui/core'
 import Submenu from './Submenu'
 import HeaderOptions from './HeaderOptions'
-const config = require('../../config.json')
+import config from '../../config'
 
 const Header = () => {
     const theme = useTheme()

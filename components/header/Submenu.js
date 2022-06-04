@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
-
-// Libraries
 import { Tabs, Badge, useTheme } from '@geist-ui/core'
 
 const Submenu = () => {

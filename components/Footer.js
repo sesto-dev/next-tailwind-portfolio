@@ -10,7 +10,7 @@ import {
     Divider,
 } from '@geist-ui/core'
 
-const config = require('../config.json')
+import config from '../config'
 
 const Footer = () => {
     const theme = useTheme()

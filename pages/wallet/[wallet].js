@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import useSWR from 'swr'
 
 // Components
-import Meta from '../../components/meta'
+import Helmet from '../../components/Helmet'
 import Header from '../../components/header/Header'
 import Footer from '../../components/Footer'
 
@@ -18,8 +18,6 @@ import {
     Description,
     Grid,
 } from '@geist-ui/core'
-
-const config = require('../../config.json')
 
 const Wallet = () => {
     const theme = useTheme()
@@ -49,7 +47,7 @@ const Wallet = () => {
 
     return (
         <>
-            <Meta
+            <Helmet
                 title={wallet}
                 image={`https://accretence-og.vercel.app/${wallet}`}
             />
