@@ -5,7 +5,7 @@ import {
     useTheme,
     Text,
     Image,
-    Link,
+    Link as GeistLink,
     Spacer,
     Card,
     Description,
@@ -13,7 +13,7 @@ import {
 } from '@geist-ui/core'
 
 import Helmet from '../../components/Helmet'
-import Header from '../../components/header/Header'
+import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Banner from '../../components/Banner'
 import Wrapper from '../../components/Wrapper'
@@ -73,13 +73,13 @@ const Wallet = () => {
                                     </Text>
                                     <br />
                                     <Text mr={0.333} small b>
-                                        <Link
+                                        <GeistLink
                                             target="_blank"
                                             rel="noopener"
                                             href={asset.permalink}
                                         >
                                             OpenSea
-                                        </Link>
+                                        </GeistLink>
                                     </Text>
                                 </Card.Body>
                             </Card>

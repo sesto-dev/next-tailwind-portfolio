@@ -1,16 +1,9 @@
 import React from 'react'
-import {
-    useTheme,
-    Grid,
-    Card,
-    Image,
-    Text,
-    Display,
-    Description,
-} from '@geist-ui/core'
+import Link from 'next/link'
+import { useTheme, Grid, Card, Image, Text } from '@geist-ui/core'
 
 import Helmet from '../components/Helmet'
-import Header from '../components/header/Header.js'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'
 import Banner from '../components/Banner'
@@ -57,6 +50,35 @@ const Index = () => {
                                 in Architectural Engineering.
                             </Text>
                         </Card>
+                    </Grid>
+                    <Grid xs={12}>
+                        <Link href="/projects">
+                            <a style={{ width: '100%' }}>
+                                <Card className="Invert">
+                                    <Text h4 my={0}>
+                                        PROJECTS
+                                    </Text>
+                                    <Text small>
+                                        Interesting projects I've been a part
+                                        of.
+                                    </Text>
+                                </Card>
+                            </a>
+                        </Link>
+                    </Grid>
+                    <Grid xs={12}>
+                        <Link href="/experience">
+                            <a style={{ width: '100%' }}>
+                                <Card className="Invert">
+                                    <Text h4 my={0}>
+                                        EXPERIENCE
+                                    </Text>
+                                    <Text small>
+                                        My professional experience.
+                                    </Text>
+                                </Card>
+                            </a>
+                        </Link>
                     </Grid>
                 </Grid.Container>
             </Wrapper>

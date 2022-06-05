@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Helmet from '../components/Helmet'
-import Header from '../components/header/Header'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 import config from '../config'
 import Banner from '../components/Banner'

@@ -1,19 +1,14 @@
 import React, { useState } from 'react'
 import {
     useTheme,
-    Text,
-    Image,
-    Link,
+    Link as GeistLink,
     Input,
     Button,
-    Spacer,
     Card,
-    Description,
-    Grid,
 } from '@geist-ui/core'
 
 import Helmet from '../../components/Helmet'
-import Header from '../../components/header/Header'
+import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import Banner from '../../components/Banner'
 import Wrapper from '../../components/Wrapper'
@@ -42,7 +37,7 @@ const Wallet = () => {
                                 onChange={handler}
                                 mr={1}
                             />
-                            <Link href={`/wallet/${value}`}>
+                            <GeistLink href={`/wallet/${value}`}>
                                 <Button
                                     disabled={value ? false : true}
                                     height="3rem"
@@ -50,7 +45,7 @@ const Wallet = () => {
                                 >
                                     Scan
                                 </Button>
-                            </Link>
+                            </GeistLink>
                         </div>
                     </Card.Content>
                 </Card>

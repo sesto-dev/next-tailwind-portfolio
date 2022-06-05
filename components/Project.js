@@ -1,4 +1,4 @@
-import { Card, Image, Link, Text, useTheme } from '@geist-ui/core'
+import { Card, Image, Link as GeistLink, Text, useTheme } from '@geist-ui/core'
 
 const Project = ({ project }) => {
     const theme = useTheme()
@@ -18,14 +18,14 @@ const Project = ({ project }) => {
                     <div>
                         <Text mr={0.333} small b>
                             {Object.keys(project.links).map((key) => (
-                                <Link
+                                <GeistLink
                                     mx={0.333}
                                     target="_blank"
                                     rel="noopener"
                                     href={project.links[key]}
                                 >
                                     {key}
-                                </Link>
+                                </GeistLink>
                             ))}
                         </Text>
                     </div>

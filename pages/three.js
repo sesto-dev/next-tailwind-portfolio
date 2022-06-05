@@ -1,18 +1,8 @@
 import React, { useRef, useState, Suspense } from 'react'
-import {
-    useTheme,
-    Text,
-    Image,
-    Link,
-    Spacer,
-    Card,
-    Slider,
-    Description,
-    Grid,
-} from '@geist-ui/core'
+import { useTheme, Card, Slider, Description, Grid } from '@geist-ui/core'
 
 import Helmet from '../components/Helmet'
-import Header from '../components/header/Header'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'
 import Room from '../components/three/Room'

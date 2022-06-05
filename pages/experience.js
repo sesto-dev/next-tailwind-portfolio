@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useTheme, Text, Card, Spacer } from '@geist-ui/core'
 
 import Helmet from '../components/Helmet'
-import Header from '../components/header/Header'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Badged from '../components/Badged'
 import config from '../config'
