@@ -1,4 +1,5 @@
 import { Card, Image, Link as GeistLink, Text, useTheme } from '@geist-ui/core'
+import Link from 'next/link'
 
 const Project = ({ project }) => {
     const theme = useTheme()
@@ -6,15 +7,23 @@ const Project = ({ project }) => {
     return (
         <>
             <Card key={project.name} mt={1}>
-                <Image
-                    height="20rem"
-                    src={project.image}
-                    style={{
-                        objectFit: 'cover',
-                    }}
-                />
+                <Link href={project.page}>
+                    <a>
+                        <Image
+                            height="20rem"
+                            src={project.image}
+                            style={{
+                                objectFit: 'cover',
+                            }}
+                        />
+                    </a>
+                </Link>
                 <div className="Flex">
-                    <Text h3>{project.name}</Text>
+                    <Link href={project.page}>
+                        <GeistLink>
+                            <Text h3>{project.name}</Text>
+                        </GeistLink>
+                    </Link>
                     <div>
                         <Text mr={0.333} small b>
                             {Object.keys(project.links).map((key) => (

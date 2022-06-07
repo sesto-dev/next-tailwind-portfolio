@@ -29,7 +29,7 @@ const Three = () => {
             <Banner header="THREE" small="3 Dimensional." />
             <Wrapper>
                 <>
-                    <Grid.Container mt={1} gap={1}>
+                    <Grid.Container gap={1}>
                         <Grid xs={24}>
                             <Card
                                 width={'100%'}
@@ -42,7 +42,7 @@ const Three = () => {
                             </Card>
                         </Grid>
                     </Grid.Container>
-                    <Card mt={1} padding={1}>
+                    <Card padding={1}>
                         <Grid.Container mt={1} gap={1}>
                             <Grid width="100%" xs={24} sm={12}>
                                 <Description
