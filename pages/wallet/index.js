@@ -13,9 +13,9 @@ import {
     Header,
     Helmet,
     Wrapper,
-} from '../geist-components'
+} from '../../geist-components'
 
-import { themePreference } from '../state/Context'
+import { themePreference } from '../../state/Context'
 import config from '../../config'
 
 const Wallet = () => {

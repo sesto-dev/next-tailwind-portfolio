@@ -18,7 +18,8 @@ import {
     Header,
     Helmet,
     Wrapper,
-} from '../geist-components'
+} from '../../geist-components'
+import { themePreference } from '../../state/Context'
 
 const Wallet = () => {
     const theme = useTheme()
@@ -47,10 +48,11 @@ const Wallet = () => {
     return (
         <>
             <Helmet
+                config={config}
                 title={wallet}
                 image={`https://accretence-og.vercel.app/${wallet}`}
             />
-            <Header />
+            <Header config={config} themePreference={themePreference} />
             <Banner />
             <Wrapper>
                 <Grid.Container gap={1}>
@@ -89,7 +91,7 @@ const Wallet = () => {
                     ))}
                 </Grid.Container>
             </Wrapper>
-            <Footer />
+            <Footer config={config} />
             <style jsx global>
                 {`
                     small {

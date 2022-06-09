@@ -23,7 +23,7 @@ const Projects = () => {
             />
             <Wrapper>
                 {config.projects.map((project) => (
-                    <Project project={project} />
+                    <Project key={project.name} project={project} />
                 ))}
             </Wrapper>
             <Footer config={config} />

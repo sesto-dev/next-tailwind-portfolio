@@ -21,16 +21,18 @@ import {
     Header,
     Helmet,
     Wrapper,
-} from '../geist-components'
+} from '../../geist-components'
 
+import { themePreference } from '../../state/Context'
 import Room from '../../components/three/Room'
 import Soft from '../../components/three/Soft'
+import config from '../../config'
 
 const Thesis = () => {
     return (
         <>
-            <Helmet title="THREE" />
-            <Header />
+            <Helmet config={config} title="THREE" />
+            <Header config={config} themePreference={themePreference} />
             <Banner header="THREE" small="3 Dimensional." />
             <Wrapper>
                 <Grid.Container gap={1}>
@@ -41,7 +43,7 @@ const Thesis = () => {
                     </Grid>
                 </Grid.Container>
             </Wrapper>
-            <Footer />
+            <Footer config={config} />
             <style jsx global>
                 {`
                     .content {
