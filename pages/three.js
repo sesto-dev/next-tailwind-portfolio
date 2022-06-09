@@ -1,14 +1,16 @@
 import React, { useRef, useState, Suspense } from 'react'
 import { useTheme, Card, Slider, Description, Grid } from '@geist-ui/core'
+import {
+    Badged,
+    Banner,
+    Footer,
+    Header,
+    Helmet,
+    Wrapper,
+} from '../geist-components'
 
-import Helmet from '../components/Helmet'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Badged from '../components/Badged'
 import Room from '../components/three/Room'
 import Soft from '../components/three/Soft'
-import Banner from '../components/Banner'
-import Wrapper from '../components/Wrapper'
 
 const Three = () => {
     const theme = useTheme()
@@ -24,8 +26,8 @@ const Three = () => {
 
     return (
         <>
-            <Helmet title="THREE" />
-            <Header />
+            <Helmet config={config} title="THREE" />
+            <Header config={config} />
             <Banner header="THREE" small="3 Dimensional." />
             <Wrapper>
                 <>
@@ -67,7 +69,7 @@ const Three = () => {
                     </Card>
                 </>
             </Wrapper>
-            <Footer />
+            <Footer config={config} />
             <style jsx global>
                 {`
                     .content {

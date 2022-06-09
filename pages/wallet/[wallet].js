@@ -11,12 +11,14 @@ import {
     Description,
     Grid,
 } from '@geist-ui/core'
-
-import Helmet from '../../components/Helmet'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Banner from '../../components/Banner'
-import Wrapper from '../../components/Wrapper'
+import {
+    Badged,
+    Banner,
+    Footer,
+    Header,
+    Helmet,
+    Wrapper,
+} from '../geist-components'
 
 const Wallet = () => {
     const theme = useTheme()

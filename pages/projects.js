@@ -1,18 +1,22 @@
 import React from 'react'
+import {
+    Badged,
+    Banner,
+    Footer,
+    Header,
+    Helmet,
+    Wrapper,
+} from '../geist-components'
 
-import Helmet from '../components/Helmet'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import config from '../config'
-import Banner from '../components/Banner'
-import Wrapper from '../components/Wrapper'
+import { themePreference } from '../state/Context'
 import Project from '../components/Project'
+import config from '../config'
 
-const Tech = () => {
+const Projects = () => {
     return (
         <>
-            <Helmet title="PROJECTS" />
-            <Header />
+            <Helmet config={config} title="PROJECTS" />
+            <Header config={config} themePreference={themePreference} />
             <Banner
                 header="PROJECTS"
                 small="Interesting projects I've been a part of."
@@ -22,9 +26,9 @@ const Tech = () => {
                     <Project project={project} />
                 ))}
             </Wrapper>
-            <Footer />
+            <Footer config={config} />
         </>
     )
 }
 
-export default Tech
+export default Projects

@@ -1,21 +1,25 @@
 import React from 'react'
 import Link from 'next/link'
 import { useTheme, Grid, Card, Image, Text } from '@geist-ui/core'
+import {
+    Badged,
+    Banner,
+    Footer,
+    Header,
+    Helmet,
+    Wrapper,
+} from '../geist-components'
 
-import Helmet from '../components/Helmet'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Badged from '../components/Badged'
-import Banner from '../components/Banner'
-import Wrapper from '../components/Wrapper'
+import { themePreference } from '../state/Context'
+import config from '../config'
 
 const Index = () => {
     const theme = useTheme()
 
     return (
         <>
-            <Helmet />
-            <Header />
+            <Helmet config={config} />
+            <Header config={config} themePreference={themePreference} />
             <Banner
                 header={'Welcome! (◕‿◕)'}
                 small={'This website is still very incomplete (Ｔ▽Ｔ)'}
@@ -82,7 +86,7 @@ const Index = () => {
                     </Grid>
                 </Grid.Container>
             </Wrapper>
-            <Footer />
+            <Footer config={config} />
             <style jsx global>
                 {`
                     .Invert:hover {

@@ -6,12 +6,17 @@ import {
     Button,
     Card,
 } from '@geist-ui/core'
+import {
+    Badged,
+    Banner,
+    Footer,
+    Header,
+    Helmet,
+    Wrapper,
+} from '../geist-components'
 
-import Helmet from '../../components/Helmet'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
-import Banner from '../../components/Banner'
-import Wrapper from '../../components/Wrapper'
+import { themePreference } from '../state/Context'
+import config from '../../config'
 
 const Wallet = () => {
     const theme = useTheme()
@@ -22,8 +27,8 @@ const Wallet = () => {
 
     return (
         <>
-            <Helmet title="WALLET" />
-            <Header />
+            <Helmet config={config} title="WALLET" />
+            <Header config={config} themePreference={themePreference} />
             <Banner />
             <Wrapper>
                 <Card>
@@ -50,7 +55,7 @@ const Wallet = () => {
                     </Card.Content>
                 </Card>
             </Wrapper>
-            <Footer />
+            <Footer config={config} />
             <style jsx global>
                 {`
                     .Flex {

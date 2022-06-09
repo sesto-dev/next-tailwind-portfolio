@@ -1,22 +1,24 @@
 import React from 'react'
 import Link from 'next/link'
 import { useTheme, Text, Card, Spacer } from '@geist-ui/core'
+import {
+    Badged,
+    Banner,
+    Footer,
+    Header,
+    Helmet,
+    Wrapper,
+} from '../geist-components'
 
-import Helmet from '../components/Helmet'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Badged from '../components/Badged'
+import { themePreference } from '../state/Context'
 import config from '../config'
-import Banner from '../components/Banner'
-import Wrapper from '../components/Wrapper'
 
 const CV = () => {
     const theme = useTheme()
-
     return (
         <>
-            <Helmet title="EXPERIENCE" />
-            <Header />
+            <Helmet config={config} title="EXPERIENCE" />
+            <Header config={config} themePreference={themePreference} />
             <Banner header="EXPERIENCES" small="My professional experience" />
             <Wrapper>
                 {config.experiences.map((exp) => (
@@ -30,7 +32,7 @@ const CV = () => {
                     </Card>
                 ))}
             </Wrapper>
-            <Footer />
+            <Footer config={config} />
             <style jsx global>
                 {`
                     .Invert:hover {
