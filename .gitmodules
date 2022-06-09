@@ -1,3 +1,3 @@
 [submodule "geist-components"]
 	path = geist-components
-	url = https://github.com/accretence/geist-components
+	url = https://github.com/accretence/geist-components.git
