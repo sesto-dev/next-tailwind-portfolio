@@ -9,7 +9,6 @@ import {
     MeshDistortMaterial,
 } from '@react-three/drei'
 import { Canvas, useFrame } from '@react-three/fiber'
-
 import { useTheme } from '@geist-ui/core'
 
 const Room = () => {
@@ -76,6 +75,7 @@ const Room = () => {
 function Scene({ ...props }) {
     const group = useRef()
     const { nodes } = useGLTF('../../scene-transformed.glb')
+
     return (
         <group ref={group} {...props} dispose={null}>
             <group name="_Chambre" rotation={[-Math.PI / 2, 0, 0]}>

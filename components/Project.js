@@ -1,4 +1,11 @@
-import { Card, Image, Link as GeistLink, Text, useTheme } from '@geist-ui/core'
+import {
+    Card,
+    Button,
+    Image,
+    Link as GeistLink,
+    Text,
+    useTheme,
+} from '@geist-ui/core'
 import Link from 'next/link'
 
 const Project = ({ project }) => {
@@ -33,7 +40,9 @@ const Project = ({ project }) => {
                                     rel="noopener"
                                     href={project.links[key]}
                                 >
-                                    {key}
+                                    <Button auto scale="0.33" type="secondary">
+                                        {key}
+                                    </Button>
                                 </GeistLink>
                             ))}
                         </Text>
