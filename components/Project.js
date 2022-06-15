@@ -13,7 +13,7 @@ const Project = ({ project }) => {
 
     return (
         <>
-            <Card key={project.name} mt={1}>
+            <Card key={project.name} width="100%">
                 <Link href={project.page}>
                     <a>
                         <Image

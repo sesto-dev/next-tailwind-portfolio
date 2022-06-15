@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { useTheme, Text, Card, Spacer } from '@geist-ui/core'
+import { useTheme, Text, Card, Spacer, Grid } from '@geist-ui/core'
 import {
     Badged,
     Banner,
@@ -21,16 +21,24 @@ const CV = () => {
             <Header config={config} themePreference={themePreference} />
             <Banner header="EXPERIENCES" small="My professional experience" />
             <Wrapper>
-                {config.experiences.map((exp) => (
-                    <Card key={exp.title} mt={1} className="Justify Invert">
-                        <Text h3>{exp.title}</Text>
-                        <Text small b>
-                            {exp.employer}, {exp.period}
-                        </Text>
-                        <br />
-                        <Text small>{exp.description}</Text>
-                    </Card>
-                ))}
+                <Grid.Container gap={1}>
+                    {config.experiences.map((exp) => (
+                        <Grid xs={24}>
+                            <Card
+                                key={exp.title}
+                                width="100%"
+                                className="Justify Invert"
+                            >
+                                <Text h3>{exp.title}</Text>
+                                <Text small b>
+                                    {exp.employer}, {exp.period}
+                                </Text>
+                                <br />
+                                <Text small>{exp.description}</Text>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid.Container>
             </Wrapper>
             <Footer config={config} />
             <style jsx global>

@@ -188,24 +188,26 @@ function Scene({ theme, visibilities }) {
                             material={glassMat}
                         />
                     </group>
-                    <mesh
-                        geometry={nodes.Toilet.geometry}
-                        material={rubberMat}
-                        position={[-8.58, 2.23, -5.07]}
-                    />
                 </>
             )}
             {piping && (
-                <group position={[-16.23, 0.35, -2.58]}>
+                <>
+                    <group position={[-16.23, 0.35, -2.58]}>
+                        <mesh
+                            geometry={nodes.Piping_Geo.geometry}
+                            material={copperMat}
+                        />
+                        <mesh
+                            geometry={nodes.Piping_Geo_1.geometry}
+                            material={metalMat}
+                        />
+                    </group>
                     <mesh
-                        geometry={nodes.Piping_Geo.geometry}
+                        geometry={nodes.Toilet.geometry}
                         material={copperMat}
+                        position={[-8.58, 2.23, -5.07]}
                     />
-                    <mesh
-                        geometry={nodes.Piping_Geo_1.geometry}
-                        material={metalMat}
-                    />
-                </group>
+                </>
             )}
             {ducting && (
                 <>

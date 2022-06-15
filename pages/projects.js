@@ -11,6 +11,7 @@ import {
 import { themePreference } from '../state/Context'
 import Project from '../components/Project'
 import config from '../config'
+import { Grid } from '@geist-ui/core'
 
 const Projects = () => {
     return (
@@ -22,9 +23,13 @@ const Projects = () => {
                 small="Interesting projects I've been a part of."
             />
             <Wrapper>
-                {config.projects.map((project) => (
-                    <Project key={project.name} project={project} />
-                ))}
+                <Grid.Container gap={1}>
+                    {config.projects.map((project) => (
+                        <Grid xs={24}>
+                            <Project key={project.name} project={project} />
+                        </Grid>
+                    ))}
+                </Grid.Container>
             </Wrapper>
             <Footer config={config} />
         </>

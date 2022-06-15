@@ -21,13 +21,13 @@ const Index = () => {
             <Helmet config={config} />
             <Header config={config} themePreference={themePreference} />
             <Banner
-                header={'Welcome! (◕‿◕)'}
+                header={'WELCOME! (◕‿◕)'}
                 small={'This website is still very incomplete (Ｔ▽Ｔ)'}
             />
             <Wrapper>
-                <Grid.Container mb={0} gap={1}>
+                <Grid.Container gap={1}>
                     <Grid xs={24}>
-                        <Card className="Invert" style={{ width: '100%' }}>
+                        <Card className="Invert" width="100%">
                             <Image
                                 src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/51860462915061.5f20864db1dcf.gif"
                                 height="30vh"

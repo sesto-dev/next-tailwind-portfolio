@@ -1,13 +1,11 @@
 import Link from 'next/link'
 import {
-    useTheme,
     Card,
-    Slider,
-    Description,
     Grid,
     Text,
     Image,
     Link as GeistLink,
+    Spacer,
 } from '@geist-ui/core'
 import {
     Badged,
@@ -26,21 +24,16 @@ const Thesis = () => {
         <>
             <Helmet config={config} title="THREE" />
             <Header config={config} themePreference={themePreference} />
-            <Banner header="THREE" small="3 Dimensional." />
+            <Banner
+                header="BACHELORS PROJECT DOCUMENT"
+                small="Bachelors Thesis - Bachelors of Architectural
+                            Engineering - 2019"
+            />
             <Wrapper>
                 <Card width={'100%'}>
                     <Card.Content>
-                        <Link href="/projects/thesis">
-                            <a style={{ width: '100%' }}>
-                                <Card className="Invert" mb={1}>
-                                    <Text h4 my={0}>
-                                        Back to 3D
-                                    </Text>
-                                    <Text small>Go back to the 3D View!</Text>
-                                </Card>
-                            </a>
-                        </Link>
-                        <Image src="https://i.imgur.com/9Ch09Iz.png" />
+                        <Nav />
+                        <Image mt={1} src="https://i.imgur.com/9Ch09Iz.png" />
                         <Text h3 mb={0.1}>
                             Designing a Center for Community Based Organizations
                             (CBOs)
@@ -81,7 +74,7 @@ const Thesis = () => {
                             <Image
                                 my={2}
                                 width="100%"
-                                src="https://i.imgur.com/eLMacheh.jpg"
+                                src="https://i.imgur.com/Y0gaKrX.jpg"
                             />
                         </GeistLink>
                         <Text h3>Problem Statement</Text>
@@ -130,44 +123,19 @@ const Thesis = () => {
                             reflect this concept and enable it’s community to
                             connect and learn.
                         </Text>
-                        <Grid.Container gap={1}>
-                            <Grid xs={12}>
-                                <Link href="/projects/thesis">
-                                    <a style={{ width: '100%' }}>
-                                        <Card className="Invert" mt={2} mb={1}>
-                                            <Text h4 my={0}>
-                                                Back to 3D
-                                            </Text>
-                                            <Text small>
-                                                Go back to the 3D View!
-                                            </Text>
-                                        </Card>
-                                    </a>
-                                </Link>
-                            </Grid>
-                            <Grid xs={12}>
-                                <GeistLink
-                                    width="100%"
-                                    target="_blank"
-                                    rel="noopener"
-                                    href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
-                                >
-                                    <Card
-                                        width="100%"
-                                        className="Invert"
-                                        mt={2}
-                                        mb={1}
-                                    >
-                                        <Text h4 my={0}>
-                                            PDF
-                                        </Text>
-                                        <Text small>
-                                            Read the full PDF Presentation!
-                                        </Text>
-                                    </Card>
-                                </GeistLink>
-                            </Grid>
-                        </Grid.Container>
+                        <Image my={2} src="https://i.imgur.com/LJuAQo0.jpg" />
+                        <GeistLink
+                            target="_blank"
+                            rel="noopener"
+                            href="https://i.imgur.com/pxzP9sr.jpg"
+                        >
+                            <Image
+                                my={2}
+                                src="https://i.imgur.com/WYdDKKq.jpg"
+                            />
+                        </GeistLink>
+                        <Spacer />
+                        <Nav />
                     </Card.Content>
                 </Card>
             </Wrapper>
@@ -186,6 +154,40 @@ const Thesis = () => {
                 `}
             </style>
         </>
+    )
+}
+
+const Nav = () => {
+    return (
+        <Grid.Container gap={1}>
+            <Grid xs={12}>
+                <Link href="/projects/thesis">
+                    <a style={{ width: '100%' }}>
+                        <Card className="Invert">
+                            <Text h4 my={0}>
+                                ◀ Back to 3D
+                            </Text>
+                            <Text small>Go back to the 3D View!</Text>
+                        </Card>
+                    </a>
+                </Link>
+            </Grid>
+            <Grid xs={12}>
+                <GeistLink
+                    width="100%"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
+                >
+                    <Card width="100%" className="Invert">
+                        <Text h4 my={0}>
+                            🔗 PDF
+                        </Text>
+                        <Text small>Read the full PDF Presentation!</Text>
+                    </Card>
+                </GeistLink>
+            </Grid>
+        </Grid.Container>
     )
 }
 
