@@ -8,10 +8,12 @@ import {
     Environment,
     OrbitControls,
     useGLTF,
+    Html,
+    useProgress,
 } from '@react-three/drei'
-import { useTheme } from '@geist-ui/core'
+import { useTheme, Text } from '@geist-ui/core'
 import { Canvas } from '@react-three/fiber'
-import { getPhysicalMaterial } from './getMaterial'
+import { getPhysicalMaterial } from '../../hooks/getMaterial'
 
 export const Model = ({ visibilities }) => {
     const theme = useTheme()
@@ -28,7 +30,7 @@ export const Model = ({ visibilities }) => {
                 }}
             >
                 <color attach="background" args={[theme.palette.background]} />
-                <Suspense fallback={null}>
+                <Suspense fallback={<Loader />}>
                     <Scene theme={theme} visibilities={visibilities} />
                     <Environment preset="sunset" />
                 </Suspense>
@@ -44,7 +46,7 @@ export const Model = ({ visibilities }) => {
 
 function Scene({ theme, visibilities }) {
     const group = useRef()
-    const { nodes, materials } = useGLTF('../../modelDraco.glb')
+    const { nodes, materials } = useGLTF('../../BachelorsThesis.glb')
 
     const {
         floor,
@@ -241,6 +243,11 @@ function Scene({ theme, visibilities }) {
     )
 }
 
-useGLTF.preload('../../modelDraco.glb')
+function Loader() {
+    const { progress } = useProgress()
+    return <Html center>{progress} % loaded.</Html>
+}
+
+useGLTF.preload('../../BachelorsThesis.glb')
 
 export default Model

@@ -10,8 +10,6 @@ import {
 } from '../../geist-components'
 
 import { themePreference } from '../../state/Context'
-import Room from '../../components/three/Room'
-import Soft from '../../components/three/Soft'
 import config from '../../config'
 
 const Masters = () => {
@@ -39,9 +37,7 @@ const Masters = () => {
                             height={'45rem'}
                             className="Justify"
                         >
-                            <Card.Content>
-                                <Soft />
-                            </Card.Content>
+                            <Card.Content></Card.Content>
                         </Card>
                     </Grid>
                     <Grid xs={24}>

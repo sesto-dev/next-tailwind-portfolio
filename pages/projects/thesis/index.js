@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { Card, Description, Text, Select } from '@geist-ui/core'
+import { Card, Text, Select, Grid, Link as GeistLink } from '@geist-ui/core'
 import {
     Banner,
     Footer,
@@ -11,9 +11,9 @@ import {
 
 import { themePreference } from '../../../state/Context'
 import config from '../../../config'
-import Model from '../../../components/three/ModelDraco'
+import Model from '../../../components/three/BachelorsThesis'
 
-const Thesis = () => {
+const Index = () => {
     const [visibilities, setVisibilities] = useState({
         floor: true,
         ceiling: true,
@@ -39,19 +39,19 @@ const Thesis = () => {
     ]
 
     const handler = (val) => {
-        let vis = {}
+        let temp = {}
 
         for (let i = 0; i < options.length; i++) {
             const element = options[i]
-            vis[element] = false
+            temp[element] = false
         }
 
         for (let j = 0; j < val.length; j++) {
             const element = val[j]
-            vis[element] = true
+            temp[element] = true
         }
 
-        setVisibilities(vis)
+        setVisibilities(temp)
     }
 
     return (
@@ -59,56 +59,58 @@ const Thesis = () => {
             <Helmet config={config} title="THREE" />
             <Header config={config} themePreference={themePreference} />
             <Banner
-                header="BACHELORS 3D INTERACTIVE"
-                small="Bachelors Thesis - Bachelors of Architectural
-                            Engineering - 2019"
+                header="3D INTERACTIVE MODEL"
+                small="You can use your 🐭 or 👆 if you have a touch screen device to orbit the model after it loads."
             />
             <Wrapper>
-                <Card width="100%">
-                    <Link href="/projects/thesis/document">
-                        <a style={{ width: '100%' }}>
-                            <Card className="Invert" mb={1}>
-                                <Text h4 my={0}>
-                                    Project Document
-                                </Text>
-                                <Text small>Go to the project document!</Text>
-                            </Card>
-                        </a>
-                    </Link>
-                    <Card mb={1}>
-                        <Description title="Options" mb={1} />
-                        <Select
-                            multiple
-                            clearable={true}
-                            initialValue={options}
-                            onChange={handler}
-                            width="100%"
-                        >
-                            <Select.Option value="floor">Floor</Select.Option>
-                            <Select.Option value="ceiling">
-                                Ceiling
-                            </Select.Option>
-                            <Select.Option value="piping">Piping</Select.Option>
-                            <Select.Option value="ducting">
-                                Ducting
-                            </Select.Option>
-                            <Select.Option value="lighting">
-                                Lighting
-                            </Select.Option>
-                            <Select.Option value="structure">
-                                Structure
-                            </Select.Option>
-                            <Select.Option value="curtain">
-                                Curtain Walls
-                            </Select.Option>
-                            <Select.Option value="panels">
-                                Solar Panels
-                            </Select.Option>
-                            <Select.Option value="rooms">Rooms</Select.Option>
-                        </Select>
-                    </Card>
-                    <Model visibilities={visibilities} />
-                </Card>
+                <Grid.Container gap={1}>
+                    <Nav />
+                    <Grid xs={24}>
+                        <Card width="100%">
+                            <Text h4 py={0} my={0}>
+                                Model Parts
+                            </Text>
+                            <Text small>Enable or disable model parts!</Text>
+                            <Select
+                                multiple
+                                clearable={true}
+                                initialValue={options}
+                                onChange={handler}
+                                width="100%"
+                                my={1}
+                            >
+                                <Select.Option value="floor">
+                                    Floor
+                                </Select.Option>
+                                <Select.Option value="ceiling">
+                                    Ceiling
+                                </Select.Option>
+                                <Select.Option value="piping">
+                                    Piping
+                                </Select.Option>
+                                <Select.Option value="ducting">
+                                    Ducting
+                                </Select.Option>
+                                <Select.Option value="lighting">
+                                    Lighting
+                                </Select.Option>
+                                <Select.Option value="structure">
+                                    Structure
+                                </Select.Option>
+                                <Select.Option value="curtain">
+                                    Curtain Walls
+                                </Select.Option>
+                                <Select.Option value="panels">
+                                    Solar Panels
+                                </Select.Option>
+                                <Select.Option value="rooms">
+                                    Rooms
+                                </Select.Option>
+                            </Select>
+                            <Model visibilities={visibilities} />
+                        </Card>
+                    </Grid>
+                </Grid.Container>
             </Wrapper>
             <Footer config={config} />
             <style jsx global>
@@ -128,4 +130,38 @@ const Thesis = () => {
     )
 }
 
-export default Thesis
+const Nav = () => {
+    return (
+        <>
+            <Grid xs={12}>
+                <Link href="/projects/thesis/summary">
+                    <a style={{ width: '100%' }}>
+                        <Card className="Invert">
+                            <Text h4 my={0}>
+                                ▶ Summary
+                            </Text>
+                            <Text small>Read the project summary!</Text>
+                        </Card>
+                    </a>
+                </Link>
+            </Grid>
+            <Grid xs={12}>
+                <GeistLink
+                    width="100%"
+                    target="_blank"
+                    rel="noopener"
+                    href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
+                >
+                    <Card width="100%" className="Invert">
+                        <Text h4 my={0}>
+                            🔗 PDF
+                        </Text>
+                        <Text small>Read the full PDF Presentation!</Text>
+                    </Card>
+                </GeistLink>
+            </Grid>
+        </>
+    )
+}
+
+export default Index
