@@ -29,7 +29,7 @@ import Model from '../../../components/three/ModelDraco'
 const Thesis = () => {
     const [visibilities, setVisibilities] = useState({
         floor: true,
-        ceiliing: true,
+        ceiling: true,
         piping: true,
         ducting: true,
         lighting: true,
