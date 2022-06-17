@@ -6,6 +6,16 @@ const config = {
         image: 'https://user-images.githubusercontent.com/45223699/172024380-b4aa82ee-1356-49ff-8772-eb28871dc44c.jpg',
         handle: '@accretence',
     },
+    tabs: [
+        {
+            label: 'PROJECTS',
+            value: '/projects',
+        },
+        {
+            label: 'EXPERIENCES',
+            value: '/experiences',
+        },
+    ],
     links: {
         email: 'mailto:accretence@gmail.com',
         twitter: 'https://twitter.com/accretence',
@@ -66,9 +76,8 @@ const config = {
             page: '/projects/thesis',
             image: 'https://i.imgur.com/BBmqRBv.jpg',
             links: {
-                PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
                 'INTERACTIVE 3D': '/projects/thesis',
-                SUMMARY: 'projects/thesis/summary',
+                PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
             },
         },
         {

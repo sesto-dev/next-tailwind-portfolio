@@ -1,17 +1,18 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { Card, Text, Select, Grid, Link as GeistLink } from '@geist-ui/core'
 import {
-    Banner,
-    Footer,
-    Header,
-    Helmet,
-    Wrapper,
-} from '../../../geist-components'
+    Card,
+    Spacer,
+    Text,
+    Select,
+    Grid,
+    Link as GeistLink,
+} from '@geist-ui/core'
+import { Banner, Footer, Header, Helmet, Wrapper } from '../../geist-components'
 
-import { themePreference } from '../../../state/Context'
-import config from '../../../main.config'
-import Model from '../../../components/three/BachelorsThesis'
+import { themePreference } from '../../state/Context'
+import config from '../../main.config'
+import Model from '../../components/three/BachelorsThesis'
 
 const Index = () => {
     const [visibilities, setVisibilities] = useState({
@@ -56,10 +57,14 @@ const Index = () => {
 
     return (
         <>
-            <Helmet config={config} title="THREE" />
+            <Helmet
+                config={config}
+                title="Transparent Architecture"
+                image="https://i.imgur.com/BBmqRBv.jpg"
+            />
             <Header config={config} themePreference={themePreference} />
             <Banner
-                header="3D INTERACTIVE MODEL"
+                header="TRANSPARENT ARCHITECTURE"
                 small="You can use your 🐭 or 👆 if you have a touch screen device to orbit the model after it loads."
             />
             <Wrapper>
@@ -67,12 +72,9 @@ const Index = () => {
                     <Grid xs={24}>
                         <Card width="100%">
                             <Text h4 py={0} my={0}>
-                                Customize Model Parts
+                                Turn Parts On/ Off ⚡🔌
                             </Text>
-                            <Text small>
-                                Enable or disable model parts using this 👇
-                                menu!
-                            </Text>
+                            <Text small>... using this 👇 menu!</Text>
                             <Select
                                 multiple
                                 clearable={true}
@@ -109,6 +111,15 @@ const Index = () => {
                                     Rooms
                                 </Select.Option>
                             </Select>
+                            <Text h4 py={0} my={0}>
+                                INTERACTIVE 3D VIEW 🎮
+                            </Text>
+                            <Text small>
+                                ... you can use your 🐭 or 👆 if you have a
+                                touch screen device to orbit the model after it
+                                loads.
+                            </Text>
+                            <Spacer />
                             <Model visibilities={visibilities} />
                         </Card>
                     </Grid>
@@ -136,19 +147,7 @@ const Index = () => {
 const Nav = () => {
     return (
         <>
-            <Grid xs={12}>
-                <Link href="/projects/thesis/summary">
-                    <a style={{ width: '100%' }}>
-                        <Card className="Invert">
-                            <Text h4 my={0}>
-                                ▶ Summary
-                            </Text>
-                            <Text small>Read the project summary!</Text>
-                        </Card>
-                    </a>
-                </Link>
-            </Grid>
-            <Grid xs={12}>
+            <Grid xs={24}>
                 <GeistLink
                     width="100%"
                     target="_blank"

@@ -24,7 +24,7 @@ export const Model = ({ visibilities }) => {
             <Canvas
                 camera={{
                     position: [100, 100, 100],
-                    zoom: 6,
+                    zoom: 7,
                     far: 300,
                 }}
             >

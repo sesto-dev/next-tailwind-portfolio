@@ -22,7 +22,7 @@ const Project = ({ project }) => {
                 }}
             />
             <Link href={project.page}>
-                <GeistLink>
+                <GeistLink underline>
                     <Text my={0} font="1.2rem">
                         🔗 {project.name}
                     </Text>
@@ -33,6 +33,7 @@ const Project = ({ project }) => {
                 {project.period} - {project.position} -{' '}
                 {Object.keys(project.links).map((key) => (
                     <GeistLink
+                        underline
                         mx={0.333}
                         target="_blank"
                         rel="noopener"
