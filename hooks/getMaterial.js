@@ -21,3 +21,9 @@ export function getToonMaterial(color) {
         color: color ? color : 'Red',
     })
 }
+
+export function getPointsMaterial(size) {
+    return new THREE.PointsMaterial({
+        size,
+    })
+}

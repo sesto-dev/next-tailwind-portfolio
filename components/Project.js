@@ -33,6 +33,7 @@ const Project = ({ project }) => {
                 {project.period} - {project.position} -{' '}
                 {Object.keys(project.links).map((key) => (
                     <GeistLink
+                        key={project.links[key]}
                         underline
                         mx={0.333}
                         target="_blank"

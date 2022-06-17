@@ -16,7 +16,7 @@ import { useTheme, Text } from '@geist-ui/core'
 import { useThree, Canvas } from '@react-three/fiber'
 import { getPhysicalMaterial } from '../../hooks/getMaterial'
 
-export const Model = ({ visibilities }) => {
+const Scene = ({ visibilities }) => {
     const theme = useTheme()
 
     return (
@@ -30,7 +30,7 @@ export const Model = ({ visibilities }) => {
             >
                 <color attach="background" args={[theme.palette.background]} />
                 <Suspense fallback={<Loader />}>
-                    <Scene theme={theme} visibilities={visibilities} />
+                    <Model theme={theme} visibilities={visibilities} />
                     <Environment preset="sunset" />
                     <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
                         <planeGeometry args={[70, 50]} />
@@ -60,9 +60,11 @@ export const Model = ({ visibilities }) => {
     )
 }
 
-function Scene({ theme, visibilities }) {
+function Model({ theme, visibilities }) {
     const group = useRef()
-    const { nodes, materials } = useGLTF('../../BachelorsThesis.glb')
+    const { nodes, materials } = useGLTF(
+        '../../assets/models/BachelorsThesis.glb'
+    )
 
     const {
         floor,
@@ -74,7 +76,7 @@ function Scene({ theme, visibilities }) {
         curtain,
         panels,
         rooms,
-    } = visibilities
+    } = visibilities || true
 
     const metalMat = getPhysicalMaterial('White', 0.5)
     const glassMat = getPhysicalMaterial('Gray', 0.1, 1, 0.1)
@@ -252,4 +254,4 @@ function Loader() {
     return <Html center>{progress} % loaded...</Html>
 }
 
-export default Model
+export default Scene

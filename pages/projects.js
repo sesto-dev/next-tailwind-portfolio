@@ -25,7 +25,7 @@ const Projects = () => {
             <Wrapper>
                 <Grid.Container gap={1}>
                     {config.projects.map((project) => (
-                        <Grid xs={24}>
+                        <Grid key={project.name} xs={24}>
                             <Project key={project.name} project={project} />
                         </Grid>
                     ))}

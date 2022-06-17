@@ -12,7 +12,7 @@ import { Banner, Footer, Header, Helmet, Wrapper } from '../../geist-components'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
-import Model from '../../components/three/BachelorsThesis'
+import Scene from '../../components/three/BachelorsThesis'
 
 const Index = () => {
     const [visibilities, setVisibilities] = useState({
@@ -111,6 +111,10 @@ const Index = () => {
                                     Rooms
                                 </Select.Option>
                             </Select>
+                        </Card>
+                    </Grid>
+                    <Grid xs={24}>
+                        <Card width="100%">
                             <Text h4 py={0} my={0}>
                                 INTERACTIVE 3D VIEW 🎮
                             </Text>
@@ -120,7 +124,7 @@ const Index = () => {
                                 loads.
                             </Text>
                             <Spacer />
-                            <Model visibilities={visibilities} />
+                            <Scene visibilities={visibilities} />
                         </Card>
                     </Grid>
                     <Nav />

@@ -73,10 +73,10 @@ const config = {
             position: `Bachelor's of Architectural Engineering`,
             name: "BACHELOR'S THESIS: TRANSPARENT ARCHITECTURE",
             period: 'July 2019',
-            page: '/projects/thesis',
+            page: '/projects/bachelors_thesis',
             image: 'https://i.imgur.com/BBmqRBv.jpg',
             links: {
-                'INTERACTIVE 3D': '/projects/thesis',
+                'INTERACTIVE 3D': '/projects/bachelors_thesis',
                 PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
             },
         },
@@ -84,7 +84,7 @@ const config = {
             position: 'Masters of Architectural Technology',
             name: 'PERLIN NOISE & INVISIBILITY IN SKYSCRAPERS',
             period: 'January 2021',
-            page: '/projects/masters',
+            page: '/projects/perlin_skyscraper',
             image: 'https://i.imgur.com/olcSXqU.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
