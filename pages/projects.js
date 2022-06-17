@@ -10,7 +10,7 @@ import {
 
 import { themePreference } from '../state/Context'
 import Project from '../components/Project'
-import config from '../config'
+import config from '../main.config'
 import { Grid } from '@geist-ui/core'
 
 const Projects = () => {
@@ -20,7 +20,7 @@ const Projects = () => {
             <Header config={config} themePreference={themePreference} />
             <Banner
                 header="PROJECTS"
-                small="Interesting projects I've been a part of."
+                small="Interesting projects I've been a part of..."
             />
             <Wrapper>
                 <Grid.Container gap={1}>

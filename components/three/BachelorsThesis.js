@@ -76,17 +76,10 @@ function Scene({ theme, visibilities }) {
         rooms,
     } = visibilities
 
-    const metalMat =
-        theme.type == 'light'
-            ? getPhysicalMaterial('White', 0.5)
-            : getPhysicalMaterial('#202020', 0.75)
-
+    const metalMat = getPhysicalMaterial('White', 0.5)
     const glassMat = getPhysicalMaterial('Gray', 0.1, 1, 0.1)
     const woodMat = getPhysicalMaterial('#99775A', 0.3)
-    const rubberMat =
-        theme.type == 'light'
-            ? getPhysicalMaterial('White', 0.7)
-            : getPhysicalMaterial('#151515', 0.7)
+    const rubberMat = getPhysicalMaterial('White', 0.7)
     const copperMat = getPhysicalMaterial('#7f4330', 0.2)
 
     return (

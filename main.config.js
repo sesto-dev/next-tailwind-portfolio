@@ -60,23 +60,23 @@ const config = {
     ],
     projects: [
         {
-            position: 'Designer',
-            name: "Bachelor's Thesis",
+            position: `Bachelor's of Architectural Engineering`,
+            name: "BACHELOR'S THESIS: TRANSPARENT ARCHITECTURE",
             period: 'July 2019',
-            description: 'Community Center',
             page: '/projects/thesis',
-            image: 'https://user-images.githubusercontent.com/45223699/172026317-e65ddf28-ea7b-4827-968c-5e0b511f08b2.png',
+            image: 'https://i.imgur.com/BBmqRBv.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
+                'INTERACTIVE 3D': '/projects/thesis',
+                SUMMARY: 'projects/thesis/summary',
             },
         },
         {
-            position: 'Designer',
-            name: 'Masters Architectural Design 01 Project',
-            period: 'December 2020',
-            description: 'Commercial Tower',
+            position: 'Masters of Architectural Technology',
+            name: 'PERLIN NOISE & INVISIBILITY IN SKYSCRAPERS',
+            period: 'January 2021',
             page: '/projects/masters',
-            image: 'https://user-images.githubusercontent.com/45223699/172026334-a74c5130-b6eb-45fe-9924-e62b4678147e.jpg',
+            image: 'https://i.imgur.com/olcSXqU.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',

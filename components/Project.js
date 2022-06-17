@@ -12,59 +12,37 @@ const Project = ({ project }) => {
     const theme = useTheme()
 
     return (
-        <>
-            <Card key={project.name} width="100%">
-                <Link href={project.page}>
-                    <a>
-                        <Image
-                            height="20rem"
-                            src={project.image}
-                            style={{
-                                objectFit: 'cover',
-                            }}
-                        />
-                    </a>
-                </Link>
-                <div className="Flex">
-                    <Link href={project.page}>
-                        <GeistLink>
-                            <Text h3>{project.name}</Text>
-                        </GeistLink>
-                    </Link>
-                    <div>
-                        <Text mr={0.333} small b>
-                            {Object.keys(project.links).map((key) => (
-                                <GeistLink
-                                    mx={0.333}
-                                    target="_blank"
-                                    rel="noopener"
-                                    href={project.links[key]}
-                                >
-                                    <Button auto scale="0.33" type="secondary">
-                                        {key}
-                                    </Button>
-                                </GeistLink>
-                            ))}
-                        </Text>
-                    </div>
-                </div>
-                <Text small b>
-                    {project.position}, {project.period}
-                </Text>
-                <br />
-                <Text small>{project.description}</Text>
-            </Card>
-            <style jsx global>
-                {`
-                    .Flex {
-                        display: flex;
-                        align-items: center;
-                        justify-content: space-between;
-                        margin-top: 2rem;
-                    }
-                `}
-            </style>
-        </>
+        <Card key={project.name} width="100%">
+            <Image
+                mb={0.75}
+                height="20rem"
+                src={project.image}
+                style={{
+                    objectFit: 'cover',
+                }}
+            />
+            <Link href={project.page}>
+                <GeistLink>
+                    <Text my={0} font="1.2rem">
+                        🔗 {project.name}
+                    </Text>
+                </GeistLink>
+            </Link>
+            <br />
+            <Text small type="secondary" mt={0}>
+                {project.period} - {project.position} -{' '}
+                {Object.keys(project.links).map((key) => (
+                    <GeistLink
+                        mx={0.333}
+                        target="_blank"
+                        rel="noopener"
+                        href={project.links[key]}
+                    >
+                        🔗 {key}
+                    </GeistLink>
+                ))}
+            </Text>
+        </Card>
     )
 }
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { useTheme, Grid, Card, Image, Text } from '@geist-ui/core'
+import { useTheme, Grid, Card, Image, Text, Collapse } from '@geist-ui/core'
 import {
     Badged,
     Banner,
@@ -11,7 +11,8 @@ import {
 } from '../geist-components'
 
 import { themePreference } from '../state/Context'
-import config from '../config'
+import config from '../main.config'
+import Project from '../components/Project'
 
 const Index = () => {
     const theme = useTheme()
@@ -21,41 +22,54 @@ const Index = () => {
             <Helmet config={config} />
             <Header config={config} themePreference={themePreference} />
             <Banner
-                header={'WELCOME!'}
-                small={`I'm a self-taught Full-Stack Web & Solidity developer. My educational & early professional experience is in Architectural Engineering.`}
+                header={'WELCOME! 👋'}
+                small={`I'm an architecture 📐 student & a self-taught Full-Stack Developer 👨‍💻. My educational & early professional experience is in Architectural Engineering.`}
             />
             <Wrapper>
-                <Grid.Container gap={1}>
-                    <Grid xs={12}>
-                        <Link href="/projects">
-                            <a style={{ width: '100%' }}>
-                                <Card className="Invert">
-                                    <Text h4 my={0}>
-                                        PROJECTS
-                                    </Text>
-                                    <Text small>
-                                        Interesting projects I've been a part
-                                        of.
-                                    </Text>
-                                </Card>
-                            </a>
-                        </Link>
-                    </Grid>
-                    <Grid xs={12}>
-                        <Link href="/experience">
-                            <a style={{ width: '100%' }}>
-                                <Card className="Invert">
-                                    <Text h4 my={0}>
-                                        EXPERIENCE
-                                    </Text>
-                                    <Text small>
-                                        My professional experience.
-                                    </Text>
-                                </Card>
-                            </a>
-                        </Link>
-                    </Grid>
-                </Grid.Container>
+                <Card>
+                    <Collapse.Group>
+                        <Collapse
+                            title="PROJECTS"
+                            subtitle="Interesting projects I've been a part of..."
+                            style={{ borderTop: 'none' }}
+                        >
+                            <Grid.Container my={2} gap={1}>
+                                {config.projects.map((project) => (
+                                    <Grid xs={24}>
+                                        <Project
+                                            key={project.name}
+                                            project={project}
+                                        />
+                                    </Grid>
+                                ))}
+                            </Grid.Container>
+                        </Collapse>
+                        <Collapse
+                            title="EXPERIENCES"
+                            subtitle="My professional experiences..."
+                            style={{ borderBottom: 'none' }}
+                        >
+                            <Grid.Container gap={1}>
+                                {config.experiences.map((exp) => (
+                                    <Grid xs={24}>
+                                        <Card
+                                            key={exp.title}
+                                            width="100%"
+                                            className="Justify Invert"
+                                        >
+                                            <Text h3>{exp.title}</Text>
+                                            <Text small b>
+                                                {exp.employer}, {exp.period}
+                                            </Text>
+                                            <br />
+                                            <Text small>{exp.description}</Text>
+                                        </Card>
+                                    </Grid>
+                                ))}
+                            </Grid.Container>
+                        </Collapse>
+                    </Collapse.Group>
+                </Card>
             </Wrapper>
             <Footer config={config} />
             <style jsx global>

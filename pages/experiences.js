@@ -11,15 +11,18 @@ import {
 } from '../geist-components'
 
 import { themePreference } from '../state/Context'
-import config from '../config'
+import config from '../main.config'
 
 const CV = () => {
     const theme = useTheme()
     return (
         <>
-            <Helmet config={config} title="EXPERIENCE" />
+            <Helmet config={config} title="EXPERIENCES" />
             <Header config={config} themePreference={themePreference} />
-            <Banner header="EXPERIENCES" small="My professional experience" />
+            <Banner
+                header="EXPERIENCES"
+                small="My professional experiences..."
+            />
             <Wrapper>
                 <Grid.Container gap={1}>
                     {config.experiences.map((exp) => (

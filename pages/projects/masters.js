@@ -10,7 +10,7 @@ import {
 } from '../../geist-components'
 
 import { themePreference } from '../../state/Context'
-import config from '../../config'
+import config from '../../main.config'
 
 const Masters = () => {
     const theme = useTheme()
