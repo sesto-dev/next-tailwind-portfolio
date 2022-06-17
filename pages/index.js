@@ -21,40 +21,11 @@ const Index = () => {
             <Helmet config={config} />
             <Header config={config} themePreference={themePreference} />
             <Banner
-                header={'WELCOME! (◕‿◕)'}
-                small={'This website is still very incomplete (Ｔ▽Ｔ)'}
+                header={'WELCOME!'}
+                small={`I'm a self-taught Full-Stack Web & Solidity developer. My educational & early professional experience is in Architectural Engineering.`}
             />
             <Wrapper>
                 <Grid.Container gap={1}>
-                    <Grid xs={24}>
-                        <Card className="Invert" width="100%">
-                            <Image
-                                src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/51860462915061.5f20864db1dcf.gif"
-                                height="30vh"
-                                width="100%"
-                                style={{
-                                    filter: `${
-                                        theme.type == 'light'
-                                            ? 'invert(1)'
-                                            : 'invert(0)'
-                                    }`,
-                                    objectFit: 'cover',
-                                }}
-                                my={0}
-                                py={0}
-                                draggable={false}
-                            />
-                            <Text h4 my={0}>
-                                I'm Accretence!
-                            </Text>
-                            <Text small>
-                                I'm a self-taught <Badged c="Full-Stack Web" />{' '}
-                                & <Badged c="Solidity" /> developer. My
-                                educational & early professional experience is
-                                in Architectural Engineering.
-                            </Text>
-                        </Card>
-                    </Grid>
                     <Grid xs={12}>
                         <Link href="/projects">
                             <a style={{ width: '100%' }}>

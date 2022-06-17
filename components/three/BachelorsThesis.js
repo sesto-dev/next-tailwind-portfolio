@@ -10,9 +10,10 @@ import {
     useGLTF,
     Html,
     useProgress,
+    MeshReflectorMaterial,
 } from '@react-three/drei'
 import { useTheme, Text } from '@geist-ui/core'
-import { Canvas } from '@react-three/fiber'
+import { useThree, Canvas } from '@react-three/fiber'
 import { getPhysicalMaterial } from '../../hooks/getMaterial'
 
 export const Model = ({ visibilities }) => {
@@ -21,23 +22,38 @@ export const Model = ({ visibilities }) => {
     return (
         <div style={{ width: '100%', height: '75vh' }}>
             <Canvas
-                orthographic
                 camera={{
-                    position: [1000, 1000, 1000],
-                    zoom: 20,
-                    far: 10000,
-                    near: 0.01,
+                    position: [100, 100, 100],
+                    zoom: 6,
+                    far: 300,
                 }}
             >
                 <color attach="background" args={[theme.palette.background]} />
                 <Suspense fallback={<Loader />}>
                     <Scene theme={theme} visibilities={visibilities} />
                     <Environment preset="sunset" />
+                    <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+                        <planeGeometry args={[70, 50]} />
+                        <MeshReflectorMaterial
+                            blur={[400, 100]}
+                            resolution={400}
+                            mixBlur={1}
+                            mixStrength={15}
+                            depthScale={1}
+                            minDepthThreshold={0.85}
+                            color="#151515"
+                            metalness={0.6}
+                            roughness={1}
+                        />
+                    </mesh>
                 </Suspense>
                 <OrbitControls
+                    autoRotate
+                    autoRotateSpeed={1}
+                    setPolarAngle={Math.PI / 2.5}
                     enablePan={false}
                     minPolarAngle={Math.PI / 4}
-                    maxPolarAngle={Math.PI / 2}
+                    maxPolarAngle={Math.PI / 2.1}
                 />
             </Canvas>
         </div>
@@ -234,20 +250,13 @@ function Scene({ theme, visibilities }) {
                     </group>
                 </>
             )}
-            <mesh
-                geometry={nodes.Platform.geometry}
-                material={copperMat}
-                position={[0, -1, 0]}
-            />
         </group>
     )
 }
 
 function Loader() {
     const { progress } = useProgress()
-    return <Html center>{progress} % loaded.</Html>
+    return <Html center>{progress} % loaded...</Html>
 }
-
-useGLTF.preload('../../BachelorsThesis.glb')
 
 export default Model

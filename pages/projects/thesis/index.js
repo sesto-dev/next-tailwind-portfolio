@@ -64,13 +64,15 @@ const Index = () => {
             />
             <Wrapper>
                 <Grid.Container gap={1}>
-                    <Nav />
                     <Grid xs={24}>
                         <Card width="100%">
                             <Text h4 py={0} my={0}>
-                                Model Parts
+                                Customize Model Parts
                             </Text>
-                            <Text small>Enable or disable model parts!</Text>
+                            <Text small>
+                                Enable or disable model parts using this 👇
+                                menu!
+                            </Text>
                             <Select
                                 multiple
                                 clearable={true}
@@ -110,6 +112,7 @@ const Index = () => {
                             <Model visibilities={visibilities} />
                         </Card>
                     </Grid>
+                    <Nav />
                 </Grid.Container>
             </Wrapper>
             <Footer config={config} />
