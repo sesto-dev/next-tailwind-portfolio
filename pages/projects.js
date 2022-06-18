@@ -9,11 +9,11 @@ import {
 } from '../geist-components'
 
 import { themePreference } from '../state/Context'
-import Project from '../components/Project'
+import Projects from '../components/Projects'
 import config from '../main.config'
 import { Grid } from '@geist-ui/core'
 
-const Projects = () => {
+const ProjectsIndex = () => {
     return (
         <>
             <Helmet config={config} title="PROJECTS" />
@@ -23,17 +23,11 @@ const Projects = () => {
                 small="Interesting projects I've been a part of..."
             />
             <Wrapper>
-                <Grid.Container gap={1}>
-                    {config.projects.map((project) => (
-                        <Grid key={project.name} xs={24}>
-                            <Project key={project.name} project={project} />
-                        </Grid>
-                    ))}
-                </Grid.Container>
+                <Projects />
             </Wrapper>
             <Footer config={config} />
         </>
     )
 }
 
-export default Projects
+export default ProjectsIndex
