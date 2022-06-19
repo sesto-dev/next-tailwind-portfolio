@@ -8,7 +8,7 @@ import {
     Grid,
     Link as GeistLink,
 } from '@geist-ui/core'
-import { Layout } from '../../geist-components'
+import { Layout } from '../../geist-abstraction'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
@@ -62,6 +62,9 @@ const Thesis = () => {
                 themePreference={themePreference}
                 bannerLarge="Bachelor's Thesis: Transparent Architecture"
                 bannerSmall="June 2019 - Bachelor's of Architectural Engineering"
+                metaTitle="Transparent Architecture"
+                metaDescription="June 2019 - Bachelor's of Architectural Engineering Thesis"
+                metaImage="https://i.imgur.com/BBmqRBv.jpg"
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
@@ -78,33 +81,11 @@ const Thesis = () => {
                                 width="100%"
                                 my={1}
                             >
-                                <Select.Option value="floor">
-                                    Floor
-                                </Select.Option>
-                                <Select.Option value="ceiling">
-                                    Ceiling
-                                </Select.Option>
-                                <Select.Option value="piping">
-                                    Piping
-                                </Select.Option>
-                                <Select.Option value="ducting">
-                                    Ducting
-                                </Select.Option>
-                                <Select.Option value="lighting">
-                                    Lighting
-                                </Select.Option>
-                                <Select.Option value="structure">
-                                    Structure
-                                </Select.Option>
-                                <Select.Option value="curtain">
-                                    Curtain Walls
-                                </Select.Option>
-                                <Select.Option value="panels">
-                                    Solar Panels
-                                </Select.Option>
-                                <Select.Option value="rooms">
-                                    Rooms
-                                </Select.Option>
+                                {options.map((option) => (
+                                    <Select.Option key={option} value={option}>
+                                        {option}
+                                    </Select.Option>
+                                ))}
                             </Select>
                         </Card>
                     </Grid>

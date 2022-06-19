@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useTheme, Text, Card, Spacer, Grid } from '@geist-ui/core'
-import { Layout } from '../geist-components'
+import { Layout } from '../geist-abstraction'
 
 import { themePreference } from '../state/Context'
 import config from '../main.config'
@@ -15,10 +15,11 @@ const CV = () => {
                 themePreference={themePreference}
                 bannerLarge="Experiences"
                 bannerSmall="My professional experiences..."
+                metaTitle="Experiences"
             >
                 <Grid.Container gap={1}>
                     {config.experiences.map((exp) => (
-                        <Grid xs={24}>
+                        <Grid xs={24} md={12}>
                             <Card
                                 key={exp.title}
                                 width="100%"

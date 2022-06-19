@@ -1,11 +1,14 @@
 const config = {
+    theme: {
+        width: '900pt',
+    },
     meta: {
         title: 'Accretence',
         description: "Amirhossein Mohammadi's Personal Website & Portfolio! 👨‍💻",
         url: 'https://accretence.com',
         image: 'https://user-images.githubusercontent.com/45223699/172024380-b4aa82ee-1356-49ff-8772-eb28871dc44c.jpg',
         handle: '@accretence',
-        keywords: ['portfolio', 'accretence'],
+        keywords: 'portfolio, accretence',
     },
     tabs: [
         {
@@ -71,7 +74,7 @@ const config = {
             name: 'Transparent Architecture',
             period: 'July 2019',
             page: '/projects/bachelors_thesis',
-            image: 'https://static.wixstatic.com/media/762115_3e70ecf38e7c4aa4afa08199002ce4ab~mv2.jpg/v1/fill/w_564,h_651,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/762115_3e70ecf38e7c4aa4afa08199002ce4ab~mv2.jpg',
+            image: 'https://i.imgur.com/BBmqRBv.jpg',
             links: {
                 'INTERACTIVE 3D': '/projects/bachelors_thesis',
                 PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
