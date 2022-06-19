@@ -8,13 +8,13 @@ import {
     Grid,
     Link as GeistLink,
 } from '@geist-ui/core'
-import { Banner, Footer, Header, Helmet, Wrapper } from '../../geist-components'
+import { Layout } from '../../geist-components'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
 import Scene from '../../components/three/BachelorsThesis'
 
-const Index = () => {
+const Thesis = () => {
     const [visibilities, setVisibilities] = useState({
         floor: true,
         ceiling: true,
@@ -57,17 +57,12 @@ const Index = () => {
 
     return (
         <>
-            <Helmet
+            <Layout
                 config={config}
-                title="Transparent Architecture"
-                image="https://i.imgur.com/BBmqRBv.jpg"
-            />
-            <Header config={config} themePreference={themePreference} />
-            <Banner
-                header="TRANSPARENT ARCHITECTURE"
-                small="You can use your 🐭 or 👆 if you have a touch screen device to orbit the model after it loads."
-            />
-            <Wrapper>
+                themePreference={themePreference}
+                bannerLarge="Bachelor's Thesis: Transparent Architecture"
+                bannerSmall="June 2019 - Bachelor's of Architectural Engineering"
+            >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
                         <Card width="100%">
@@ -129,8 +124,7 @@ const Index = () => {
                     </Grid>
                     <Nav />
                 </Grid.Container>
-            </Wrapper>
-            <Footer config={config} />
+            </Layout>
             <style jsx global>
                 {`
                     .Invert:hover {
@@ -170,4 +164,4 @@ const Nav = () => {
     )
 }
 
-export default Index
+export default Thesis

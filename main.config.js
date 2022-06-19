@@ -1,10 +1,11 @@
 const config = {
     meta: {
         title: 'Accretence',
-        description: "I'm a self-taught Full-Stack Web & Solidity developer.",
+        description: "Amirhossein Mohammadi's Personal Website & Portfolio! 👨‍💻",
         url: 'https://accretence.com',
         image: 'https://user-images.githubusercontent.com/45223699/172024380-b4aa82ee-1356-49ff-8772-eb28871dc44c.jpg',
         handle: '@accretence',
+        keywords: ['portfolio', 'accretence'],
     },
     tabs: [
         {
@@ -75,95 +76,92 @@ const config = {
                 'INTERACTIVE 3D': '/projects/bachelors_thesis',
                 PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
             },
+            keywords: ['Javascript', 'Three.js', 'WebGL', 'Revit'],
         },
 
         {
             position: 'Masters of Architectural Technology',
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
+            page: '/projects/bachelors_thesis',
             image: 'https://cdn.dribbble.com/users/2055637/screenshots/17422443/media/ed694e599a2fc721fad81163b00f457d.png?compress=1&resize=1600x1200&vertical=top',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
+            keywords: ['Three.js', 'Architecture', 'Unity'],
         },
         {
             position: 'Masters of Architectural Technology',
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
+            page: '/projects/bachelors_thesis',
             image: 'https://cdn.dribbble.com/users/2905985/screenshots/14580732/media/8e25b03c1938ee9f27e992e0b46d4b58.png?compress=1&resize=1600x1200&vertical=top',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
+            keywords: ['Three.js', 'Unity', 'Revit'],
         },
         {
             position: 'Masters of Architectural Technology',
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
+            page: '/projects/bachelors_thesis',
             image: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/ba0247107500101.5fa8e86a7f955.png',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
+            keywords: ['Three.js', 'Architecture', 'Unity'],
         },
         {
             position: 'Masters of Architectural Technology',
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
+            page: '/projects/bachelors_thesis',
             image: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/a6f00c76514213.5c6d5bfb1c3cb.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
+            keywords: ['Three.js', 'Architecture', 'Unity'],
         },
         {
             position: 'Masters of Architectural Technology',
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
+            page: '/projects/bachelors_thesis',
             image: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/dbc9a3142560005.Y3JvcCwxNDg4LDExNjQsMTI4LDA.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
+            keywords: ['Three.js', 'Architecture', 'Unity'],
         },
         {
             position: 'Masters of Architectural Technology',
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
-            image: 'https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/d2ca64141013353.624c42453d18d.png',
-            links: {
-                PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
-                YOUTUBE: 'https://youtu.be/qIsABW5UTys',
-            },
-        },
-        {
-            position: 'Masters of Architectural Technology',
-            name: 'Perlin Noise & Invisibility in Skyscrapers',
-            period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
+            page: '/projects/bachelors_thesis',
             image: 'https://cdn.dribbble.com/userupload/2896514/file/original-8472ca96356b9c49e138d373684422e7.jpg?compress=1&resize=2048x1536',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
+            keywords: ['Three.js', 'Architecture', 'Unity'],
         },
         {
             position: 'Masters of Architectural Technology',
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             period: 'January 2021',
-            page: '/projects/perlin_skyscraper',
+            page: '/projects/bachelors_thesis',
             image: 'https://cdn.dribbble.com/users/2905985/screenshots/15793471/media/4e4bdd10ed446bb61231175bc8ef6363.png',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',
             },
+            keywords: ['Three.js', 'Architecture', 'Unity'],
         },
     ],
 }

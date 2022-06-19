@@ -7,6 +7,7 @@ import {
     useTheme,
     Grid,
     Spacer,
+    Badge,
 } from '@geist-ui/core'
 import Link from 'next/link'
 
@@ -29,11 +30,12 @@ const Project = ({ project }) => {
 
     return (
         <Link href={project.page}>
-            <a>
-                <Card key={project.name} width="100%" height="100%">
+            <a style={{ width: '100%' }}>
+                <Card hoverable key={project.name} width="100%" height="100%">
                     <Image
                         mb={0.5}
                         height="20rem"
+                        width="100%"
                         src={project.image}
                         style={{
                             objectFit: 'cover',
@@ -43,9 +45,15 @@ const Project = ({ project }) => {
                         {project.name}
                     </Text>
                     <br />
-                    <Text small type="secondary" my={0}>
+                    <Text small type="secondary">
                         {project.period} - {project.position}
                     </Text>
+                    <br />
+                    {project.keywords.map((keyword) => (
+                        <Badge type="secondary" mr={0.3} scale="0.5">
+                            {keyword}
+                        </Badge>
+                    ))}
                 </Card>
             </a>
         </Link>

@@ -1,14 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useTheme, Text, Card, Spacer, Grid } from '@geist-ui/core'
-import {
-    Badged,
-    Banner,
-    Footer,
-    Header,
-    Helmet,
-    Wrapper,
-} from '../geist-components'
+import { Layout } from '../geist-components'
 
 import { themePreference } from '../state/Context'
 import config from '../main.config'
@@ -17,13 +10,12 @@ const CV = () => {
     const theme = useTheme()
     return (
         <>
-            <Helmet config={config} title="EXPERIENCES" />
-            <Header config={config} themePreference={themePreference} />
-            <Banner
-                header="EXPERIENCES"
-                small="My professional experiences..."
-            />
-            <Wrapper>
+            <Layout
+                config={config}
+                themePreference={themePreference}
+                bannerLarge="Experiences"
+                bannerSmall="My professional experiences..."
+            >
                 <Grid.Container gap={1}>
                     {config.experiences.map((exp) => (
                         <Grid xs={24}>
@@ -42,8 +34,7 @@ const CV = () => {
                         </Grid>
                     ))}
                 </Grid.Container>
-            </Wrapper>
-            <Footer config={config} />
+            </Layout>
             <style jsx global>
                 {`
                     .Invert:hover {

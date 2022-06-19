@@ -17,8 +17,6 @@ import { useThree, Canvas } from '@react-three/fiber'
 import { getPhysicalMaterial } from '../../hooks/getMaterial'
 
 const Scene = ({ visibilities }) => {
-    const theme = useTheme()
-
     return (
         <div style={{ width: '100%', height: '75vh' }}>
             <Canvas
@@ -28,9 +26,8 @@ const Scene = ({ visibilities }) => {
                     far: 300,
                 }}
             >
-                <color attach="background" args={[theme.palette.background]} />
                 <Suspense fallback={<Loader />}>
-                    <Model theme={theme} visibilities={visibilities} />
+                    <Model visibilities={visibilities} />
                     <Environment preset="sunset" />
                     <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
                         <planeGeometry args={[70, 50]} />
@@ -60,7 +57,7 @@ const Scene = ({ visibilities }) => {
     )
 }
 
-function Model({ theme, visibilities }) {
+function Model({ visibilities }) {
     const group = useRef()
     const { nodes, materials } = useGLTF(
         '../../assets/models/BachelorsThesis.glb'
