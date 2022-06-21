@@ -1,1 +1,5 @@
-<img align="center" src="https://user-images.githubusercontent.com/45223699/167655509-14c96314-cfe3-4338-ac5d-4e32741c5275.gif" width="100%" />
+I'm Amirhossein Mohammadi. I'm a self-taught developer & an architecture student. In my spare time I try to work on open-source projects. Most of my open-source projects below 👇🏻 are focused on one thing - **to make deploying production apps faster**!
+
+### Reach out
+
+[accretence.com](https://accretence.com) - [accretence@outlook.com](mailto:accretence@outlook.com)

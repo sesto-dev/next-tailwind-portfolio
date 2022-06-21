@@ -60,15 +60,15 @@ const Thesis = () => {
             <Layout
                 config={config}
                 themePreference={themePreference}
-                bannerLarge="Bachelor's Thesis: Transparent Architecture"
-                bannerSmall="June 2019 - Bachelor's of Architectural Engineering"
+                crownLarge="Bachelor's Thesis: Transparent Architecture"
+                crownSmall="June 2019 - Bachelor's of Architectural Engineering"
                 metaTitle="Transparent Architecture"
                 metaDescription="June 2019 - Bachelor's of Architectural Engineering Thesis"
                 metaImage="https://i.imgur.com/BBmqRBv.jpg"
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
-                        <Card width="100%">
+                        <Card hoverable width="100%">
                             <Text h4 py={0} my={0}>
                                 Turn Parts On/ Off ⚡🔌
                             </Text>
@@ -90,7 +90,7 @@ const Thesis = () => {
                         </Card>
                     </Grid>
                     <Grid xs={24}>
-                        <Card width="100%">
+                        <Card hoverable width="100%">
                             <Text h4 py={0} my={0}>
                                 INTERACTIVE 3D VIEW 🎮
                             </Text>
@@ -108,9 +108,6 @@ const Thesis = () => {
             </Layout>
             <style jsx global>
                 {`
-                    .Invert:hover {
-                        filter: invert(1);
-                    }
                     .content {
                         height: 100% !important;
                     }
@@ -133,7 +130,7 @@ const Nav = () => {
                     rel="noopener"
                     href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
                 >
-                    <Card width="100%" className="Invert">
+                    <Card hoverable width="100%">
                         <Text h4 my={0}>
                             🔗 PDF
                         </Text>

@@ -17,7 +17,7 @@ const Projects = () => {
     return (
         <Grid.Container gap={1}>
             {config.projects.map((project) => (
-                <Grid key={project.name} xs={24} sm={12} md={8} xl={6}>
+                <Grid key={project.name} sm={24} md={12} xl={8}>
                     <Project key={project.name} project={project} />
                 </Grid>
             ))}
@@ -36,21 +36,25 @@ const Project = ({ project }) => {
                         mb={0.5}
                         height="20rem"
                         width="100%"
-                        src={project.image}
+                        src={project.poster}
                         style={{
                             objectFit: 'cover',
                         }}
                     />
                     <Text b mb={0}>
-                        {project.name}
+                        {project.name},{' '}
                     </Text>
-                    <br />
                     <Text small type="secondary">
-                        {project.period} - {project.position}
+                        {project.description}
                     </Text>
                     <br />
                     {project.keywords.map((keyword) => (
-                        <Badge type="secondary" mr={0.3} scale="0.5">
+                        <Badge
+                            key={keyword}
+                            type="secondary"
+                            mr={0.3}
+                            scale="0.5"
+                        >
                             {keyword}
                         </Badge>
                     ))}
