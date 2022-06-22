@@ -1,6 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
-import { useTheme, Text, Card, Image, Grid } from '@geist-ui/core'
+import {
+    useTheme,
+    Text,
+    Card,
+    Image,
+    Grid,
+    Badge,
+    Spacer,
+} from '@geist-ui/core'
 import { Layout } from '../geist-abstraction'
 
 import { themePreference } from '../state/Context'
@@ -19,13 +27,8 @@ const Experiences = () => {
             >
                 <Grid.Container gap={1}>
                     {config.experiences.map((exp) => (
-                        <Grid xs={24} md={12}>
-                            <Card
-                                hoverable
-                                key={exp.title}
-                                width="100%"
-                                className="justify"
-                            >
+                        <Grid key={exp.title} xs={24} md={12}>
+                            <Card hoverable width="100%" className="justify">
                                 {exp.poster && (
                                     <Image
                                         mb={0.5}
@@ -43,6 +46,26 @@ const Experiences = () => {
                                 </Text>
                                 <br />
                                 <Text small>{exp.description}</Text>
+                                {exp.skills && exp.skills != [] && (
+                                    <>
+                                        <Spacer />
+                                        <Text small>Acquired Skills:</Text>
+                                        <br />
+                                        {exp.skills.map((skill) => (
+                                            <Badge
+                                                key={skill}
+                                                mr={0.3}
+                                                scale="0.5"
+                                                style={{
+                                                    backgroundColor: `${theme.palette.accents_2}`,
+                                                    color: `${theme.palette.foreground}`,
+                                                }}
+                                            >
+                                                {skill}
+                                            </Badge>
+                                        ))}
+                                    </>
+                                )}
                             </Card>
                         </Grid>
                     ))}

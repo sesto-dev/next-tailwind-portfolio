@@ -16,7 +16,7 @@ const Contact = () => {
                 config={config}
                 themePreference={themePreference}
                 crownLarge="Contact"
-                crownSmall="You can use my EMAIL to get in touch..."
+                crownSmall="These are all the ways we can can get in contact. ;-) E-Mail is easiest and fastest."
                 metaTitle="Experiences"
             >
                 <Grid.Container gap={1}>
@@ -26,13 +26,11 @@ const Contact = () => {
                         if (link.includes('https://')) link = link.slice(8)
 
                         return (
-                            <Grid xs={24} xl={12}>
+                            <Grid key={i} xs={24} xl={12}>
                                 <a
                                     style={{ width: '100%' }}
-                                    key={i}
                                     href={links[key]}
                                     target="_blank"
-                                    rel="noopener noreferrer"
                                 >
                                     <Card hoverable width="100%">
                                         <Text b mb={0}>

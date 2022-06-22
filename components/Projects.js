@@ -1,8 +1,6 @@
 import {
     Card,
-    Button,
     Image,
-    Link as GeistLink,
     Text,
     useTheme,
     Grid,
@@ -14,20 +12,24 @@ import Link from 'next/link'
 import config from '../main.config'
 
 const Projects = () => {
+    const theme = useTheme()
+
     return (
         <Grid.Container gap={1}>
             {config.projects.map((project) => (
                 <Grid key={project.name} sm={24} md={12} xl={8}>
-                    <Project key={project.name} project={project} />
+                    <Project
+                        key={project.name}
+                        theme={theme}
+                        project={project}
+                    />
                 </Grid>
             ))}
         </Grid.Container>
     )
 }
 
-const Project = ({ project }) => {
-    const theme = useTheme()
-
+const Project = ({ theme, project }) => {
     return (
         <Link href={project.page}>
             <a style={{ width: '100%' }}>
@@ -44,16 +46,19 @@ const Project = ({ project }) => {
                     <Text b mb={0}>
                         {project.name},{' '}
                     </Text>
-                    <Text small type="secondary">
+                    <Text small style={{ color: `${theme.palette.accents_6}` }}>
                         {project.description}
                     </Text>
-                    <br />
+                    <Spacer mt={0} />
                     {project.keywords.map((keyword) => (
                         <Badge
                             key={keyword}
-                            type="secondary"
                             mr={0.3}
                             scale="0.5"
+                            style={{
+                                backgroundColor: `${theme.palette.accents_2}`,
+                                color: `${theme.palette.foreground}`,
+                            }}
                         >
                             {keyword}
                         </Badge>

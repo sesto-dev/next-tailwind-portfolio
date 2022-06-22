@@ -9,10 +9,12 @@ export function getPhysicalMaterial(color, roughness, transmission, thickness) {
     })
 }
 
-export function getPhongMaterial(color, flatShading) {
+export function getPhongMaterial(color, opacity, transparent, flatShading) {
     return new THREE.MeshPhongMaterial({
         color: color ? color : 'Red',
-        flatShading: flatShading ? flatShading : 'null',
+        opacity: opacity ? opacity : 0.5,
+        transparent: transparent ? transparent : true,
+        flatShading: flatShading ? flatShading : false,
     })
 }
 

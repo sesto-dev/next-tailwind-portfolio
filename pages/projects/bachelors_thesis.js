@@ -127,7 +127,6 @@ const Nav = () => {
                 <GeistLink
                     width="100%"
                     target="_blank"
-                    rel="noopener"
                     href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
                 >
                     <Card hoverable width="100%">
