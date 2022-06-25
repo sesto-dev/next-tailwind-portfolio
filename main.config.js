@@ -61,12 +61,12 @@ const config = {
             skills: ['Agile Pipelines'],
             poster: 'https://i.imgur.com/R7RniiG.png',
             description:
-                'In my first experience in the development industry, I was able to work with an amazing group of individuals and web engineers and gain experience in both UI & UX Design, and front-end development. I was given the opportunity to work on several projects including in-house CRM, Resource & Project Management and Analysis, and E-Commerce Platforms from the design phase using tools, presenting designs to upper management and educating in-house users on tool-chain changes.',
+                'In my first experience in the development industry, I was able to work with an amazing group of individuals and web engineers and gain experience in both UI & UX Design, and front-end development. I was given the opportunity to work on several projects including in-house CRM, Resource & Project Management and Analysis, and E-Commerce Platforms from the design phase to presenting designs to upper management and educating in-house users on tool-chain changes.',
         },
     ],
     projects: [
         {
-            description: `Interative 3D Presentation of my Bachelor's Thesis. You can hide different parts of the building to see it's inner workings!`,
+            description: `Open-Source Web-Ready Interactive 3D Presentation of my BArch thesis. You can hide different parts of the building to see the inner workings!`,
             name: 'Transparent Architecture',
             page: '/projects/bachelors_thesis',
             poster: 'https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/64594c61446529.5a6f3c0731f96.jpg',

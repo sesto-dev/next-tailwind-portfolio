@@ -29,7 +29,7 @@ const Contact = () => {
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
-                        <Card padding={2} width="100%">
+                        <Card hoverable padding={2} width="100%">
                             <Card.Content>
                                 <Text h3>Introduction to Discord.js</Text>
                                 <Text small type="secondary">
@@ -99,10 +99,17 @@ const Contact = () => {
                                     knowledge.
                                 </Text>
                                 <Display shadow caption="Hestia Source-Code">
-                                    <a href="http://" target="_blank">
-                                        <Card width="500pt" type="dark">
+                                    <a
+                                        href="http://github.com/accretence/hestia"
+                                        target="_blank"
+                                    >
+                                        <Card
+                                            hoverable
+                                            width="500pt"
+                                            type="dark"
+                                        >
                                             <Text h4 my={0}>
-                                                Github
+                                                🔗 Github
                                             </Text>
                                             <Text
                                                 small
@@ -112,13 +119,14 @@ const Contact = () => {
                                                         .accents_3,
                                                 }}
                                             >
-                                                accretence/hestia
+                                                https://github.com/accretence/hestia
                                             </Text>
                                         </Card>
                                     </a>
                                 </Display>
                                 <Text h3>
-                                    Gamifying Engagement- User-Journey Map
+                                    Gamifying Engagement - Illustrated via
+                                    User-Journey Map
                                 </Text>
                                 <Text small type="secondary">
                                     Hestia gamifies engagement through multiple
@@ -136,7 +144,7 @@ const Contact = () => {
                                 >
                                     <iframe
                                         width="900pt"
-                                        height="700pt"
+                                        height="600pt"
                                         src="https://miro.com/app/live-embed/uXjVOr855ig=/?moveToViewport=-1192,-669,2048,1200"
                                         frameBorder="0"
                                         scrolling="no"
