@@ -31,7 +31,7 @@ const config = {
     experiences: [
         {
             title: 'Learning and Development Specialist',
-            employer: 'Fahandej Engineering, Tehran',
+            employer: 'Danak Group, Tehran',
             period: 'Jan 2018 – Jun 2018',
             skills: ['Facilitation', 'Writing Practical Documentations'],
             description:
@@ -43,14 +43,13 @@ const config = {
             period: 'Sep 2018',
             skills: ['Communication', 'Improvisation'],
             description:
-                'As both a fluent English speaker and an architectural engineering student I helped translate for and connect to international attendees and organizers while collaborating with a group of 12 people to execute a Pharmaceutical Exhibition on an international level.',
+                'In a collaboration with a large team of 12 professionals, I helped with the execution of a week-long Pharmaceutical Exhibition on an international level. My duties consisted of supervising booth assembly & disassembly processes, ensuring the safety of all participants and stakeholders, and translating for and accommodating the needs of foreign participants.',
         },
         {
             title: 'Interior Architect, and BIM Specialist',
             employer: 'Farazin, Tehran',
             period: 'August 2019 - December 2019',
             skills: ['Co-Operation', 'Autodesk Revit', 'BIM'],
-            poster: 'https://i.imgur.com/OlR7y8U.jpg',
             description:
                 'As a recent Bachelor of Architecture graduate, I was able to join a great team of designers and engineers in an industry-leading company. I was able to bring my 3D Modelling and Rendering skills and improve the company’s presentation capabilities.',
         },
@@ -59,9 +58,24 @@ const config = {
             employer: 'Farazin, Tehran',
             period: 'December 2019 - May 2020',
             skills: ['Agile Pipelines'],
-            poster: 'https://i.imgur.com/R7RniiG.png',
             description:
                 'In my first experience in the development industry, I was able to work with an amazing group of individuals and web engineers and gain experience in both UI & UX Design, and front-end development. I was given the opportunity to work on several projects including in-house CRM, Resource & Project Management and Analysis, and E-Commerce Platforms from the design phase to presenting designs to upper management and educating in-house users on tool-chain changes.',
+        },
+        {
+            title: 'Back-End Developer',
+            employer: 'Freelance',
+            period: 'June 2020 - Present',
+            skills: ['Time-Mangement, Valuation Techniques'],
+            description:
+                'I have kept myself busy since the beginning of the COVID-19 pandemic by doing freelance Back-End Development projects to earn income working from home & gain real-world development experience.',
+        },
+        {
+            title: 'Construction Supervisor',
+            employer: 'Nikan HVAC, Tehran',
+            period: 'September 2020 - March 2021',
+            skills: ['Crisis-Management'],
+            description:
+                'I have had the honor of trying my hand at supervising a large-scale industrial construction project. I represented the HVAC contractor and ensured the construction followed the documentation provided by the mechanical engineers and the product specifications provided by Nikan HVAC.',
         },
     ],
     projects: [
@@ -69,7 +83,7 @@ const config = {
             description: `Open-Source Web-Ready Interactive 3D Presentation of my BArch thesis. You can hide different parts of the building to see the inner workings!`,
             name: 'Transparent Architecture',
             page: '/projects/bachelors_thesis',
-            poster: 'https://mir-s3-cdn-cf.behance.net/project_modules/2800_opt_1/64594c61446529.5a6f3c0731f96.jpg',
+            poster: 'https://i.imgur.com/6GJpaCd.jpg',
             links: {
                 PDF: 'https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view',
             },
@@ -90,7 +104,7 @@ const config = {
                 'Gamification',
                 'MongoDB Database',
                 'Node.js',
-                'User-Journey Map',
+                'User-Flow-Map',
             ],
         },
         {
@@ -109,28 +123,6 @@ const config = {
             name: 'Perlin Noise & Invisibility in Skyscrapers',
             page: '/projects/bachelors_thesis',
             poster: 'https://mir-s3-cdn-cf.behance.net/project_modules/fs/a6f00c76514213.5c6d5bfb1c3cb.jpg',
-            links: {
-                PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
-                YOUTUBE: 'https://youtu.be/qIsABW5UTys',
-            },
-            keywords: ['Three.js', 'Architecture', 'Unity'],
-        },
-        {
-            description: 'Masters of Architectural Technology',
-            name: 'Perlin Noise & Invisibility in Skyscrapers',
-            page: '/projects/bachelors_thesis',
-            poster: 'https://mir-s3-cdn-cf.behance.net/projects/max_808/dbc9a3142560005.Y3JvcCwxNDg4LDExNjQsMTI4LDA.jpg',
-            links: {
-                PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
-                YOUTUBE: 'https://youtu.be/qIsABW5UTys',
-            },
-            keywords: ['Three.js', 'Architecture', 'Unity'],
-        },
-        {
-            description: 'Masters of Architectural Technology',
-            name: 'Perlin Noise & Invisibility in Skyscrapers',
-            page: '/projects/bachelors_thesis',
-            poster: 'https://cdn.dribbble.com/userupload/2896514/file/original-8472ca96356b9c49e138d373684422e7.jpg?compress=1&resize=2048x1536',
             links: {
                 PDF: 'https://drive.google.com/file/d/1FIGE4zIfGLg-_Imsc_dsi3qJVl8UFSnS/view?usp=sharing',
                 YOUTUBE: 'https://youtu.be/qIsABW5UTys',

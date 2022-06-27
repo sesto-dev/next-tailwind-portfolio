@@ -125,8 +125,8 @@ const Contact = () => {
                                     </a>
                                 </Display>
                                 <Text h3>
-                                    Gamifying Engagement - Illustrated via
-                                    User-Journey Map
+                                    Gamifying Engagement - Illustrated via User
+                                    Flow-Map
                                 </Text>
                                 <Text small type="secondary">
                                     Hestia gamifies engagement through multiple
@@ -140,7 +140,7 @@ const Contact = () => {
                                 </Text>
                                 <Display
                                     shadow
-                                    caption="Interactive User-Journey Map. Click on 'See the board' 👆"
+                                    caption="Interactive User Flow-Map. Click on 'See the board' 👆"
                                 >
                                     <iframe
                                         width="900pt"
