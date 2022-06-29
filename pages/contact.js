@@ -1,7 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
-import { useTheme, Text, Card, Image, Grid } from '@geist-ui/core'
-import { Layout } from '../geist-abstraction'
+import { useTheme, Text, Card, Grid, Code } from '@geist-ui/core'
+import { Layout } from '../next-dashboard-abstraction'
 
 import { themePreference } from '../state/Context'
 import config from '../main.config'
@@ -17,7 +16,7 @@ const Contact = () => {
                 themePreference={themePreference}
                 crownLarge="Contact"
                 crownSmall="These are all the ways we can can get in contact. ;-) E-Mail is easiest and fastest."
-                metaTitle="Experiences"
+                metaTitle="Contact"
             >
                 <Grid.Container gap={1}>
                     {Object.keys(links).map((key, i) => {
@@ -37,9 +36,9 @@ const Contact = () => {
                                             {key.toUpperCase()}
                                         </Text>
                                         <br />
-                                        <Text mt={0} small type="secondary">
+                                        <Code style={{ fontSize: '0.8rem' }}>
                                             {link}
-                                        </Text>
+                                        </Code>
                                     </Card>
                                 </a>
                             </Grid>

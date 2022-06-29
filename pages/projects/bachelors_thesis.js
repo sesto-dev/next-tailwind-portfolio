@@ -1,20 +1,23 @@
 import { useState } from 'react'
-import Link from 'next/link'
 import {
     Card,
+    Display,
     Spacer,
     Text,
-    Select,
+    Description,
     Grid,
     Link as GeistLink,
+    useTheme,
+    Checkbox,
 } from '@geist-ui/core'
-import { Layout } from '../../geist-abstraction'
+import { Layout } from '../../next-dashboard-abstraction'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
 import Scene from '../../components/three/BachelorsThesis'
 
 const Thesis = () => {
+    const theme = useTheme()
     const [visibilities, setVisibilities] = useState({
         floor: true,
         ceiling: true,
@@ -68,29 +71,13 @@ const Thesis = () => {
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
-                        <Card hoverable width="100%">
-                            <Text h4 py={0} my={0}>
-                                Turn Parts On/ Off ⚡🔌
-                            </Text>
-                            <Text small>... using this 👇 menu!</Text>
-                            <Select
-                                multiple
-                                clearable={true}
-                                initialValue={options}
-                                onChange={handler}
-                                width="100%"
-                                my={1}
-                            >
-                                {options.map((option) => (
-                                    <Select.Option key={option} value={option}>
-                                        {option}
-                                    </Select.Option>
-                                ))}
-                            </Select>
-                        </Card>
-                    </Grid>
-                    <Grid xs={24}>
-                        <Card hoverable width="100%">
+                        <Card
+                            style={{
+                                backgroundColor: `${theme.palette.accents_1}`,
+                            }}
+                            shadow
+                            width="100%"
+                        >
                             <Text h4 py={0} my={0}>
                                 INTERACTIVE 3D VIEW 🎮
                             </Text>
@@ -101,9 +88,43 @@ const Thesis = () => {
                             </Text>
                             <Spacer />
                             <Scene visibilities={visibilities} />
+                            <Display mt={0.5}>
+                                <Text h4 mt={0} mb={2}>
+                                    Turn Parts On/ Off ⚡🔌 in the model using
+                                    this 👇 menu!
+                                </Text>
+                                <Checkbox.Group
+                                    value={options}
+                                    onChange={handler}
+                                >
+                                    <Grid.Container gap={1}>
+                                        {options.map((option) => (
+                                            <Grid
+                                                key={option}
+                                                xs={12}
+                                                sm={8}
+                                                md={6}
+                                                my={1}
+                                            >
+                                                <Checkbox
+                                                    type="secondary"
+                                                    value={option}
+                                                >
+                                                    <Description
+                                                        title="Geometry"
+                                                        content={option.toUpperCase()}
+                                                    />
+                                                </Checkbox>
+                                            </Grid>
+                                        ))}
+                                    </Grid.Container>
+                                </Checkbox.Group>
+                            </Display>
                         </Card>
                     </Grid>
-                    <Nav />
+                    <Grid xs={24}>
+                        <Nav />
+                    </Grid>
                 </Grid.Container>
             </Layout>
             <style jsx global>
@@ -122,22 +143,18 @@ const Thesis = () => {
 
 const Nav = () => {
     return (
-        <>
-            <Grid xs={24}>
-                <GeistLink
-                    width="100%"
-                    target="_blank"
-                    href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
-                >
-                    <Card hoverable width="100%">
-                        <Text h4 my={0}>
-                            🔗 PDF
-                        </Text>
-                        <Text small>Read the full PDF Presentation!</Text>
-                    </Card>
-                </GeistLink>
-            </Grid>
-        </>
+        <GeistLink
+            width="100%"
+            target="_blank"
+            href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
+        >
+            <Card hoverable width="100%">
+                <Text h4 my={0}>
+                    🔗 PDF
+                </Text>
+                <Text small>Read the full PDF Presentation!</Text>
+            </Card>
+        </GeistLink>
     )
 }
 

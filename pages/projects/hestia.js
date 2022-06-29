@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import {
     useTheme,
     Display,
@@ -10,12 +9,12 @@ import {
     Spacer,
     Code,
 } from '@geist-ui/core'
-import { Layout } from '../../geist-abstraction'
+import { Layout } from '../../next-dashboard-abstraction'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
 
-const Contact = () => {
+const Hestia = () => {
     const theme = useTheme()
 
     return (
@@ -29,7 +28,14 @@ const Contact = () => {
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
-                        <Card hoverable padding={2} width="100%">
+                        <Card
+                            style={{
+                                backgroundColor: `${theme.palette.accents_1}`,
+                            }}
+                            shadow
+                            padding={2}
+                            width="100%"
+                        >
                             <Card.Content>
                                 <Text h3>Introduction to Discord.js</Text>
                                 <Text small type="secondary">
@@ -103,11 +109,7 @@ const Contact = () => {
                                         href="http://github.com/accretence/hestia"
                                         target="_blank"
                                     >
-                                        <Card
-                                            hoverable
-                                            width="500pt"
-                                            type="dark"
-                                        >
+                                        <Card hoverable width="500pt">
                                             <Text h4 my={0}>
                                                 🔗 Github
                                             </Text>
@@ -119,7 +121,9 @@ const Contact = () => {
                                                         .accents_3,
                                                 }}
                                             >
-                                                https://github.com/accretence/hestia
+                                                <Code>
+                                                    https://github.com/accretence/hestia
+                                                </Code>
                                             </Text>
                                         </Card>
                                     </a>
@@ -158,8 +162,8 @@ const Contact = () => {
             </Layout>
             <style jsx global>
                 {`
-                    .justify .content {
-                        text-align: justify;
+                    .content {
+                        text-align: justify !important;
                     }
                 `}
             </style>
@@ -167,4 +171,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default Hestia

@@ -1,10 +1,9 @@
 import React from 'react'
-import Link from 'next/link'
-import { Layout } from '../geist-abstraction'
-import { Code, useTheme } from '@geist-ui/core'
+import { Layout } from '../next-dashboard-abstraction'
+import { Code, useTheme, Grid } from '@geist-ui/core'
 import { themePreference } from '../state/Context'
 import config from '../main.config'
-import Projects from '../components/Projects'
+import Project from '../components/Project'
 
 const Index = () => {
     const theme = useTheme()
@@ -26,7 +25,17 @@ const Index = () => {
                 </>
             }
         >
-            <Projects />
+            <Grid.Container gap={1}>
+                {config.projects.map((project) => (
+                    <Grid key={project.name} sm={24} md={12} xl={8}>
+                        <Project
+                            key={project.name}
+                            theme={theme}
+                            project={project}
+                        />
+                    </Grid>
+                ))}
+            </Grid.Container>
         </Layout>
     )
 }

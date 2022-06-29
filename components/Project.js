@@ -1,33 +1,5 @@
-import {
-    Card,
-    Image,
-    Text,
-    useTheme,
-    Grid,
-    Spacer,
-    Badge,
-} from '@geist-ui/core'
+import { Card, Image, Text, Spacer, Badge } from '@geist-ui/core'
 import Link from 'next/link'
-
-import config from '../main.config'
-
-const Projects = () => {
-    const theme = useTheme()
-
-    return (
-        <Grid.Container gap={1}>
-            {config.projects.map((project) => (
-                <Grid key={project.name} sm={24} md={12} xl={8}>
-                    <Project
-                        key={project.name}
-                        theme={theme}
-                        project={project}
-                    />
-                </Grid>
-            ))}
-        </Grid.Container>
-    )
-}
 
 const Project = ({ theme, project }) => {
     return (
@@ -69,4 +41,4 @@ const Project = ({ theme, project }) => {
     )
 }
 
-export default Projects
+export default Project

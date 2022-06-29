@@ -15,11 +15,11 @@ import {
 
 const Scene = ({ visibilities }) => {
     return (
-        <div style={{ width: '100%', height: '75vh' }}>
+        <div style={{ width: '100%', height: '60vh' }}>
             <Canvas
                 camera={{
                     position: [100, 100, 100],
-                    zoom: 7,
+                    zoom: 9,
                     far: 300,
                 }}
             >
