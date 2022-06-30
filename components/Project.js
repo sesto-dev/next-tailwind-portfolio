@@ -4,7 +4,7 @@ import Link from 'next/link'
 const Project = ({ theme, project }) => {
     return (
         <Link href={project.page}>
-            <a style={{ width: '100%' }}>
+            <a style={{ width: '100%', textAlign: 'justify' }}>
                 <Card hoverable key={project.name} width="100%" height="100%">
                     <Image
                         mb={0.5}

@@ -103,7 +103,6 @@ const config = {
                 'Gamification',
                 'MongoDB Database',
                 'Node.js',
-                'User-Flow-Map',
             ],
         },
         {

@@ -19,7 +19,7 @@ const Scene = ({ visibilities }) => {
                 camera={{
                     position: [100, 100, 100],
                     zoom: 9,
-                    far: 300,
+                    far: 900,
                 }}
             >
                 <Suspense fallback={<Loader />}>
