@@ -9,7 +9,7 @@ import {
     Spacer,
     Code,
 } from '@geist-ui/core'
-import { Layout } from '../../next-dashboard-abstraction'
+import Layout from '../../next-dashboard/components/Layout'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
@@ -25,6 +25,7 @@ const Hestia = () => {
                 crownLarge="Hestia"
                 crownSmall="Self-Hosted Open-Source Discord Bot to onboard users, protect users, and gamify entertainment & engagement."
                 metaTitle="Hestia"
+                metaImage="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png"
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>

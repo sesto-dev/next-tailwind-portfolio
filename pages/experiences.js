@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTheme, Grid } from '@geist-ui/core'
-import { Layout } from '../next-dashboard-abstraction'
+import Layout from '../next-dashboard/components/Layout'
 
 import { themePreference } from '../state/Context'
 import config from '../main.config'

@@ -9,7 +9,7 @@ import {
     Spacer,
     Code,
 } from '@geist-ui/core'
-import { Layout } from '../../next-dashboard-abstraction'
+import Layout from '../../next-dashboard/components/Layout'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
@@ -25,6 +25,7 @@ const Next_Dashboard = () => {
                 crownLarge="Grasshopper UI Redesign"
                 crownSmall="My attempt to bring Rhino Grasshopper's UI up-to-date in Figma!"
                 metaTitle="Grasshopper UI Redesign"
+                metaImage="https://cdn.dribbble.com/users/2782348/screenshots/18605312/media/f5b636c7523f2d4a1afe78d6ff3c6b30.png?compress=1&resize=1600x1200&vertical=top"
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>

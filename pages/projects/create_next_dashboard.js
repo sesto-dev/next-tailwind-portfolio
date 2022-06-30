@@ -9,7 +9,7 @@ import {
     Spacer,
     Code,
 } from '@geist-ui/core'
-import { Layout } from '../../next-dashboard-abstraction'
+import Layout from '../../next-dashboard/components/Layout'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
@@ -18,7 +18,6 @@ const Geist = () => {
     const links = [
         'http://github.com/accretence/create-next-dashboard',
         'http://github.com/accretence/next-dashboard-boilerplate',
-        'http://github.com/accretence/next-dashboard-abstraction',
     ]
     const theme = useTheme()
 
@@ -28,8 +27,9 @@ const Geist = () => {
                 config={config}
                 themePreference={themePreference}
                 crownLarge="Create-Next-Dashboard"
-                crownSmall="1-Line script that sets in motion a barrage of tools and web-services to deploy a highly-customizable state-of-the-art website, like this one!"
+                crownSmall="1-Line script that sets in motion a barrage of tools and web services to present the user with a highly customizable, and instantly deployable progressive web application."
                 metaTitle="Create-Next-Dashboard"
+                metaImage="https://i.imgur.com/hNovO0U.png"
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
@@ -52,12 +52,16 @@ const Geist = () => {
                                     use CLI tools and other executables hosted
                                     on the registry. It greatly simplifies a
                                     number of things that, until now, required a
-                                    bit of ceremony to do with plain npm:
+                                    bit of ceremony to do with plain npm.
+                                    <Spacer />
+                                    You can visit the{' '}
+                                    <Code>create-next-dashboard</Code> ecosystem
+                                    provided by the links below.
                                 </Text>
                                 <Spacer />
                                 <Grid.Container gap={1}>
                                     {links.map((link) => (
-                                        <Grid key={link} xs={24} md={8}>
+                                        <Grid key={link} xs={24} md={12}>
                                             <a
                                                 style={{ width: '100%' }}
                                                 href={link}

@@ -6,7 +6,7 @@ const config = {
         title: 'Accretence',
         description: "Amirhossein Mohammadi's Personal Website & Portfolio! 👨‍💻",
         url: 'https://accretence.com',
-        image: 'https://i.imgur.com/NitQE9d.jpg',
+        image: 'https://i.imgur.com/hNovO0U.png',
         handle: '@accretence',
         keywords: 'portfolio, accretence',
     },
@@ -43,7 +43,7 @@ const config = {
             period: 'Sep 2018',
             skills: ['Communication', 'Improvisation'],
             description:
-                'In a collaboration with a large team of 12 professionals, I helped with the execution of a week-long Pharmaceutical Exhibition on an international level. My duties consisted of supervising booth assembly & disassembly processes, ensuring the safety of all participants and stakeholders, and translating for and accommodating the needs of foreign participants.',
+                'I helped transition the design department of a traditional design firm to a more contemporary operational pipeline in a 6 months L&D program. I created written documents and small videos that helped the design department switch from outdated CAD software to modern BIM software which resulted in improved efficiency and reduced redundant tasks.',
         },
         {
             title: 'Interior Architect & BIM Specialist',
@@ -51,7 +51,7 @@ const config = {
             period: 'August 2019 - December 2019',
             skills: ['Co-Operation', 'Autodesk Revit', 'BIM'],
             description:
-                'As a recent Bachelor of Architecture graduate, I was able to join a great team of designers and engineers in an industry-leading company. I was able to bring my 3D Modelling and Rendering skills and improve the company’s presentation capabilities.',
+                'As a recent Bachelor of Architectural Engineering, I was able to join a professional team of designers & engineers in an industry-leading company and put everything I had learned in BIM, Autodesk Revit, and creating well-designed floor plans to use in a professional work environment. ',
         },
         {
             title: 'UI & UX Designer',
@@ -107,7 +107,7 @@ const config = {
         },
         {
             description:
-                '1-Line script that sets in motion a barrage of tools and web-services to deploy a highly-customizable state-of-the-art website, like this one!',
+                '1-Line script that sets in motion a barrage of tools and web services to present the user with a highly customizable, and instantly deployable progressive web application.',
             name: 'Create-Next-Dashboard',
             page: '/projects/create_next_dashboard',
             poster: 'https://i.imgur.com/hNovO0U.png',

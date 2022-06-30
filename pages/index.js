@@ -1,5 +1,5 @@
 import React from 'react'
-import { Layout } from '../next-dashboard-abstraction'
+import Layout from '../next-dashboard/components/Layout'
 import { Code, useTheme, Grid } from '@geist-ui/core'
 import { themePreference } from '../state/Context'
 import config from '../main.config'
@@ -17,7 +17,7 @@ const Index = () => {
                 <>
                     I'm Amirhossein Mohammadi, a{' '}
                     <Code>Self-Taught Developer</Code> and an{' '}
-                    <Code>Architecture Graduate</Code>. I work at the
+                    <Code>Architecture Undergraduate</Code>. I work at the
                     intersection of programming and design. In my spare time I
                     try to work on open-source projects. Most of my open-source
                     projects below 👇🏻 are focused on one thing; make deploying

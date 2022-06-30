@@ -9,7 +9,7 @@ import {
     useTheme,
     Checkbox,
 } from '@geist-ui/core'
-import { Layout } from '../../next-dashboard-abstraction'
+import Layout from '../../next-dashboard/components/Layout'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
@@ -78,7 +78,7 @@ const Thesis = () => {
                 }
                 metaTitle="Transparent Architecture"
                 metaDescription="June 2019 - Bachelor's of Architectural Engineering"
-                metaImage="https://i.imgur.com/BBmqRBv.jpg"
+                metaImage="https://i.imgur.com/TR0h5SR.jpg"
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
