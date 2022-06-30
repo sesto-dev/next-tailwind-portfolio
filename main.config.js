@@ -80,7 +80,7 @@ const config = {
     ],
     projects: [
         {
-            description: `Open-Source Web-Ready Interactive 3D Presentation of my BArch thesis. You can hide different parts of the building to see the inner workings!`,
+            description: `Open-Source, web-native, and interactive 3D presentation of my BArch thesis. You can hide different parts of the building to see the inner workings!`,
             name: 'Transparent Architecture',
             page: '/projects/bachelors_thesis',
             poster: 'https://i.imgur.com/TR0h5SR.jpg',
@@ -93,7 +93,7 @@ const config = {
             ],
         },
         {
-            description: `Open-Source, Self-Hosted and Gamified Discord Bot to build highly-engaged communities around products and services.`,
+            description: `Open-Source, self-hosted and gamified Discord bot to build highly-engaged communities around products and services.`,
             name: 'Hestia',
             page: '/projects/hestia',
             poster: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png',

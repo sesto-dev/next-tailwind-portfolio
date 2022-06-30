@@ -25,7 +25,7 @@ const Contact = () => {
                         if (link.includes('https://')) link = link.slice(8)
 
                         return (
-                            <Grid key={i} xs={24} xl={12}>
+                            <Grid key={i} xs={24} md={12}>
                                 <a
                                     style={{ width: '100%' }}
                                     href={links[key]}
@@ -33,7 +33,7 @@ const Contact = () => {
                                 >
                                     <Card hoverable width="100%">
                                         <Text b mb={0}>
-                                            {key.toUpperCase()}
+                                            🔗 {key.toUpperCase()}
                                         </Text>
                                         <br />
                                         <Code style={{ fontSize: '0.8rem' }}>

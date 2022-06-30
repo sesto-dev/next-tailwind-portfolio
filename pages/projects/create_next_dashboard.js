@@ -66,18 +66,11 @@ const Geist = () => {
                                             >
                                                 <Card hoverable>
                                                     <Text h4 my={0}>
-                                                        🔗 Github
+                                                        🔗 GITHUB
                                                     </Text>
-                                                    <Text
-                                                        small
-                                                        type="secondary"
-                                                        style={{
-                                                            color: theme.palette
-                                                                .accents_3,
-                                                        }}
-                                                    >
+                                                    <Card.Footer>
                                                         <Code>{link}</Code>
-                                                    </Text>
+                                                    </Card.Footer>
                                                 </Card>
                                             </a>
                                         </Grid>

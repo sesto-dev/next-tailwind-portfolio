@@ -41,9 +41,14 @@ const Next_Dashboard = () => {
                                 <Text small type="secondary">
                                     Grasshopper is a graphical algorithm editor
                                     tightly integrated with Rhino’s 3-D modeling
-                                    tools, allowing designers to build form
-                                    generators from the simple to the
-                                    awe-inspiring.
+                                    tools. The program was created by David
+                                    Rutten at Robert McNeel & Associates.
+                                    Programs are created by dragging components
+                                    onto a canvas. The outputs to these
+                                    components are then connected to the inputs
+                                    of subsequent components, allowing designers
+                                    to build form generators from the simple to
+                                    the awe-inspiring.
                                 </Text>
                                 <Display
                                     shadow

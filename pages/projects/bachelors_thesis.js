@@ -6,7 +6,6 @@ import {
     Text,
     Description,
     Grid,
-    Link as GeistLink,
     useTheme,
     Checkbox,
 } from '@geist-ui/core'
@@ -64,9 +63,21 @@ const Thesis = () => {
                 config={config}
                 themePreference={themePreference}
                 crownLarge="Bachelor's Thesis: Transparent Architecture"
-                crownSmall="June 2019 - Bachelor's of Architectural Engineering"
+                crownSmall={
+                    <>
+                        June 2019, Bachelor's of Architectural Engineering
+                        Thesis, You can read the full presentation documentation{' '}
+                        <a
+                            href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            here.
+                        </a>
+                    </>
+                }
                 metaTitle="Transparent Architecture"
-                metaDescription="June 2019 - Bachelor's of Architectural Engineering Thesis"
+                metaDescription="June 2019 - Bachelor's of Architectural Engineering"
                 metaImage="https://i.imgur.com/BBmqRBv.jpg"
             >
                 <Grid.Container gap={1}>
@@ -122,9 +133,6 @@ const Thesis = () => {
                             </Display>
                         </Card>
                     </Grid>
-                    <Grid xs={24}>
-                        <Nav />
-                    </Grid>
                 </Grid.Container>
             </Layout>
             <style jsx global>
@@ -138,23 +146,6 @@ const Thesis = () => {
                 `}
             </style>
         </>
-    )
-}
-
-const Nav = () => {
-    return (
-        <GeistLink
-            width="100%"
-            target="_blank"
-            href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
-        >
-            <Card hoverable width="100%">
-                <Text h4 my={0}>
-                    🔗 PDF
-                </Text>
-                <Text small>Read the full PDF Presentation!</Text>
-            </Card>
-        </GeistLink>
     )
 }
 

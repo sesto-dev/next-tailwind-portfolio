@@ -110,21 +110,15 @@ const Hestia = () => {
                                         target="_blank"
                                     >
                                         <Card hoverable width="500pt">
-                                            <Text h4 my={0}>
-                                                🔗 Github
+                                            <Text b font={1.1}>
+                                                🔗 GITHUB
                                             </Text>
-                                            <Text
-                                                small
-                                                type="secondary"
-                                                style={{
-                                                    color: theme.palette
-                                                        .accents_3,
-                                                }}
+                                            <br />
+                                            <Code
+                                                style={{ fontSize: '0.8rem' }}
                                             >
-                                                <Code>
-                                                    https://github.com/accretence/hestia
-                                                </Code>
-                                            </Text>
+                                                https://github.com/accretence/hestia
+                                            </Code>
                                         </Card>
                                     </a>
                                 </Display>
