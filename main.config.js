@@ -129,7 +129,7 @@ const config = {
         },
         {
             title: 'Parametric Golden-Gate Bridge',
-            description: `Fully-Parametric Grasshopper to generate a model of Golden-Gate bridge and simulate cables.`,
+            description: `Fully Parametric Grasshopper script to generate a 3D model of Golden-Gate bridge and physcially simulate suspension cables.`,
             page: '/projects/parametric_golden-gate',
             poster: 'https://i.imgur.com/Jb76hkS.jpg',
             keywords: ['Grasshopper'],

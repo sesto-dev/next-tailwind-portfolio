@@ -1,12 +1,10 @@
-import React from 'react'
-import { useTheme, Text, Card, Grid, Code } from '@geist-ui/core'
+import { Text, Card, Grid, Code } from '@geist-ui/core'
 import Layout from '../next-dashboard/components/Layout'
 
 import { themePreference } from '../state/Context'
 import config from '../main.config'
 
 const Contact = () => {
-    const theme = useTheme()
     const { links } = config
 
     return (

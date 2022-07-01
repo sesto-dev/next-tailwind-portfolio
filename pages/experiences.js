@@ -1,4 +1,3 @@
-import React from 'react'
 import { useTheme, Grid } from '@geist-ui/core'
 import Layout from '../next-dashboard/components/Layout'
 
@@ -8,14 +7,18 @@ import Experience from '../components/Experience'
 
 const Experiences = () => {
     const theme = useTheme()
+    const title = 'Experiences'
+    const description = 'My professional experiences.'
+
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge="Experiences"
-                crownSmall="My professional experiences..."
-                metaTitle="Experiences"
+                crownLarge={title}
+                crownSmall={description}
+                metaTitle={title}
+                metaDescription={description}
             >
                 <Grid.Container gap={1}>
                     {config.experiences.map((exp) => (

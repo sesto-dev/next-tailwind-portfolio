@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { GeistProvider, CssBaseline } from '@geist-ui/core'
 
 // Global State

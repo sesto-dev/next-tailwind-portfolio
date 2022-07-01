@@ -1,14 +1,4 @@
-import React from 'react'
-import {
-    useTheme,
-    Display,
-    Text,
-    Card,
-    Image,
-    Grid,
-    Spacer,
-    Code,
-} from '@geist-ui/core'
+import { useTheme, Text, Card, Grid, Spacer, Code } from '@geist-ui/core'
 import Layout from '../../next-dashboard/components/Layout'
 
 import { themePreference } from '../../state/Context'

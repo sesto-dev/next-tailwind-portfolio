@@ -1,4 +1,3 @@
-import React from 'react'
 import {
     useTheme,
     Display,
@@ -238,6 +237,16 @@ const Hestia = () => {
                                         src="https://i.imgur.com/LrQAIRz.jpg"
                                     />
                                 </Display>
+                                <Text small type="secondary">
+                                    You can download the final script using{' '}
+                                    <a
+                                        href="https://drive.google.com/file/d/1ur_8deSArTfyLPbd2whphq7xdSsBcy20/view?usp=sharing"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        this link.
+                                    </a>
+                                </Text>
                             </Card.Content>
                         </Card>
                     </Grid>
