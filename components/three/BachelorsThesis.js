@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from 'react'
+import { Suspense, useRef } from 'react'
 import {
     Environment,
     OrbitControls,
@@ -10,7 +10,7 @@ import { Canvas } from '@react-three/fiber'
 import {
     getPhongMaterial,
     getPhysicalMaterial,
-} from '../../functions/getMaterial'
+} from '../../helpers/getMaterial'
 
 const Scene = ({ visibilities }) => {
     return (
@@ -72,7 +72,7 @@ function Model({ visibilities }) {
     } = visibilities || true
 
     const metalMat = getPhysicalMaterial('White', 0.5)
-    const glassMat = getPhongMaterial('Red', 0.5, true)
+    const glassMat = getPhongMaterial('Gray', 0.5, true)
     const woodMat = getPhysicalMaterial('#BA8C63', 0.3)
     const rubberMat = getPhysicalMaterial('White', 0.7)
     const copperMat = getPhysicalMaterial('#7f4330', 0.2)

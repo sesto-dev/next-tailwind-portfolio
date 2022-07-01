@@ -5,7 +5,7 @@ const Project = ({ theme, project }) => {
     return (
         <Link href={project.page}>
             <a style={{ width: '100%', textAlign: 'justify' }}>
-                <Card hoverable key={project.name} width="100%" height="100%">
+                <Card hoverable key={project.title} width="100%" height="100%">
                     <Image
                         mb={0.5}
                         height="20rem"
@@ -16,7 +16,7 @@ const Project = ({ theme, project }) => {
                         }}
                     />
                     <Text b mb={0}>
-                        {project.name},{' '}
+                        {project.title},{' '}
                     </Text>
                     <Text small style={{ color: `${theme.palette.accents_6}` }}>
                         {project.description}

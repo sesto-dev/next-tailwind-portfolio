@@ -16,15 +16,18 @@ import config from '../../main.config'
 
 const Hestia = () => {
     const theme = useTheme()
+    const title = config.projects[1].title
+    const description = config.projects[1].description
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge="Hestia"
-                crownSmall="Self-Hosted Open-Source Discord Bot to onboard users, protect users, and gamify entertainment & engagement."
-                metaTitle="Hestia"
+                crownLarge={title}
+                crownSmall={description}
+                metaTitle={title}
+                metaDescription={description}
                 metaImage="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png"
             >
                 <Grid.Container gap={1}>

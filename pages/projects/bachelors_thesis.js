@@ -57,12 +57,15 @@ const Thesis = () => {
         setVisibilities(temp)
     }
 
+    const title = config.projects[0].title
+    const description = config.projects[0].description
+
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge="Bachelor's Thesis: Transparent Architecture"
+                crownLarge={title}
                 crownSmall={
                     <>
                         June 2019, Bachelor's of Architectural Engineering
@@ -76,8 +79,8 @@ const Thesis = () => {
                         </a>
                     </>
                 }
-                metaTitle="Transparent Architecture"
-                metaDescription="June 2019 - Bachelor's of Architectural Engineering"
+                metaTitle={title}
+                metaDescription={description}
                 metaImage="https://i.imgur.com/TR0h5SR.jpg"
             >
                 <Grid.Container gap={1}>

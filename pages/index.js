@@ -27,9 +27,9 @@ const Index = () => {
         >
             <Grid.Container gap={1}>
                 {config.projects.map((project) => (
-                    <Grid key={project.name} sm={24} md={12} xl={8}>
+                    <Grid key={project.title} sm={24} md={12} xl={8}>
                         <Project
-                            key={project.name}
+                            key={project.title}
                             theme={theme}
                             project={project}
                         />

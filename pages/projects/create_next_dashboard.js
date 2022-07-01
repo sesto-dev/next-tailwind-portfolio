@@ -20,15 +20,18 @@ const Geist = () => {
         'http://github.com/accretence/next-dashboard-boilerplate',
     ]
     const theme = useTheme()
+    const title = config.projects[2].title
+    const description = config.projects[2].description
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge="Create-Next-Dashboard"
-                crownSmall="1-Line script that sets in motion a barrage of tools and web services to present the user with a highly customizable, and instantly deployable progressive web application."
-                metaTitle="Create-Next-Dashboard"
+                crownLarge={title}
+                crownSmall={description}
+                metaTitle={title}
+                metaDescription={description}
                 metaImage="https://i.imgur.com/hNovO0U.png"
             >
                 <Grid.Container gap={1}>

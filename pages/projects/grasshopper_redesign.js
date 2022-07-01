@@ -16,15 +16,18 @@ import config from '../../main.config'
 
 const Next_Dashboard = () => {
     const theme = useTheme()
+    const title = config.projects[3].title
+    const description = config.projects[3].description
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge="Grasshopper UI Redesign"
-                crownSmall="My attempt to bring Rhino Grasshopper's UI up-to-date in Figma!"
-                metaTitle="Grasshopper UI Redesign"
+                crownLarge={title}
+                crownSmall={description}
+                metaTitle={title}
+                metaDescription={description}
                 metaImage="https://cdn.dribbble.com/users/2782348/screenshots/18605312/media/f5b636c7523f2d4a1afe78d6ff3c6b30.png?compress=1&resize=1600x1200&vertical=top"
             >
                 <Grid.Container gap={1}>

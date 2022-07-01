@@ -35,7 +35,7 @@ const config = {
             period: 'Jan 2018 – Jun 2018',
             skills: ['Facilitation', 'Writing Practical Documentations'],
             description:
-                'As a student studying architectural engineering, I helped transition a traditional design and construction company to a more contemporary and sustainable technical multi-desciplinary pipeline in a 6 months L&D program.',
+                'In a 6 months L&D program,  I created written documents and small videos that helped transition a traditional design firm using outdated CAD software to a more contemporary operational pipeline using modern BIM software which resulted in improved efficiency and reduced redundant tasks.',
         },
         {
             title: 'Executive Supervisor',
@@ -43,7 +43,7 @@ const config = {
             period: 'Sep 2018',
             skills: ['Communication', 'Improvisation'],
             description:
-                'I helped transition the design department of a traditional design firm to a more contemporary operational pipeline in a 6 months L&D program. I created written documents and small videos that helped the design department switch from outdated CAD software to modern BIM software which resulted in improved efficiency and reduced redundant tasks.',
+                'In collaboration with a large team of 12 professionals, I helped with the execution of a week-long Pharmaceutical Exhibition on an international level. My duties consisted of supervising booth assembly & disassembly processes, ensuring the safety of all participants, and translating for and accommodating the needs of foreign participants.',
         },
         {
             title: 'Interior Architect & BIM Specialist',
@@ -51,7 +51,7 @@ const config = {
             period: 'August 2019 - December 2019',
             skills: ['Co-Operation', 'Autodesk Revit', 'BIM'],
             description:
-                'As a recent Bachelor of Architectural Engineering, I was able to join a professional team of designers & engineers in an industry-leading company and put everything I had learned in BIM, Autodesk Revit, and creating well-designed floor plans to use in a professional work environment. ',
+                'As a recent Bachelor of Architectural Engineering, I was able to join a professional team of designers & engineers in an industry-leading company and put everything I had learned in BIM, Autodesk Revit, and creating well-designed floor plans to use in a professional work environment.',
         },
         {
             title: 'UI & UX Designer',
@@ -59,7 +59,7 @@ const config = {
             period: 'December 2019 - May 2020',
             skills: ['Agile Pipelines'],
             description:
-                'In my first experience in the development industry, I was able to work with an amazing group of individuals and web engineers and gain experience in both UI & UX Design, and front-end development. I was given the opportunity to work on several projects including in-house CRM, Resource & Project Management and Analysis, and E-Commerce Platforms from the design phase to presenting designs to upper management and educating in-house users on tool-chain changes.',
+                'I had the honor of designing several projects including in-house Enterprise Resource Planning, and E-Commerce Platforms starting from the design phase to presenting designs to upper management and educating in-house users on tool-chain changes.',
         },
         {
             title: 'Back-End Developer',
@@ -67,7 +67,7 @@ const config = {
             period: 'June 2020 - Present',
             skills: ['Time-Mangement', 'Valuation Techniques'],
             description:
-                'I have kept myself busy since the beginning of the COVID-19 pandemic by doing freelance Back-End Development projects to earn income working from home & gain real-world development experience.',
+                'I’ve kept myself busy since the beginning of the COVID-19 pandemic by freelancing programming projects to earn income working from home & gain real-world development experience. Most projects I’ve delivered included web-scraping server-side applications or login credentials servers & databases.',
         },
         {
             title: 'Construction Supervisor',
@@ -75,13 +75,13 @@ const config = {
             period: 'September 2020 - March 2021',
             skills: ['Crisis-Management'],
             description:
-                'I have had the honor of trying my hand at supervising a large-scale industrial construction project. I represented the HVAC contractor and ensured the construction followed the documentation provided by the mechanical engineers and the product specifications provided by Nikan HVAC.',
+                'Taking part in a large-scale industrial construction project, I represented the HVAC contractor and ensured the construction followed the documentation provided by the mechanical engineers and the product specifications provided by Nikan HVAC.',
         },
     ],
     projects: [
         {
-            description: `Open-Source, web-native, and interactive 3D presentation of my BArch thesis. You can hide different parts of the building to see the inner workings!`,
-            name: 'Transparent Architecture',
+            title: 'Transparent Architecture',
+            description: `Open-Source web-native interactive 3D presentation of my BArch thesis. You can hide different parts of the structure to see the inner workings!`,
             page: '/projects/bachelors_thesis',
             poster: 'https://i.imgur.com/TR0h5SR.jpg',
             keywords: [
@@ -93,8 +93,8 @@ const config = {
             ],
         },
         {
-            description: `Open-Source, self-hosted and gamified Discord bot to build highly-engaged communities around products and services.`,
-            name: 'Hestia',
+            title: 'Hestia',
+            description: `Open-Source, self-hosted, and gamified Discord bot to build highly-engaged communities around products and services.`,
             page: '/projects/hestia',
             poster: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png',
             keywords: [
@@ -106,9 +106,9 @@ const config = {
             ],
         },
         {
+            title: 'Create-Next-Dashboard',
             description:
                 '1-Line script that sets in motion a barrage of tools and web services to present the user with a highly customizable, and instantly deployable progressive web application.',
-            name: 'Create-Next-Dashboard',
             page: '/projects/create_next_dashboard',
             poster: 'https://i.imgur.com/hNovO0U.png',
             keywords: [
@@ -121,11 +121,18 @@ const config = {
             ],
         },
         {
+            title: 'Rhino Grasshopper UI Redesign',
             description: `My attempt to bring Rhino Grasshopper's UI up-to-date in Figma!`,
-            name: 'Rhino Grasshopper UI Redesign',
             page: '/projects/grasshopper_redesign',
             poster: 'https://cdn.dribbble.com/users/2782348/screenshots/18605312/media/f5b636c7523f2d4a1afe78d6ff3c6b30.png?compress=1&resize=1600x1200&vertical=top',
             keywords: ['UI/ UX Design', 'Figma'],
+        },
+        {
+            title: 'Parametric Golden-Gate Bridge',
+            description: `Fully-Parametric Grasshopper to generate a model of Golden-Gate bridge and simulate cables.`,
+            page: '/projects/parametric_golden-gate',
+            poster: 'https://i.imgur.com/Jb76hkS.jpg',
+            keywords: ['Grasshopper'],
         },
     ],
 }
