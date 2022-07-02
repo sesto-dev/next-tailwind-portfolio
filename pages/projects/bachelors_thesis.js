@@ -24,7 +24,7 @@ const Thesis = () => {
         ducting: true,
         lighting: true,
         structure: true,
-        curtain: true,
+        walls: true,
         panels: true,
         rooms: true,
     })
@@ -36,7 +36,7 @@ const Thesis = () => {
         'ducting',
         'lighting',
         'structure',
-        'curtain',
+        'walls',
         'panels',
         'rooms',
     ]
@@ -79,21 +79,16 @@ const Thesis = () => {
                             shadow
                             width="100%"
                         >
-                            <Text h4 py={0} my={0}>
-                                INTERACTIVE 3D VIEW 🎮
-                            </Text>
-                            <Text small>
-                                ... you can use your 🐭 or 👆 if you have a
-                                touch screen device to orbit the model after it
-                                loads.
-                            </Text>
-                            <Spacer />
                             <Scene visibilities={visibilities} />
-                            <Display mt={0.5}>
-                                <Text h4 mt={0} mb={2}>
-                                    Turn Parts On/ Off ⚡🔌 in the model using
-                                    this 👇 menu!
+                            <Display mx={1} mt={0.5}>
+                                <Text>
+                                    You can interact with the 3D Model above 👆
+                                    using your mouse or touch-screen!
+                                    <br />
+                                    ... or turn parts On/ Off ⚡🔌 in the model
+                                    using this 👇 menu!
                                 </Text>
+                                <Spacer />
                                 <Checkbox.Group
                                     value={options}
                                     onChange={handler}
@@ -121,7 +116,7 @@ const Thesis = () => {
                                     </Grid.Container>
                                 </Checkbox.Group>
                                 <Spacer />
-                                <Text small type="secondary">
+                                <Text type="secondary">
                                     You can read the full presentation
                                     documentation{' '}
                                     <a

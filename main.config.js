@@ -1,6 +1,7 @@
 const config = {
     theme: {
         width: '900pt',
+        defaultTheme: 'dark',
     },
     meta: {
         title: 'Accretence',

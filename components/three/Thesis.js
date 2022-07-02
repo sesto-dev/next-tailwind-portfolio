@@ -1,5 +1,6 @@
 import { Suspense, useRef } from 'react'
 import {
+    Loader,
     Environment,
     OrbitControls,
     useGLTF,
@@ -14,7 +15,7 @@ import {
 
 const Scene = ({ visibilities }) => {
     return (
-        <div style={{ width: '100%', height: '60vh' }}>
+        <div style={{ width: '100%', height: '65vh' }}>
             <Canvas
                 camera={{
                     position: [100, 100, 100],
@@ -22,7 +23,7 @@ const Scene = ({ visibilities }) => {
                     far: 900,
                 }}
             >
-                <Suspense fallback={<Loader />}>
+                <Suspense fallback={null}>
                     <Model visibilities={visibilities} />
                     <Environment preset="sunset" />
                     <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -49,6 +50,7 @@ const Scene = ({ visibilities }) => {
                     maxPolarAngle={Math.PI / 2.1}
                 />
             </Canvas>
+            <Loader />
         </div>
     )
 }
@@ -64,7 +66,7 @@ function Model({ visibilities }) {
         ducting,
         lighting,
         structure,
-        curtain,
+        walls,
         panels,
         rooms,
     } = visibilities || true
@@ -137,7 +139,7 @@ function Model({ visibilities }) {
                     />
                 </group>
             )}
-            {curtain && (
+            {walls && (
                 <>
                     <group position={[2.09, 3.64, -0.23]}>
                         <mesh
@@ -237,35 +239,6 @@ function Model({ visibilities }) {
                 </>
             )}
         </group>
-    )
-}
-
-function Loader() {
-    return (
-        <Html center>
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20vh"
-                height="20vh"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="xMidYMid"
-            >
-                <path
-                    d="M10 50A40 40 0 0 0 90 50A40 42 0 0 1 10 50"
-                    fill="#dfdfdf"
-                    stroke="none"
-                >
-                    <animateTransform
-                        attributeName="transform"
-                        type="rotate"
-                        dur="1s"
-                        repeatCount="indefinite"
-                        keyTimes="0;1"
-                        values="0 50 51;360 50 51"
-                    ></animateTransform>
-                </path>
-            </svg>
-        </Html>
     )
 }
 
