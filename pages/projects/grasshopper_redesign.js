@@ -6,19 +6,18 @@ import config from '../../main.config'
 
 const Next_Dashboard = () => {
     const theme = useTheme()
-    const title = config.projects[3].title
-    const description = config.projects[3].description
+    const project = config.projects[4]
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge={title}
-                crownSmall={description}
-                metaTitle={title}
-                metaDescription={description}
-                metaImage="https://cdn.dribbble.com/users/2782348/screenshots/18605312/media/f5b636c7523f2d4a1afe78d6ff3c6b30.png?compress=1&resize=1600x1200&vertical=top"
+                crownLarge={project.title}
+                crownSmall={project.description}
+                metaTitle={project.title}
+                metaDescription={project.description}
+                metaImage={project.poster}
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>

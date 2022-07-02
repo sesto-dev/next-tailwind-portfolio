@@ -55,9 +55,7 @@ const Scene = ({ visibilities }) => {
 
 function Model({ visibilities }) {
     const group = useRef()
-    const { nodes, materials } = useGLTF(
-        '../../assets/models/BachelorsThesis.glb'
-    )
+    const { nodes, materials } = useGLTF('../../assets/models/Thesis.glb')
 
     const {
         floor,

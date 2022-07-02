@@ -22,11 +22,15 @@ const Experience = ({ exp, theme }) => {
                 {exp.employer}, {exp.period}
             </Text>
             <Spacer />
-            <Text small>{exp.description}</Text>
+            <Text small type="secondary">
+                {exp.description}
+            </Text>
             {exp.skills && exp.skills != [] && (
                 <>
                     <Spacer />
-                    <Text small>Acquired Skills:</Text>
+                    <Text small type="secondary">
+                        Skill Developed:
+                    </Text>
                     <br />
                     {exp.skills.map((skill) => (
                         <Badge

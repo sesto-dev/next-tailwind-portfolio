@@ -13,7 +13,7 @@ import Layout from '../../next-dashboard/components/Layout'
 
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
-import Scene from '../../components/three/BachelorsThesis'
+import Scene from '../../components/three/Thesis'
 
 const Thesis = () => {
     const theme = useTheme()
@@ -57,31 +57,18 @@ const Thesis = () => {
         setVisibilities(temp)
     }
 
-    const title = config.projects[0].title
-    const description = config.projects[0].description
+    const project = config.projects[0]
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge={title}
-                crownSmall={
-                    <>
-                        June 2019, Bachelor's of Architectural Engineering
-                        Thesis, You can read the full presentation documentation{' '}
-                        <a
-                            href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            here.
-                        </a>
-                    </>
-                }
-                metaTitle={title}
-                metaDescription={description}
-                metaImage="https://i.imgur.com/TR0h5SR.jpg"
+                crownLarge={project.title}
+                crownSmall={project.description}
+                metaTitle={project.title}
+                metaDescription={project.description}
+                metaImage={project.poster}
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
@@ -133,6 +120,18 @@ const Thesis = () => {
                                         ))}
                                     </Grid.Container>
                                 </Checkbox.Group>
+                                <Spacer />
+                                <Text small type="secondary">
+                                    You can read the full presentation
+                                    documentation{' '}
+                                    <a
+                                        href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        here.
+                                    </a>
+                                </Text>
                             </Display>
                         </Card>
                     </Grid>

@@ -62,20 +62,20 @@ const config = {
                 'I had the honor of designing several projects including in-house Enterprise Resource Planning, and E-Commerce Platforms starting from the design phase to presenting designs to upper management and educating in-house users on tool-chain changes.',
         },
         {
-            title: 'Back-End Developer',
-            employer: 'Freelance',
-            period: 'June 2020 - Present',
-            skills: ['Time-Mangement', 'Valuation Techniques'],
-            description:
-                'I’ve kept myself busy since the beginning of the COVID-19 pandemic by freelancing programming projects to earn income working from home & gain real-world development experience. Most projects I’ve delivered included web-scraping server-side applications or login credentials servers & databases.',
-        },
-        {
             title: 'Construction Supervisor',
             employer: 'Nikan HVAC, Tehran',
-            period: 'September 2020 - March 2021',
+            period: 'July 2020 - February 2021',
             skills: ['Crisis-Management'],
             description:
-                'Taking part in a large-scale industrial construction project, I represented the HVAC contractor and ensured the construction followed the documentation provided by the mechanical engineers and the product specifications provided by Nikan HVAC.',
+                'Taking part in a large-scale construction project, I represented the HVAC contractor and ensured the construction followed the documentation provided by the mechanical engineers and the product specifications provided by Nikan HVAC.',
+        },
+        {
+            title: 'Back-End Developer',
+            employer: 'Freelance',
+            period: 'March 2021 - Present',
+            skills: ['Time-Mangement', 'Node.js', 'Express.js', 'REST APIs'],
+            description:
+                'With the rising severity of the COVID-19 pandemic in Iran, I made the decision to work from home and gain real-world development experience. Being solely responsible to manage my time and deliver to clients was an invaluable experience. Most projects I’ve delivered included web-scraping server-side applications or login credentials servers & databases.',
         },
     ],
     projects: [
@@ -93,13 +93,20 @@ const config = {
             ],
         },
         {
+            title: 'Metaverse Gallery',
+            description: `3D presentation space to display virtual artworks. Open-Source web-native starting point to create metaverse experiences. `,
+            page: '/projects/metaverse_gallery',
+            poster: 'https://i.imgur.com/dCwKw8B.jpg',
+            keywords: ['Javascript', 'Three.js', 'Metaverse'],
+        },
+        {
             title: 'Hestia',
             description: `Open-Source, self-hosted, and gamified Discord bot to build highly-engaged communities around products and services.`,
             page: '/projects/hestia',
             poster: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png',
             keywords: [
-                'Discord.js',
                 'Javascript',
+                'Discord.js',
                 'Gamification',
                 'MongoDB Database',
                 'Node.js',
@@ -129,7 +136,7 @@ const config = {
         },
         {
             title: 'Parametric Golden-Gate Bridge',
-            description: `Fully Parametric Grasshopper script to generate a 3D model of Golden-Gate bridge and physcially simulate suspension cables.`,
+            description: `Fully Parametric Grasshopper script to generate a 3D model of Golden-Gate bridge and physically simulate suspension cables.`,
             page: '/projects/parametric_golden-gate',
             poster: 'https://i.imgur.com/Jb76hkS.jpg',
             keywords: ['Grasshopper'],

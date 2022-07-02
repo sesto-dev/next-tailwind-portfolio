@@ -33,9 +33,6 @@ const Experiences = () => {
                     .justify .content {
                         text-align: justify;
                     }
-                    .content small {
-                        color: ${theme.palette.accents_6}!important;
-                    }
                 `}
             </style>
         </>

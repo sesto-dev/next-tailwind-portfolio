@@ -15,19 +15,18 @@ import config from '../../main.config'
 
 const Hestia = () => {
     const theme = useTheme()
-    const title = config.projects[1].title
-    const description = config.projects[1].description
+    const project = config.projects[2]
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge={title}
-                crownSmall={description}
-                metaTitle={title}
-                metaDescription={description}
-                metaImage="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png"
+                crownLarge={project.title}
+                crownSmall={project.description}
+                metaTitle={project.title}
+                metaDescription={project.description}
+                metaImage={project.poster}
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>

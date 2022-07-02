@@ -10,19 +10,18 @@ const Geist = () => {
         'http://github.com/accretence/next-dashboard-boilerplate',
     ]
     const theme = useTheme()
-    const title = config.projects[2].title
-    const description = config.projects[2].description
+    const project = config.projects[3]
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge={title}
-                crownSmall={description}
-                metaTitle={title}
-                metaDescription={description}
-                metaImage="https://i.imgur.com/hNovO0U.png"
+                crownLarge={project.title}
+                crownSmall={project.description}
+                metaTitle={project.title}
+                metaDescription={project.description}
+                metaImage={project.poster}
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>

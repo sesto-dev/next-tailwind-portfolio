@@ -15,19 +15,18 @@ import config from '../../main.config'
 
 const Hestia = () => {
     const theme = useTheme()
-    const title = config.projects[4].title
-    const description = config.projects[4].description
+    const project = config.projects[5]
 
     return (
         <>
             <Layout
                 config={config}
                 themePreference={themePreference}
-                crownLarge={title}
-                crownSmall={description}
-                metaTitle={title}
-                metaDescription={description}
-                metaImage="https://i.imgur.com/Jb76hkS.jpg"
+                crownLarge={project.title}
+                crownSmall={project.description}
+                metaTitle={project.title}
+                metaDescription={project.description}
+                metaImage={project.poster}
             >
                 <Grid.Container gap={1}>
                     <Grid xs={24}>
@@ -40,10 +39,10 @@ const Hestia = () => {
                             width="100%"
                         >
                             <Card.Content>
-                                <Text h3>Golden Gate Bridge</Text>
+                                <Text h3>Golden-Gate Bridge</Text>
                                 <Text small type="secondary">
-                                    The Golden Gate Bridge is a suspension
-                                    bridge spanning the Golden Gate, the
+                                    The Golden-Gate Bridge is a suspension
+                                    bridge spanning the Golden-Gate, the
                                     one-mile-wide (1.6 km) strait connecting San
                                     Francisco Bay and the Pacific Ocean. The
                                     structure links the U.S. city of San
@@ -58,7 +57,7 @@ const Hestia = () => {
                                     declared one of the Wonders of the Modern
                                     World by the American Society of Civil
                                     Engineers. The Frommer’s travel guide
-                                    describes the Golden Gate Bridge as
+                                    describes the Golden-Gate Bridge as
                                     “possibly the most beautiful, certainly the
                                     most photographed, bridge in the world.” At
                                     the time of its opening in 1937, it was both
@@ -73,7 +72,6 @@ const Hestia = () => {
                                         src="https://i.imgur.com/9GIt6Sa.jpg"
                                     />
                                 </Display>
-
                                 <Text h3>Parametric Model</Text>
                                 <Text small type="secondary">
                                     This parametric model has 2 implementations,
@@ -94,82 +92,125 @@ const Hestia = () => {
                                         src="https://i.imgur.com/TFov4lF.png"
                                     />
                                 </Display>
-                                <Text h5>Section 01 - Railroad</Text>
-                                <Text small type="secondary">
-                                    This Cluster is managed via Metahopper
-                                    plugin and only gets enabled if user
-                                    specifically enables it’sBoolean toggle.
-                                    Railroad’s added width offset is added to
-                                    the original Bridge Floor extrusion. This
-                                    branching behaviour is managed via a Stream
-                                    Filter component.
-                                </Text>
-                                <Spacer />
-                                <Text h5>
-                                    Section 02 to 09 - Bridge Floor Extrusions
-                                </Text>
-                                <Text small type="secondary">
-                                    A single origin point is used as both a
-                                    transform handle to move the entire model
-                                    and a mirror plane origin as the entire
-                                    bridge is symmetrical in two planes. Simple
-                                    extrusions are used to model the bridge
-                                    floor. Each section delivers it’s finished
-                                    width to the next section.
-                                </Text>
-                                <Spacer />
-                                <Text h5>Section 10 - Road Lane Markings</Text>
-                                <Text h5>Section 11 - Light Poles</Text>
-                                <Text small type="secondary">
-                                    A simple rectangle frame is drawn to the
-                                    required dimensions and is then arrayed to
-                                    the entire length of the bridge at required
-                                    intervals. One of the vertices is removed
-                                    which results in two perpendicular lines.
-                                    Remaining vertices are interpolated
-                                    resulting in desired shape of the light
-                                    poles.
-                                </Text>
-                                <Spacer />
-                                <Text h5>
-                                    Section 12 & 13 - Railing and Railing
-                                </Text>
-                                <Text small type="secondary">
-                                    Protection Simple rectangles and boxes are
-                                    arrayed to the entire length of the bridge.
-                                    A Wireframe modifier is then applied.
-                                </Text>
-                                <Spacer />
-                                <Text h5>
-                                    Section 14 to 17 - Underlying Supporting
-                                </Text>
-                                <Text small type="secondary">
-                                    Trusses Rectangles are extruded to required
-                                    depths. Lunchbox plugin is used to draw the
-                                    trusses. First Bottom Truss is removed if
-                                    Double Deck is enabled, using the Stream
-                                    Filter component.
-                                </Text>
-                                <Spacer />
-                                <Text h5>
-                                    Section 18 to 21 - Parametrically Created
-                                    Column Section and extrusion
-                                </Text>
-                                <Text small type="secondary">
-                                    Couple of rectangles are drawn at different
-                                    scales and then a Boolean Union operation is
-                                    used to create a clean section. 5 Sections
-                                    are transformed and extruded to manually
-                                    controlled heights.
-                                </Text>
-                                <Spacer />
-                                <Text h5>Section 22 & 23 - Mast Trusses</Text>
-                                <Text small type="secondary">
-                                    Using variables from previous section,
-                                    Required number of rectangles are drawn
-                                    between Masts. Lunchbox plugin is used to
-                                    draw trusses.
-                                </Text>
+                                <Grid.Container gap={2}>
+                                    <Grid xs={12}>
+                                        <Text h5>
+                                            Section 01 - Railroad
+                                            <br />
+                                            <Text small type="secondary">
+                                                This Cluster is managed via
+                                                Metahopper plugin and only gets
+                                                enabled if user specifically
+                                                enables it’sBoolean toggle.
+                                                Railroad’s added width offset is
+                                                added to the original Bridge
+                                                Floor extrusion. This branching
+                                                behaviour is managed via a
+                                                Stream Filter component.
+                                            </Text>
+                                        </Text>
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Text h5>
+                                            Section 02 to 09 - Bridge Floor
+                                            Extrusions
+                                            <br />
+                                            <Text small type="secondary">
+                                                A single origin point is used as
+                                                both a transform handle to move
+                                                the entire model and a mirror
+                                                plane origin as the entire
+                                                bridge is symmetrical in two
+                                                planes. Simple extrusions are
+                                                used to model the bridge floor.
+                                                Each section delivers it’s
+                                                finished width to the next
+                                                section.
+                                            </Text>
+                                        </Text>
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Text h5>
+                                            Section 10 to 11 - Light Poles
+                                            <br />
+                                            <Text small type="secondary">
+                                                A simple rectangle frame is
+                                                drawn to the required dimensions
+                                                and is then arrayed to the
+                                                entire length of the bridge at
+                                                required intervals. One of the
+                                                vertices is removed which
+                                                results in two perpendicular
+                                                lines. Remaining vertices are
+                                                interpolated resulting in
+                                                desired shape of the light
+                                                poles.
+                                            </Text>
+                                        </Text>
+                                    </Grid>
+                                    <Grid xs={12}>
+                                        <Text h5>
+                                            Section 12 & 13 - Railing and
+                                            Railing
+                                            <br />
+                                            <Text small type="secondary">
+                                                Protection Simple rectangles and
+                                                boxes are arrayed to the entire
+                                                length of the bridge. A
+                                                Wireframe modifier is then
+                                                applied.
+                                            </Text>
+                                        </Text>
+                                    </Grid>
+
+                                    <Grid xs={12}>
+                                        <Text h5>
+                                            Section 14 to 17 - Underlying
+                                            Supporting
+                                            <br />
+                                            <Text small type="secondary">
+                                                Trusses Rectangles are extruded
+                                                to required depths. Lunchbox
+                                                plugin is used to draw the
+                                                trusses. First Bottom Truss is
+                                                removed if Double Deck is
+                                                enabled, using the Stream Filter
+                                                component.
+                                            </Text>
+                                        </Text>
+                                    </Grid>
+
+                                    <Grid xs={12}>
+                                        <Text h5>
+                                            Section 18 to 21 - Parametrically
+                                            Created Column Section and extrusion
+                                            <br />
+                                            <Text small type="secondary">
+                                                Couple of rectangles are drawn
+                                                at different scales and then a
+                                                Boolean Union operation is used
+                                                to create a clean section. 5
+                                                Sections are transformed and
+                                                extruded to manually controlled
+                                                heights.
+                                            </Text>
+                                        </Text>
+                                    </Grid>
+
+                                    <Grid xs={12}>
+                                        <Text h5>
+                                            Section 22 & 23 - Mast Trusses
+                                            <br />
+                                            <Text small type="secondary">
+                                                Using variables from previous
+                                                section, Required number of
+                                                rectangles are drawn between
+                                                Masts. Lunchbox plugin is used
+                                                to draw trusses.
+                                            </Text>
+                                        </Text>
+                                    </Grid>
+                                </Grid.Container>
                                 <Display shadow caption="Masts">
                                     <Image
                                         width="500pt"
@@ -196,6 +237,7 @@ const Hestia = () => {
                                         src="https://i.imgur.com/DvobyeW.png"
                                     />
                                 </Display>
+
                                 <Text h5>Section 27 - Double Deck</Text>
                                 <Text small type="secondary">
                                     This Cluster is managed via Metahopper
@@ -231,22 +273,27 @@ const Hestia = () => {
                                         src="https://i.imgur.com/4NkZlc5.png"
                                     />
                                 </Display>
-                                <Display shadow caption="Finished Product">
+                                <Display
+                                    shadow
+                                    caption={
+                                        <>
+                                            Finisehed product. You can download
+                                            the final Grasshopper script using{' '}
+                                            <a
+                                                href="https://drive.google.com/file/d/1ur_8deSArTfyLPbd2whphq7xdSsBcy20/view?usp=sharing"
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                this link.
+                                            </a>
+                                        </>
+                                    }
+                                >
                                     <Image
                                         width="500pt"
                                         src="https://i.imgur.com/LrQAIRz.jpg"
                                     />
                                 </Display>
-                                <Text small type="secondary">
-                                    You can download the final script using{' '}
-                                    <a
-                                        href="https://drive.google.com/file/d/1ur_8deSArTfyLPbd2whphq7xdSsBcy20/view?usp=sharing"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        this link.
-                                    </a>
-                                </Text>
                             </Card.Content>
                         </Card>
                     </Grid>
