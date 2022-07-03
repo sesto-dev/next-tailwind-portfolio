@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
     const [themeType, setThemeType] = useState(config.theme.defaultTheme)
     const router = useRouter()
     const isProduction = process.env.NODE_ENV === 'production'
-    const googleID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID
+    const googleID = config.analytics.googleAnalyticsID
 
     useEffect(() => {
         if (googleID && isProduction) {

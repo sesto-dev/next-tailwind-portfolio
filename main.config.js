@@ -1,4 +1,7 @@
 const config = {
+    analytics: {
+        googleAnalyticsID: 'G-GY1N6940ED',
+    },
     theme: {
         width: '900pt',
         defaultTheme: 'dark',
