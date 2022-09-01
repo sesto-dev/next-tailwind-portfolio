@@ -4,9 +4,9 @@ import Layout from '../../next-dashboard/components/Layout'
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
 
-const Next_Dashboard = () => {
+export default function () {
     const theme = useTheme()
-    const project = config.projects[4]
+    const project = config.projects[5]
 
     return (
         <>
@@ -23,7 +23,7 @@ const Next_Dashboard = () => {
                     <Grid xs={24}>
                         <Card
                             style={{
-                                backgroundColor: `${theme.palette.accents_1}`,
+                                backgroundColor: theme.palette.accents_1,
                             }}
                             shadow
                             padding={2}
@@ -84,5 +84,3 @@ const Next_Dashboard = () => {
         </>
     )
 }
-
-export default Next_Dashboard

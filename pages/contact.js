@@ -4,7 +4,7 @@ import Layout from '../next-dashboard/components/Layout'
 import { themePreference } from '../state/Context'
 import config from '../main.config'
 
-const Contact = () => {
+export default function () {
     const { links } = config
 
     return (
@@ -54,5 +54,3 @@ const Contact = () => {
         </>
     )
 }
-
-export default Contact

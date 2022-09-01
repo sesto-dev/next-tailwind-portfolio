@@ -13,9 +13,9 @@ import Layout from '../../next-dashboard/components/Layout'
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
 
-const Hestia = () => {
+export default function () {
     const theme = useTheme()
-    const project = config.projects[2]
+    const project = config.projects[4]
 
     return (
         <>
@@ -32,7 +32,7 @@ const Hestia = () => {
                     <Grid xs={24}>
                         <Card
                             style={{
-                                backgroundColor: `${theme.palette.accents_1}`,
+                                backgroundColor: theme.palette.accents_1,
                             }}
                             shadow
                             padding={2}
@@ -85,7 +85,7 @@ const Hestia = () => {
                                 >
                                     <Image
                                         width="500pt"
-                                        src="https://cdn.dribbble.com/users/1218478/screenshots/13405095/media/57c4e6afb32a5b22289afa0b6ef7c9ac.jpg"
+                                        src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png"
                                     />
                                 </Display>
                                 <Text h3>Introduction to Hestia</Text>
@@ -166,5 +166,3 @@ const Hestia = () => {
         </>
     )
 }
-
-export default Hestia

@@ -15,9 +15,9 @@ import { themePreference } from '../../state/Context'
 import config from '../../main.config'
 import Scene from '../../components/three/Gallery'
 
-const Thesis = () => {
+export default function () {
     const theme = useTheme()
-    const project = config.projects[1]
+    const project = config.projects[3]
 
     return (
         <>
@@ -34,7 +34,7 @@ const Thesis = () => {
                     <Grid xs={24}>
                         <Card
                             style={{
-                                backgroundColor: `${theme.palette.accents_1}`,
+                                backgroundColor: theme.palette.accents_1,
                             }}
                             shadow
                             width="100%"
@@ -58,5 +58,3 @@ const Thesis = () => {
         </>
     )
 }
-
-export default Thesis

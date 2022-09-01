@@ -5,7 +5,7 @@ import { themePreference } from '../state/Context'
 import config from '../main.config'
 import Experience from '../components/Experience'
 
-const Experiences = () => {
+export default function () {
     const theme = useTheme()
     const title = 'Experiences'
     const description = 'My professional experiences.'
@@ -38,5 +38,3 @@ const Experiences = () => {
         </>
     )
 }
-
-export default Experiences

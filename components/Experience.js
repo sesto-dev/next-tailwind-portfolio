@@ -1,6 +1,6 @@
 import { Badge, Card, Image, Spacer, Text, Code } from '@geist-ui/core'
 
-const Experience = ({ exp, theme }) => {
+export default function ({ exp, theme }) {
     return (
         <Card width="100%" className="justify">
             {exp.poster && (
@@ -38,8 +38,8 @@ const Experience = ({ exp, theme }) => {
                             mr={0.3}
                             scale="0.5"
                             style={{
-                                backgroundColor: `${theme.palette.accents_2}`,
-                                color: `${theme.palette.foreground}`,
+                                backgroundColor: theme.palette.accents_2,
+                                color: theme.palette.foreground,
                             }}
                         >
                             {skill}
@@ -50,5 +50,3 @@ const Experience = ({ exp, theme }) => {
         </Card>
     )
 }
-
-export default Experience

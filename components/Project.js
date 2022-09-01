@@ -1,11 +1,17 @@
 import { Card, Image, Text, Spacer, Badge } from '@geist-ui/core'
 import Link from 'next/link'
 
-const Project = ({ theme, project }) => {
+export default function ({ theme, project }) {
     return (
         <Link href={project.page}>
             <a style={{ width: '100%', textAlign: 'justify' }}>
-                <Card hoverable key={project.title} width="100%" height="100%">
+                <Card
+                    shadow
+                    hoverable
+                    key={project.title}
+                    width="100%"
+                    height="100%"
+                >
                     <Image
                         mb={0.5}
                         height="20rem"
@@ -28,8 +34,8 @@ const Project = ({ theme, project }) => {
                             mr={0.3}
                             scale="0.5"
                             style={{
-                                backgroundColor: `${theme.palette.accents_2}`,
-                                color: `${theme.palette.foreground}`,
+                                backgroundColor: theme.palette.accents_2,
+                                color: theme.palette.foreground,
                             }}
                         >
                             {keyword}
@@ -40,5 +46,3 @@ const Project = ({ theme, project }) => {
         </Link>
     )
 }
-
-export default Project

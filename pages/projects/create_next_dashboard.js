@@ -4,13 +4,10 @@ import Layout from '../../next-dashboard/components/Layout'
 import { themePreference } from '../../state/Context'
 import config from '../../main.config'
 
-const Geist = () => {
-    const links = [
-        'http://github.com/accretence/create-next-dashboard',
-        'http://github.com/accretence/next-dashboard-boilerplate',
-    ]
+export default function () {
+    const links = ['http://github.com/accretence/create-next-dashboard']
     const theme = useTheme()
-    const project = config.projects[3]
+    const project = config.projects[0]
 
     return (
         <>
@@ -27,7 +24,7 @@ const Geist = () => {
                     <Grid xs={24}>
                         <Card
                             style={{
-                                backgroundColor: `${theme.palette.accents_1}`,
+                                backgroundColor: theme.palette.accents_1,
                             }}
                             shadow
                             padding={2}
@@ -87,5 +84,3 @@ const Geist = () => {
         </>
     )
 }
-
-export default Geist

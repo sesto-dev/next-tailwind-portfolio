@@ -4,7 +4,7 @@ import { themePreference } from '../state/Context'
 import config from '../main.config'
 import Project from '../components/Project'
 
-const Index = () => {
+export default function () {
     const theme = useTheme()
 
     return (
@@ -38,5 +38,3 @@ const Index = () => {
         </Layout>
     )
 }
-
-export default Index

@@ -84,6 +84,21 @@ const config = {
     ],
     projects: [
         {
+            title: 'Create-Next-Dashboard',
+            description:
+                '1-Line script that sets in motion a barrage of tools and web services to present the user with a highly customizable, and instantly deployable progressive web application.',
+            page: '/projects/create_next_dashboard',
+            poster: 'https://i.imgur.com/hNovO0U.png',
+            keywords: [
+                'Javascript',
+                'Next.js',
+                'Server-Side-Rendering',
+                'Git',
+                'NPM',
+                'NPX',
+            ],
+        },
+        {
             title: 'Transparent Architecture',
             description: `Open-Source web-native interactive 3D presentation of my BArch thesis. You can hide different parts of the structure to see the inner workings!`,
             page: '/projects/bachelors_thesis',
@@ -95,6 +110,13 @@ const config = {
                 'WebGL',
                 'Revit',
             ],
+        },
+        {
+            title: 'Angra',
+            description: `3D presentation space to display virtual artworks. Open-Source web-native starting point to create metaverse experiences. `,
+            page: '/projects/angra',
+            poster: 'https://cdn.dribbble.com/users/182336/screenshots/17411058/media/7e83030186c76a1b04b0c1e50800ebfb.png',
+            keywords: ['Javascript', 'Three.js', 'Metaverse'],
         },
         {
             title: 'Metaverse Gallery',
@@ -114,21 +136,6 @@ const config = {
                 'Gamification',
                 'MongoDB Database',
                 'Node.js',
-            ],
-        },
-        {
-            title: 'Create-Next-Dashboard',
-            description:
-                '1-Line script that sets in motion a barrage of tools and web services to present the user with a highly customizable, and instantly deployable progressive web application.',
-            page: '/projects/create_next_dashboard',
-            poster: 'https://i.imgur.com/hNovO0U.png',
-            keywords: [
-                'Javascript',
-                'Next.js',
-                'Server-Side-Rendering',
-                'Git',
-                'NPM',
-                'NPX',
             ],
         },
         {
