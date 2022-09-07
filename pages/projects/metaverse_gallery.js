@@ -17,7 +17,7 @@ import Scene from '../../components/three/Gallery'
 
 export default function () {
     const theme = useTheme()
-    const project = config.projects[3]
+    const project = config.projects[4]
 
     return (
         <>

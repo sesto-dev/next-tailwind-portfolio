@@ -17,6 +17,8 @@ import Scene from '../../components/three/Thesis'
 
 export default function () {
     const theme = useTheme()
+    const project = config.projects[2]
+
     const [visibilities, setVisibilities] = useState({
         floor: true,
         ceiling: true,
@@ -56,8 +58,6 @@ export default function () {
 
         setVisibilities(temp)
     }
-
-    const project = config.projects[1]
 
     return (
         <>

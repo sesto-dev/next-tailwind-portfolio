@@ -15,7 +15,7 @@ import config from '../../main.config'
 
 export default function () {
     const theme = useTheme()
-    const project = config.projects[3]
+    const project = config.projects[1]
 
     return (
         <>
@@ -39,23 +39,19 @@ export default function () {
                             width="100%"
                         >
                             <Card.Content>
-                                <Text h3>Introduction to Nodemailer.js</Text>
+                                <Text h3>Introduction to Aryana</Text>
                                 <Text small type="secondary">
-                                    Nodemailer is a module for Node.js
-                                    applications to allow easy as cake email
-                                    sending. The project got started back in
-                                    2010 when there was no sane option to send
-                                    email messages, today it is the solution
-                                    most Node.js users turn to by default.
+                                    Aryana is a singular component UI library
+                                    built upon geist-ui.
                                 </Text>
                                 <Display shadow>
                                     <Image width="500pt" src={project.poster} />
                                 </Display>
-                                <Text h3>Introduction to Angra</Text>
+                                <Text h3>Introduction to Aryana</Text>
                                 <Text small type="secondary">
-                                    Angra is an{' '}
+                                    Aryana is an{' '}
                                     <a
-                                        href="https://www.npmjs.com/package/angra"
+                                        href="https://www.npmjs.com/package/aryana"
                                         target="_blank"
                                     >
                                         NPM Module
@@ -63,9 +59,9 @@ export default function () {
                                     to send transactional emails using only SMTP
                                     credentials.
                                 </Text>
-                                <Display shadow caption="Angra Source-Code">
+                                <Display shadow caption="Aryana Source-Code">
                                     <a
-                                        href="http://github.com/accretence/angra"
+                                        href="http://github.com/accretence/aryana"
                                         target="_blank"
                                     >
                                         <Card hoverable width="500pt">
@@ -76,7 +72,7 @@ export default function () {
                                             <Code
                                                 style={{ fontSize: '0.8rem' }}
                                             >
-                                                https://github.com/accretence/angra
+                                                https://github.com/accretence/aryana
                                             </Code>
                                         </Card>
                                     </a>

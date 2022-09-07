@@ -15,7 +15,7 @@ import config from '../../main.config'
 
 export default function () {
     const theme = useTheme()
-    const project = config.projects[4]
+    const project = config.projects[5]
 
     return (
         <>
@@ -88,11 +88,11 @@ export default function () {
                                         src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png"
                                     />
                                 </Display>
-                                <Text h3>Introduction to Hestia</Text>
+                                <Text h3>Introduction to Pardis</Text>
                                 <Text small type="secondary">
-                                    Hestia is a self-hosted{' '}
+                                    Pardis is a self-hosted{' '}
                                     <a
-                                        href="http://github.com/accretence/hestia"
+                                        href="http://github.com/accretence/pardis"
                                         target="_blank"
                                     >
                                         open-source
@@ -103,12 +103,12 @@ export default function () {
                                     deployed in production. It abstracts many of
                                     the common setups required to set up a
                                     Discord bot so that all community owners can
-                                    deploy Hestia without a deep programming
+                                    deploy Pardis without a deep programming
                                     knowledge.
                                 </Text>
-                                <Display shadow caption="Hestia Source-Code">
+                                <Display shadow caption="Pardis Source-Code">
                                     <a
-                                        href="http://github.com/accretence/hestia"
+                                        href="http://github.com/accretence/pardis"
                                         target="_blank"
                                     >
                                         <Card hoverable width="500pt">
@@ -119,7 +119,7 @@ export default function () {
                                             <Code
                                                 style={{ fontSize: '0.8rem' }}
                                             >
-                                                https://github.com/accretence/hestia
+                                                https://github.com/accretence/pardis
                                             </Code>
                                         </Card>
                                     </a>
@@ -129,7 +129,7 @@ export default function () {
                                     Flow-Map
                                 </Text>
                                 <Text small type="secondary">
-                                    Hestia gamifies engagement through multiple
+                                    Pardis gamifies engagement through multiple
                                     avenues. All users are registered on a
                                     leaderboard when they enter the server. They
                                     can engagem in multiple activies to advance

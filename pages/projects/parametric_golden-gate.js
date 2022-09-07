@@ -15,7 +15,7 @@ import config from '../../main.config'
 
 export default function () {
     const theme = useTheme()
-    const project = config.projects[6]
+    const project = config.projects[7]
 
     return (
         <>

@@ -99,6 +99,13 @@ const config = {
             ],
         },
         {
+            title: 'Aryana',
+            description: `Singular Component Next.js UI Layout built upon geist-ui.`,
+            page: '/projects/aryana',
+            poster: 'https://user-images.githubusercontent.com/45223699/188952783-09436330-558c-49d4-8a04-12ed75615ba7.png',
+            keywords: ['UI', 'Javascript', 'Next.js'],
+        },
+        {
             title: 'Transparent Architecture',
             description: `Open-Source web-native interactive 3D presentation of my BArch thesis. You can hide different parts of the structure to see the inner workings!`,
             page: '/projects/bachelors_thesis',
@@ -113,10 +120,10 @@ const config = {
         },
         {
             title: 'Angra',
-            description: `3D presentation space to display virtual artworks. Open-Source web-native starting point to create metaverse experiences. `,
+            description: `Compose transactional email templates and send using Nodemailer.`,
             page: '/projects/angra',
             poster: 'https://cdn.dribbble.com/users/182336/screenshots/17411058/media/7e83030186c76a1b04b0c1e50800ebfb.png',
-            keywords: ['Javascript', 'Three.js', 'Metaverse'],
+            keywords: ['Javascript', 'Nodemailer', 'Email'],
         },
         {
             title: 'Metaverse Gallery',
@@ -126,9 +133,9 @@ const config = {
             keywords: ['Javascript', 'Three.js', 'Metaverse'],
         },
         {
-            title: 'Hestia',
+            title: 'Pardis',
             description: `Open-Source, self-hosted, and gamified Discord bot to build highly-engaged communities around products and services.`,
-            page: '/projects/hestia',
+            page: '/projects/pardis',
             poster: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png',
             keywords: [
                 'Javascript',
