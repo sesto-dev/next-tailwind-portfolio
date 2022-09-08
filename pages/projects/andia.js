@@ -88,11 +88,11 @@ export default function () {
                                         src="https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png"
                                     />
                                 </Display>
-                                <Text h3>Introduction to Pardis</Text>
+                                <Text h3>Introduction to Andia</Text>
                                 <Text small type="secondary">
-                                    Pardis is a self-hosted{' '}
+                                    Andia is a self-hosted{' '}
                                     <a
-                                        href="http://github.com/accretence/pardis"
+                                        href="http://github.com/accretence/andia"
                                         target="_blank"
                                     >
                                         open-source
@@ -103,12 +103,12 @@ export default function () {
                                     deployed in production. It abstracts many of
                                     the common setups required to set up a
                                     Discord bot so that all community owners can
-                                    deploy Pardis without a deep programming
+                                    deploy Andia without a deep programming
                                     knowledge.
                                 </Text>
-                                <Display shadow caption="Pardis Source-Code">
+                                <Display shadow caption="Andia Source-Code">
                                     <a
-                                        href="http://github.com/accretence/pardis"
+                                        href="http://github.com/accretence/andia"
                                         target="_blank"
                                     >
                                         <Card hoverable width="500pt">
@@ -119,7 +119,7 @@ export default function () {
                                             <Code
                                                 style={{ fontSize: '0.8rem' }}
                                             >
-                                                https://github.com/accretence/pardis
+                                                https://github.com/accretence/andia
                                             </Code>
                                         </Card>
                                     </a>
@@ -129,7 +129,7 @@ export default function () {
                                     Flow-Map
                                 </Text>
                                 <Text small type="secondary">
-                                    Pardis gamifies engagement through multiple
+                                    Andia gamifies engagement through multiple
                                     avenues. All users are registered on a
                                     leaderboard when they enter the server. They
                                     can engagem in multiple activies to advance

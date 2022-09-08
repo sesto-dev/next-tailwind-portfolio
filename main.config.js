@@ -133,9 +133,9 @@ const config = {
             keywords: ['Javascript', 'Three.js', 'Metaverse'],
         },
         {
-            title: 'Pardis',
+            title: 'Andia',
             description: `Open-Source, self-hosted, and gamified Discord bot to build highly-engaged communities around products and services.`,
-            page: '/projects/pardis',
+            page: '/projects/andia',
             poster: 'https://cdn.vox-cdn.com/uploads/chorus_asset/file/22399430/882599fca31a23ad38bd47db302b2a00.png',
             keywords: [
                 'Javascript',
