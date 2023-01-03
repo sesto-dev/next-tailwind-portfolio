@@ -39,7 +39,10 @@ const Page = () => {
                                     companyURL,
                                     description,
                                 }) => (
-                                    <div className="w-full h-full border border-neutral-200 rounded-lg dark:border-neutral-700">
+                                    <div
+                                        key={position}
+                                        className="w-full h-full border border-neutral-200 rounded-lg dark:border-neutral-700"
+                                    >
                                         <div
                                             className={`p-5 ${
                                                 locale == 'fa' && 'text-right'

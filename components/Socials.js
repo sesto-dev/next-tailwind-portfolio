@@ -14,8 +14,10 @@ export default function Socials({ locale, className }) {
                 const bool =
                     social.link.includes('http') ||
                     social.link.includes('mailto')
+
                 return (
                     <Link
+                        key={social.link}
                         href={social.link}
                         target={bool && '_blank'}
                         rel={bool && 'noopener noreferrer'}
