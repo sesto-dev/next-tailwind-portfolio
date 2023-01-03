@@ -1,11 +1,8 @@
 import { useState } from 'react'
 import Scene from '../../components/three/Thesis'
 import Container from '../../components/Container'
-import { useTheme } from 'next-themes'
 
 export default function Page() {
-    const { theme } = useTheme()
-
     const [visibilities, setVisibilities] = useState({
         floor: true,
         ceiling: true,

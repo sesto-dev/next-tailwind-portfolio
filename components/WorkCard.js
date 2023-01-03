@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+import Data from '../data/portfolio.json'
 
-const WorkCard = ({ img, name, description, slug }) => {
+const WorkCard = ({ img, name, description, slug, createdAt }) => {
+    const { locale = Data['defaultLocale'] } = useRouter()
+
     return (
         <Link href={`/projects/${slug}`}>
             <div className="w-full h-full bg-white border border-gray-200 rounded-lg dark:bg-black dark:border-neutral-700">
@@ -19,13 +23,13 @@ const WorkCard = ({ img, name, description, slug }) => {
                 />
                 <div className="p-5">
                     <p className="mb-1 font-normal text-sm text-gray-700 dark:text-gray-400">
-                        21 December, 2022
+                        {createdAt}
                     </p>
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                        {name}
+                        {name[locale]}
                     </h5>
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                        {description}
+                        {description[locale]}
                     </p>
                 </div>
             </div>

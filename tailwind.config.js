@@ -1,3 +1,5 @@
+const { fontFamily } = require('tailwindcss/defaultTheme')
+
 module.exports = {
     content: [
         './pages/**/*.{js,ts,jsx,tsx}',
@@ -12,7 +14,14 @@ module.exports = {
             desktop: '1280px',
             laptopl: '1440px',
         },
-        extend: {},
+        extend: {
+            fontFamily: {
+                sans: ['Inter', 'Yekan', ...fontFamily.sans],
+            },
+        },
     },
     plugins: [],
+    corePlugins: {
+        fontFamily: true,
+    },
 }

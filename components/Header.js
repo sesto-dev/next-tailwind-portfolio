@@ -1,18 +1,29 @@
-import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
+import { SunIcon, MoonIcon, LanguageIcon } from '@heroicons/react/24/solid'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import Button from './Button'
 // Local Data
-import data from '../data/portfolio.json'
+import Data from '../data/portfolio.json'
 import Link from 'next/link'
 
 const Header = () => {
     const router = useRouter()
+    const {
+        locale = Data['defaultLocale'],
+        locales,
+        pathname,
+        asPath,
+        query,
+    } = useRouter()
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
 
-    const { name } = data
+    function loopLanguages() {
+        router.push({ pathname, query }, asPath, {
+            locale: locales[(locales.indexOf(locale) + 1) % locales.length],
+        })
+    }
 
     useEffect(() => {
         setMounted(true)
@@ -23,17 +34,9 @@ const Header = () => {
             className={`py-2 text-lg mt-2 items-center justify-between dark:text-white z-10 flex`}
         >
             <Link href="/" className="text-lg">
-                {name}
+                {Data['name'][locale]}
             </Link>
-            <div className="flex gap-4 mt-2">
-                <Link href="/blog">Blog</Link>
-
-                <Link href="/resume" classes="first:ml-1">
-                    Resume
-                </Link>
-
-                <a href="mailto:accretence@gmail.com">Contact</a>
-
+            <div className="flex gap-4 mt-2 text-base">
                 {mounted && theme && (
                     <Button
                         onClick={() =>
@@ -47,6 +50,10 @@ const Header = () => {
                         )}
                     </Button>
                 )}
+
+                <Button onClick={loopLanguages}>
+                    <LanguageIcon className="h-5 w-5" />
+                </Button>
             </div>
         </div>
     )

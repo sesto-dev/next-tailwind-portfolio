@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
     reactStrictMode: true,
+    i18n: {
+        locales: ['en', 'fa'],
+        defaultLocale: 'fa',
+    },
     images: {
         remotePatterns: [
             {
@@ -10,5 +14,3 @@ const nextConfig = {
         ],
     },
 }
-
-module.exports = nextConfig

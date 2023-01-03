@@ -1,48 +1,114 @@
 {
-    "name": "Amirhossein Mohammadi",
-    "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Amirhossein",
-    "headerTaglineThree": "a designer and developer",
-    "headerTaglineFour": "based in Tehran, Iran.",
+    "defaultLocale": "fa",
+    "name": {
+        "en": "Amirhossein Mohammadi",
+        "fa": "امیرحسین محمدی"
+    },
+    "headerTaglineOne": {
+        "en": "Hello 👋",
+        "fa": "درود 👋"
+    },
+    "headerTaglineTwo": {
+        "en": "I'm Amirhossein",
+        "fa": "امیرحسین محمدی"
+    },
+    "headerTaglineThree": {
+        "en": "a designer and developer",
+        "fa": "طراح و برنامه نویس"
+    },
+    "headerTaglineFour": {
+        "en": "based in Tehran, Iran.",
+        "fa": "تهران، ایران"
+    },
     "socials": [
         {
-            "title": "Github",
+            "title": {
+                "en": "Github",
+                "fa": "گیتهاب"
+            },
             "link": "https://github.com/accretence"
         },
         {
-            "title": "LinkedIn",
+            "title": {
+                "en": "Linkedin",
+                "fa": "لینکدین"
+            },
             "link": "https://www.linkedin.com/in/accretence/"
         },
         {
-            "title": "Twitter",
+            "title": {
+                "en": "Twitter",
+                "fa": "توییتر"
+            },
             "link": "https://twitter.com/accretence"
         },
-        { "title": "Email", "link": "mailto:accretence@gmail.com" }
+        {
+            "title": {
+                "en": "Resume",
+                "fa": "رزومه"
+            },
+            "link": "https://accretence.com/resume"
+        },
+        {
+            "title": {
+                "en": "Email",
+                "fa": "ایمیل"
+            },
+            "link": "mailto:accretence@gmail.com"
+        }
     ],
     "projects": [
         {
-            "title": "Interactive Architectural Presentation",
-            "description": "Open-Source web-native interactive 3D presentation of my BArch thesis. You can hide different parts of the structure to see the inner workings!",
+            "title": {
+                "en": "Interactive Architectural Presentation",
+                "fa": "ارائه تعاملی معماری در بستر وب"
+            },
+            "description": {
+                "en": "Open-Source web-native interactive 3D presentation of my BArch thesis. You can hide different parts of the structure to see the inner workings!",
+                "fa": "ارائه 3 بعدی سازه معماری در بستر وب با قابلیت خاموش و یا روشن کردن قطعات مختلف سازه"
+            },
             "imageSrc": "https://i.imgur.com/TR0h5SR.jpg",
-            "slug": "interactive_architectural_presentation"
+            "slug": "interactive_architectural_presentation",
+            "createdAt": "31 July, 2020"
         },
         {
-            "title": "Rhino Grasshopper UI Redesign",
-            "description": "My attempt to bring Rhino Grasshopper's UI up-to-date in Figma!",
+            "title": {
+                "en": "Rhino Grasshopper UI Redesign",
+                "fa": "باز طراحی رابط کاربری نرم افزار گرسهاپر"
+            },
+            "description": {
+                "en": "My attempt to bring Rhino Grasshopper's UI up-to-date in Figma!",
+                "fa": "بازطراحی و به روز رسانی رابط کاربری نرم افزار گرسهاپر"
+            },
             "imageSrc": "https://cdn.dribbble.com/users/2782348/screenshots/18605312/media/f5b636c7523f2d4a1afe78d6ff3c6b30.png?compress=1&resize=1600x1200&vertical=top",
-            "slug": "grasshopper_redesign"
+            "slug": "grasshopper_redesign",
+            "createdAt": "2022-10-31"
         },
         {
-            "title": "Angra",
-            "description": "Compose transactional email templates and send using Nodemailer.",
+            "title": {
+                "en": "Angra, Send transactional emails with a single function",
+                "fa": "کتابخانه انگرا، ارسال ایمیل های سازمانی با یک تابع"
+            },
+            "description": {
+                "en": "Compose and send transactional email templates using Nodemailer.",
+                "fa": "ساخت و ارسال ایمیل های سازمانی با استفاده از کتابخانه نودمیلر"
+            },
             "imageSrc": "https://cdn.dribbble.com/users/182336/screenshots/17411058/media/7e83030186c76a1b04b0c1e50800ebfb.png",
-            "slug": "angra"
+            "slug": "angra",
+            "createdAt": "2022-10-31"
         },
         {
-            "title": "Metaverse Gallery",
-            "description": "3D presentation space to display virtual artworks. Open-Source web-native starting point to create metaverse experiences.",
+            "title": {
+                "en": "Metaverse Gallery",
+                "fa": "گالری متاورس"
+            },
+            "description": {
+                "en": "3D presentation space to display virtual artworks. Open-Source web-native starting point to create metaverse experiences.",
+                "fa": "ارائه 3 بعدی قطعات هنری در بستر وب"
+            },
             "imageSrc": "https://i.imgur.com/dCwKw8B.jpg",
-            "slug": "metaverse_gallery"
+            "slug": "metaverse_gallery",
+            "createdAt": "2022-10-31"
         }
     ],
     "services": [
