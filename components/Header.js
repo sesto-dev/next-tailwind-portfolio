@@ -1,3 +1,4 @@
+import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -39,12 +40,11 @@ const Header = () => {
                             setTheme(theme === 'dark' ? 'light' : 'dark')
                         }
                     >
-                        <img
-                            className="h-6"
-                            src={`/images/${
-                                theme === 'dark' ? 'moon.svg' : 'sun.svg'
-                            }`}
-                        />
+                        {theme === 'dark' ? (
+                            <SunIcon className="h-5 w-5" />
+                        ) : (
+                            <MoonIcon className="h-5 w-5" />
+                        )}
                     </Button>
                 )}
             </div>

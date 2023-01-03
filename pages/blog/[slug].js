@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import Container from '../../components/Container'
 
-export default BlogPost = ({ post }) => {
+export default function BlogPost({ post }) {
     const textOne = useRef()
     const textTwo = useRef()
 

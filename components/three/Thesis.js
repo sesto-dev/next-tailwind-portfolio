@@ -8,10 +8,7 @@ import {
     MeshReflectorMaterial,
 } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import {
-    getPhongMaterial,
-    getPhysicalMaterial,
-} from '../../helpers/getMaterial'
+import { getPhongMaterial, getPhysicalMaterial } from '../../lib/three'
 
 const Scene = ({ visibilities }) => {
     return (
@@ -57,7 +54,7 @@ const Scene = ({ visibilities }) => {
 
 function Model({ visibilities }) {
     const group = useRef()
-    const { nodes, materials } = useGLTF('../../assets/models/Thesis.glb')
+    const { nodes, materials } = useGLTF('../../models/Thesis.glb')
 
     const {
         floor,

@@ -1,3 +1,4 @@
+import { SunIcon, MoonIcon } from '@heroicons/react/24/solid'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import { useState } from 'react'

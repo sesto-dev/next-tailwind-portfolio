@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import Scene from '../../components/three/Thesis'
 import Container from '../../components/Container'
+import { useTheme } from 'next-themes'
 
-export default function () {
+export default function Page() {
+    const { theme } = useTheme()
+
     const [visibilities, setVisibilities] = useState({
         floor: true,
         ceiling: true,
@@ -46,14 +49,11 @@ export default function () {
     return (
         <Container>
             <div
-                style={{
-                    backgroundColor: theme.palette.accents_1,
-                }}
-                shadow
+                className="mt-10 rounded-lg bg-neutral-50 dark:bg-neutral-900"
                 width="100%"
             >
                 <Scene visibilities={visibilities} />
-                <div mx={1} mt={0.5}>
+                <div className="p-12">
                     <p>
                         You can interact with the 3D Model above 👆 using your
                         mouse or touch-screen!
@@ -61,33 +61,45 @@ export default function () {
                         ... or turn parts On/ Off ⚡🔌 in the model using this
                         👇 menu!
                     </p>
-                    <Checkbox.Group value={options} onChange={handler}>
-                        <Grid.Container gap={1}>
-                            {options.map((option) => (
-                                <Grid key={option} xs={12} sm={8} md={6} my={1}>
-                                    <Checkbox type="secondary" value={option}>
-                                        <Description
-                                            title="Geometry"
-                                            content={option.toUpperCase()}
-                                        />
-                                    </Checkbox>
-                                </Grid>
-                            ))}
-                        </Grid.Container>
-                    </Checkbox.Group>
-                    <Spacer />
-                    <Text type="secondary">
+                    <div className="my-6 grid grid-cols-3 gap-4">
+                        {options.map((option) => (
+                            <label class="inline-flex relative items-center mr-5 cursor-pointer">
+                                <input
+                                    type="checkbox"
+                                    value=""
+                                    class="sr-only peer"
+                                    checked
+                                />
+                                <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-600" />
+                                <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                    {toTitleCase(option)}
+                                </span>
+                            </label>
+                        ))}
+                    </div>
+                    <p type="secondary">
                         You can read the full presentation documentation{' '}
                         <a
+                            className="text-yellow-500"
                             href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             here.
                         </a>
-                    </Text>
+                    </p>
                 </div>
             </div>
         </Container>
     )
+}
+
+function toTitleCase(str) {
+    return str
+        .toLowerCase()
+        .split(' ')
+        .map(function (word) {
+            return word.charAt(0).toUpperCase() + word.slice(1)
+        })
+        .join(' ')
 }
