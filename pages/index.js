@@ -1,40 +1,70 @@
-import Layout from '../next-dashboard/components/Layout'
-import { Code, useTheme, Grid } from '@geist-ui/core'
-import { themePreference } from '../state/Context'
-import config from '../main.config'
-import Project from '../components/Project'
+import { useRef } from 'react'
+import ServiceCard from '../components/ServiceCard'
+import Socials from '../components/Socials'
+import WorkCard from '../components/WorkCard'
 
-export default function () {
-    const theme = useTheme()
+// Local Data
+import data from '../data/portfolio.json'
+import Container from '../components/Container'
+
+export default function Home() {
+    // Ref
+    const workRef = useRef()
+    const aboutRef = useRef()
+    const textOne = useRef()
+    const textTwo = useRef()
+    const textThree = useRef()
+    const textFour = useRef()
 
     return (
-        <Layout
-            config={config}
-            themePreference={themePreference}
-            crownLarge="WELCOME..."
-            crownSmall={
-                <>
-                    I'm Amirhossein Mohammadi, a{' '}
-                    <Code>Self-Taught Developer</Code> and an{' '}
-                    <Code>Architecture Undergraduate</Code>. I work at the
-                    intersection of programming and design. In my spare time I
-                    try to work on open-source projects. Most of my open-source
-                    projects below 👇🏻 are focused on one thing; make deploying
-                    practical production apps faster & more efficient!
-                </>
-            }
-        >
-            <Grid.Container gap={1}>
-                {config.projects.map((project) => (
-                    <Grid key={project.title} sm={24} md={12} xl={8}>
-                        <Project
+        <Container>
+            <div className="laptop:mt-20 mt-10 ">
+                <h1
+                    ref={textOne}
+                    className="text-7xl text-bold mob:w-full laptop:w-4/5"
+                >
+                    {data.headerTaglineOne}
+                </h1>
+                <h1
+                    ref={textTwo}
+                    className="text-7xl text-bold w-full laptop:w-4/5"
+                >
+                    {data.headerTaglineTwo}
+                </h1>
+                <h1
+                    ref={textThree}
+                    className="text-7xl text-bold w-full laptop:w-4/5"
+                >
+                    {data.headerTaglineThree}
+                </h1>
+                <h1
+                    ref={textFour}
+                    className="text-7xl text-bold w-full laptop:w-4/5"
+                >
+                    {data.headerTaglineFour}
+                </h1>
+            </div>
+            <Socials className="mt-6" />
+            <div className="mt-10 laptop:mt-30" ref={workRef}>
+                <h1 className="text-2xl text-bold">Projects.</h1>
+                <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+                    {data.projects.map((project) => (
+                        <WorkCard
                             key={project.title}
-                            theme={theme}
-                            project={project}
+                            img={project.imageSrc}
+                            name={project.title}
+                            description={project.description}
+                            slug={project.slug}
                         />
-                    </Grid>
-                ))}
-            </Grid.Container>
-        </Layout>
+                    ))}
+                </div>
+            </div>
+            <div className="mt-12" ref={aboutRef}>
+                <h1 className="tablet:my-10 text-2xl text-bold">About.</h1>
+                <p className="text-lg text-justify text-neutral-600 dark:text-neutral-300">
+                    {data.aboutpara}
+                </p>
+            </div>
+        </Container>
     )
 }
