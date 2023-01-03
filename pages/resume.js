@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import ProjectResume from '../components/ProjectResume'
 import Socials from '../components/Socials'
 import Button from '../components/Button'
 import { useTheme } from 'next-themes'
-import Portfolio from '../data/portfolio.json'
+import Data from '../data/portfolio.json'
 import Container from '../components/Container'
+import { useRouter } from 'next/router'
 
 const Page = () => {
     const theme = useTheme()
     const [mount, setMount] = useState(false)
-    const { resume, name } = Portfolio
+    const { resume, name } = Data
+
+    const { locale = Data['defaultLocale'] } = useRouter()
 
     useEffect(() => {
         setMount(true)
@@ -18,47 +20,60 @@ const Page = () => {
         <Container>
             {mount && (
                 <div
-                    className={`mt-6 w-full ${
-                        mount && theme.theme === 'dark'
-                            ? 'bg-slate-800'
-                            : 'bg-gray-50'
-                    } py-20 px-32 rounded-lg shadow-sm`}
+                    className={`mt-6 w-full border border-neutral-200 dark:bg-neutral-900 bg-neutral-100 py-20 px-12 laptop:px-32 rounded-lg dark:border-neutral-700`}
                 >
-                    <h1 className="text-3xl font-bold">{name}</h1>
-                    <h2 className="text-xl mt-5">{resume.tagline}</h2>
-                    <h2 className="w-4/5 text-xl mt-5 opacity-50">
-                        {resume.description}
-                    </h2>
-                    <div className="mt-2">
-                        <Socials locale={locale} />
-                    </div>
-                    <div className="mt-5">
+                    <h1 className="text-3xl">{name[locale]}</h1>
+                    <Socials
+                        className="mt-4 text-neutral-400"
+                        locale={locale}
+                    />
+                    <div className="mt-12">
                         <h1 className="text-2xl font-bold">Experience</h1>
-
-                        {resume.experiences.map(
-                            ({ id, dates, type, position, bullets }) => (
-                                <ProjectResume
-                                    key={id}
-                                    dates={dates}
-                                    type={type}
-                                    position={position}
-                                    bullets={bullets}
-                                />
-                            )
-                        )}
+                        <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+                            {resume.experiences.map(
+                                ({
+                                    dates,
+                                    type,
+                                    position,
+                                    company,
+                                    companyURL,
+                                    description,
+                                }) => (
+                                    <div className="w-full h-full border border-neutral-200 rounded-lg dark:border-neutral-700">
+                                        <div
+                                            className={`p-5 ${
+                                                locale == 'fa' && 'text-right'
+                                            }`}
+                                        >
+                                            <p className="mb-1 font-normal text-sm text-gray-700 dark:text-gray-400">
+                                                {dates}
+                                            </p>
+                                            <h5
+                                                className={`mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white `}
+                                            >
+                                                {company} - {position}
+                                            </h5>
+                                            <p
+                                                className={`mb-3 font-normal text-gray-700 dark:text-gray-400 `}
+                                            >
+                                                {description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                )
+                            )}
+                        </div>
                     </div>
                     <div className="mt-5">
                         <h1 className="text-2xl font-bold">Education</h1>
                         <div className="mt-2">
                             <h2 className="text-lg">
-                                {resume.education.universityName}
+                                {resume.education.institution} -{' '}
+                                {resume.education.course}
                             </h2>
                             <h3 className="text-sm opacity-75">
-                                {resume.education.universityDate}
+                                {resume.education.years}
                             </h3>
-                            <p className="text-sm mt-2 opacity-50">
-                                {resume.education.universityPara}
-                            </p>
                         </div>
                     </div>
                     <div className="mt-5">

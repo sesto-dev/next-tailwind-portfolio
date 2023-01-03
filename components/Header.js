@@ -7,7 +7,7 @@ import Button from './Button'
 import Data from '../data/portfolio.json'
 import Link from 'next/link'
 
-const Header = () => {
+export default function Header() {
     const router = useRouter()
     const {
         locale = Data['defaultLocale'],
@@ -58,5 +58,3 @@ const Header = () => {
         </div>
     )
 }
-
-export default Header

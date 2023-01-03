@@ -6,11 +6,11 @@
     },
     "headerTaglineOne": {
         "en": "Hello 👋",
-        "fa": "درود 👋"
+        "fa": "👋 درود"
     },
     "headerTaglineTwo": {
         "en": "I'm Amirhossein",
-        "fa": "امیرحسین محمدی"
+        "fa": "پورتفولیو امیرحسین محمدی"
     },
     "headerTaglineThree": {
         "en": "a designer and developer",
@@ -47,7 +47,7 @@
                 "en": "Resume",
                 "fa": "رزومه"
             },
-            "link": "https://accretence.com/resume"
+            "link": "/resume"
         },
         {
             "title": {
@@ -69,7 +69,7 @@
             },
             "imageSrc": "https://i.imgur.com/TR0h5SR.jpg",
             "slug": "interactive_architectural_presentation",
-            "createdAt": "31 July, 2020"
+            "createdAt": "2022-05-04"
         },
         {
             "title": {
@@ -111,52 +111,59 @@
             "createdAt": "2022-10-31"
         }
     ],
-    "services": [
+    "blogs": [
         {
-            "id": "1",
-            "title": "Art Direction",
-            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+            "title": {
+                "en": "Going through the Tornado Cash Smart Contract",
+                "fa": "مروری بر قرارداد هوشمند سرویس میکسر Tornado Cash"
+            },
+            "description": {
+                "en": "Open-Source web-native interactive 3D presentation of my BArch thesis. You can hide different parts of the structure to see the inner workings!",
+                "fa": "ارائه 3 بعدی سازه معماری در بستر وب با قابلیت خاموش و یا روشن کردن قطعات مختلف سازه"
+            },
+            "imageSrc": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F4840%2F1*_eltQNfCM1xfi3MXK2rMJg.png&f=1&nofb=1&ipt=22209d08cb442adb015524f81b5f61e580ca9afcfa58cc21b568b48cddf5d7e3&ipo=images",
+            "slug": "interactive_architectural_presentation",
+            "createdAt": "2022-10-01"
         },
         {
-            "id": "2",
-            "title": "Branding",
-            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
-        },
-        {
-            "id": "3",
-            "title": "Web Design",
-            "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
-        },
-        {
-            "id": "4",
-            "title": "3D Design",
-            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+            "title": {
+                "en": "What are On-Chain NFTs and how to create one?",
+                "fa": "توکن های غیر قابل تعویض ذخیره مستقیم در بلاکچین چه هستند و چگونه آنها را بسازیم؟"
+            },
+            "description": {
+                "en": "Open-Source web-native interactive 3D presentation of my BArch thesis. You can hide different parts of the structure to see the inner workings!",
+                "fa": "ارائه 3 بعدی سازه معماری در بستر وب با قابلیت خاموش و یا روشن کردن قطعات مختلف سازه"
+            },
+            "imageSrc": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic1.squarespace.com%2Fstatic%2F5e1421011232b71c373a8668%2F5e3fa37d4b6b8940ee976e5e%2F6124fd3261af794b407e8eb1%2F1629922151158%2FScreenshot%2B2021-08-25%2Bat%2B12.23.07.png%3Fformat%3D1500w&f=1&nofb=1&ipt=96bc090821c53ca8583497d7b8d1aa8153812f2e0240ab5014f413f87ec44699&ipo=images",
+            "slug": "interactive_architectural_presentation",
+            "createdAt": "2022-10-01"
         }
     ],
-    "aboutpara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "resume": {
         "tagline": "👋  I'm a software engineer, product designer.",
         "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
         "experiences": [
             {
-                "id": "1",
-                "dates": "March 2022 - Present",
+                "dates": "January 2018 - June 2018",
                 "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Bullet One, Bullet Two"
+                "company": "Danak",
+                "companyURL": "https://www.instagram.com/danakgroup/",
+                "position": "Learning and Development Specialist",
+                "description": "In a 6 months L&D program,  I created written documents and small videos that helped transition a traditional design firm using outdated CAD software to a more contemporary operational pipeline using modern BIM software which resulted in improved efficiency and reduced redundant tasks. Skills developed: Facilitation, Writing Practical Documentations"
             },
             {
-                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-                "dates": "July 2020 - March 2022",
+                "dates": "September 2018",
                 "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+                "company": "Rasayesh",
+                "companyURL": "https://www.instagram.com/rasayesh.official/",
+                "position": "Executive Supervisor @IranPharma Int. Expo 2018",
+                "description": "In collaboration with a large team of 12 professionals, I helped with the execution of a week-long Pharmaceutical Exhibition on an international level. My duties consisted of supervising booth assembly & disassembly processes, ensuring the safety of all participants, and translating for and accommodating the needs of foreign participants. Skills developed: Communication, Improvisation"
             }
         ],
         "education": {
-            "universityName": "University X",
-            "universityDate": "2016-2020",
-            "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            "institution": "IAUTNB",
+            "years": "2014-2019",
+            "course": "Bachelors of Architectural Engineering"
         },
         "languages": ["Javascript", "HTML5", "CSS", "Python", "Go"],
         "frameworks": ["React", "Typescript", "NodeJs"],
