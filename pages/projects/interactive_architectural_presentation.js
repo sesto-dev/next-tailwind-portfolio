@@ -15,38 +15,10 @@ export default function Page() {
         rooms: true,
     })
 
-    let options = [
-        'floor',
-        'ceiling',
-        'piping',
-        'ducting',
-        'lighting',
-        'structure',
-        'walls',
-        'panels',
-        'rooms',
-    ]
-
-    const handler = (val) => {
-        let temp = {}
-
-        for (let i = 0; i < options.length; i++) {
-            const element = options[i]
-            temp[element] = false
-        }
-
-        for (let j = 0; j < val.length; j++) {
-            const element = val[j]
-            temp[element] = true
-        }
-
-        setVisibilities(temp)
-    }
-
     return (
         <Container>
             <div
-                className="mt-10 rounded-lg bg-neutral-50 dark:bg-neutral-900"
+                className="mt-10 rounded-lg bg-neutral-100 dark:bg-neutral-900"
                 width="100%"
             >
                 <Scene visibilities={visibilities} />
@@ -59,16 +31,21 @@ export default function Page() {
                         👇 menu!
                     </p>
                     <div className="my-6 grid grid-cols-3 gap-4">
-                        {options.map((option) => (
+                        {Object.keys(visibilities).map((option) => (
                             <label
                                 key={option}
                                 className="inline-flex relative items-center mr-5 cursor-pointer"
                             >
                                 <input
                                     type="checkbox"
-                                    value=""
                                     className="sr-only peer"
-                                    checked
+                                    checked={visibilities[option]}
+                                    onChange={() =>
+                                        setVisibilities({
+                                            ...visibilities,
+                                            [option]: !visibilities[option],
+                                        })
+                                    }
                                 />
                                 <div className="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-600" />
                                 <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">

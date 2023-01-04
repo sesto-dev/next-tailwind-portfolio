@@ -42,13 +42,7 @@
             },
             "link": "https://twitter.com/accretence"
         },
-        {
-            "title": {
-                "en": "Resume",
-                "fa": "رزومه"
-            },
-            "link": "/resume"
-        },
+
         {
             "title": {
                 "en": "Email",
@@ -144,26 +138,98 @@
         "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
         "experiences": [
             {
-                "dates": "January 2018 - June 2018",
-                "type": "Full Time",
-                "company": "Danak",
+                "dates": {
+                    "en": "January 2018 - June 2018",
+                    "fa": "بهمن 1396 تا مرداد 1397"
+                },
+                "type": { "en": "Full Time", "fa": "تمام وقت" },
+                "company": { "en": "Danak", "fa": "دانک" },
                 "companyURL": "https://www.instagram.com/danakgroup/",
-                "position": "Learning and Development Specialist",
-                "description": "In a 6 months L&D program,  I created written documents and small videos that helped transition a traditional design firm using outdated CAD software to a more contemporary operational pipeline using modern BIM software which resulted in improved efficiency and reduced redundant tasks. Skills developed: Facilitation, Writing Practical Documentations"
+                "position": {
+                    "en": "Learning and Development Specialist",
+                    "fa": "متخصص یادگیری و توسعه"
+                },
+                "description": {
+                    "en": "In a 6 months L&D program,  I created written documents and small videos that helped transition a traditional design firm using outdated CAD software to a more contemporary operational pipeline using modern BIM software which resulted in improved efficiency and reduced redundant tasks. Skills developed: Facilitation, Writing Practical Documentations",
+                    "fa": "در برنامه ای 6 ماهه، وظیفه نگارش مستندات و ساخت ویدیوهای آموزشی برای پروسه انتقال سیستم طراحی یک شرکت ساخت و ساز به سیستمی به روزتر با استفاده از ابزار های طراحی هوشمند مانند Autodesk Revit را داشتم.مهارت های کسب شده: تسهیل گری مفاهیم، نگارش مستندات"
+                }
             },
             {
-                "dates": "September 2018",
-                "type": "Full Time",
-                "company": "Rasayesh",
+                "dates": {
+                    "en": "September 2018",
+                    "fa": "مهر 1397"
+                },
+                "type": { "en": "Full Time", "fa": "تمام وقت" },
+                "company": { "en": "Rasayesh", "fa": "رسایش" },
                 "companyURL": "https://www.instagram.com/rasayesh.official/",
-                "position": "Executive Supervisor @IranPharma Int. Expo 2018",
-                "description": "In collaboration with a large team of 12 professionals, I helped with the execution of a week-long Pharmaceutical Exhibition on an international level. My duties consisted of supervising booth assembly & disassembly processes, ensuring the safety of all participants, and translating for and accommodating the needs of foreign participants. Skills developed: Communication, Improvisation"
+                "position": {
+                    "en": "Executive Supervisor @IranPharma Int. Expo 2018",
+                    "fa": "ناظر اجرایی نمایشگاه بین المللی ایران فارما"
+                },
+                "description": {
+                    "en": "In collaboration with a large team of 12 professionals, I helped with the execution of a week-long Pharmaceutical Exhibition on an international level. My duties consisted of supervising booth assembly & disassembly processes, ensuring the safety of all participants, and translating for and accommodating the needs of foreign participants. Skills developed: Communication, Improvisation",
+                    "fa": "با همکاری یک تیم حرفه ای 12 نفره، فرصت تجربه برپایی نمایشگاهی هفت روزه در مقیاس بین المللی را داشتم. وظایف من شامل نظارت بر ساخت و تخریب غرفه های نمایشگاهی و ترجمه برای شرکت کنندگان بین المللی بود.مهارت های کسب شده: نحوه ارتباط حرفه ای با گروه های مختلف با حرفه های مختلف"
+                }
+            },
+            {
+                "dates": {
+                    "en": "August 2019 - December 2019",
+                    "fa": "تیر 1398 تا بهمن 1398"
+                },
+                "type": { "en": "Full Time", "fa": "تمام وقت" },
+                "company": { "en": "Farazin", "fa": "فرآذین" },
+                "companyURL": "https://www.instagram.com/farazin.co.ir/",
+                "position": {
+                    "en": "Interior Architect & BIM Specialist",
+                    "fa": "معمار داخلی و متخصص مدل سازی هوشمند"
+                },
+                "description": {
+                    "en": "As a recent Bachelor of Architectural Engineering, I was able to join a professional team of designers & engineers in an industry-leading company and put everything I had learned in BIM, Autodesk Revit, and creating well-designed floor plans to use in a professional work environment. Skills developed: Co-Operation, Professional Etiquette",
+                    "fa": "در همکاری با تیم حرفه ای از مهندسان در شرکتی پیشرو در صنعت طراحی داخلی محیط های تجاری، مهارت های BIM و Autodesk Revit کسب شده خود در مدت زمان تحصیلی را مورد استفاده و آزمون قرار دادم.مهارت های کسب شده: همکاری در محیط حرفه ای"
+                }
+            },
+            {
+                "dates": {
+                    "en": "August 2019 - December 2019",
+                    "fa": "تیر 1398 تا بهمن 1398"
+                },
+                "type": { "en": "Full Time", "fa": "تمام وقت" },
+                "company": { "en": "Farazin", "fa": "فرآذین" },
+                "companyURL": "https://www.instagram.com/farazin.co.ir/",
+                "position": {
+                    "en": "UI & UX Designer",
+                    "fa": "طراح رابط کاربری"
+                },
+                "description": {
+                    "en": "I had the honor of designing several projects including in-house Enterprise Resource Planning, and E-Commerce Platforms starting from the design phase to presenting designs to upper management and educating in-house users on tool-chain changes. Skills developed: Adobe XD, React.js, CSS",
+                    "fa": "در همکاری با تیم حرفه ای از مهندسان در شرکتی پیشرو در صنعت طراحی داخلی محیط های تجاری، مهارت های BIM و Autodesk Revit کسب شده خود در مدت زمان تحصیلی را مورد استفاده و آزمون قرار دادم. مهارت های کسب شده: همکاری در محیط حرفه ای"
+                }
+            },
+            {
+                "dates": {
+                    "en": "July 2020 - February 2021",
+                    "fa": "تیر 1400 تا بهمن 1400"
+                },
+                "type": { "en": "Full Time", "fa": "تمام وقت" },
+                "company": { "en": "Nikan HVAC", "fa": "نیکان تهویه پارس" },
+                "companyURL": "https://nikan-tahvie.ir/",
+                "position": {
+                    "en": "Construction Supervisor",
+                    "fa": "ناظر اجرایی"
+                },
+                "description": {
+                    "en": "Taking part in a large-scale construction project, I represented the HVAC contractor and ensured the construction followed the documentation provided by the mechanical engineers and the product specifications provided by Nikan HVAC. Skills developed: Crisis-Management",
+                    "fa": "در همکاری در یک پروژه عظیم ساختمانی، به عنوان نماینده پیمانکار سیستم های تهویه وظیفه نظارت بر پیشبرد نصب سیستم های تهویه بر طبق نقشه های تدوین شده را داشتم. مهارت های کسب شده: مدیریت بحران"
+                }
             }
         ],
         "education": {
-            "institution": "IAUTNB",
-            "years": "2014-2019",
-            "course": "Bachelors of Architectural Engineering"
+            "institution": { "en": "IAUTNB", "fa": "دانشگاه آزاد تهران شمال" },
+            "years": { "en": "2014 - 2019", "fa": "1393 - 1399" },
+            "course": {
+                "en": "Bachelors of Architectural Engineering",
+                "fa": "کارشناسی مهندسی معماری"
+            }
         },
         "languages": ["Javascript", "HTML5", "CSS", "Python", "Go"],
         "frameworks": ["React", "Typescript", "NodeJs"],
