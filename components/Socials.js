@@ -1,5 +1,5 @@
 import React from 'react'
-import Data from '../data/portfolio.json'
+import Data from '../data/data.json'
 import Link from 'next/link'
 
 export default function Socials({ locale, className }) {

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Data from '../data/portfolio.json'
+import Data from '../data/data.json'
 
 export default function WorkCard({ img, name, description, slug, createdAt }) {
     const { locale = Data['defaultLocale'] } = useRouter()
