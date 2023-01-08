@@ -88,9 +88,10 @@ function Experiences({ experiences, locale }) {
                             </h5>
                             {typeof description[locale] == 'string' ? (
                                 <p
-                                    style={
-                                        locale == 'fa' && { direction: 'rtl' }
-                                    }
+                                    style={{
+                                        direction:
+                                            locale == 'fa' ? 'rtl' : 'ltr',
+                                    }}
                                     className="mb-3 font-normal text-gray-700 dark:text-gray-400 "
                                 >
                                     {description[locale]}
@@ -106,11 +107,12 @@ function Experiences({ experiences, locale }) {
                                                 {item}
                                             </h2>
                                             <p
-                                                style={
-                                                    locale == 'fa' && {
-                                                        direction: 'rtl',
-                                                    }
-                                                }
+                                                style={{
+                                                    direction:
+                                                        locale == 'fa'
+                                                            ? 'rtl'
+                                                            : 'ltr',
+                                                }}
                                                 className="text-gray-700 dark:text-gray-400"
                                             >
                                                 {description[locale][item]}
