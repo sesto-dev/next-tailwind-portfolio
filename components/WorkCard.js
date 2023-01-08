@@ -8,7 +8,7 @@ export default function WorkCard({ img, name, description, slug, createdAt }) {
 
     return (
         <Link href={`/projects/${slug}`}>
-            <div className="w-full h-full  border border-neutral-200 rounded-lg  dark:border-neutral-700 dark:hover:border-white hover:border-black transition-all duration-300">
+            <div className="w-full h-full border border-neutral-200 rounded-lg  dark:border-neutral-700 dark:hover:border-white hover:border-black transition-all duration-300">
                 <Image
                     className="rounded-t-lg"
                     src={img}

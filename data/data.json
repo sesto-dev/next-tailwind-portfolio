@@ -191,8 +191,8 @@
             },
             {
                 "dates": {
-                    "en": "August 2019 - December 2019",
-                    "fa": "تیر 1398 تا بهمن 1398"
+                    "en": "January 2020 - May 2020",
+                    "fa": "بهمن 1398 تا اردیبهشت 1399"
                 },
                 "type": { "en": "Full Time", "fa": "تمام وقت" },
                 "company": { "en": "Farazin", "fa": "فرآذین" },
@@ -208,19 +208,44 @@
             },
             {
                 "dates": {
-                    "en": "July 2020 - February 2021",
-                    "fa": "تیر 1400 تا بهمن 1400"
+                    "en": "June 2020 - Present",
+                    "fa": "مرداد 1399 تا حال حاضر"
                 },
-                "type": { "en": "Full Time", "fa": "تمام وقت" },
-                "company": { "en": "Nikan HVAC", "fa": "نیکان تهویه پارس" },
-                "companyURL": "https://nikan-tahvie.ir/",
+                "type": { "en": "Freelance", "fa": "فریلنس" },
+                "company": { "en": "Freelance", "fa": "فریلنس" },
+                "companyURL": "/",
                 "position": {
-                    "en": "Construction Supervisor",
-                    "fa": "ناظر اجرایی"
+                    "en": "Back-End & Blockchain Developer",
+                    "fa": "توسعه دهنده بلاکچین و بک اند"
                 },
                 "description": {
-                    "en": "Taking part in a large-scale construction project, I represented the HVAC contractor and ensured the construction followed the documentation provided by the mechanical engineers and the product specifications provided by Nikan HVAC. Skills developed: Crisis-Management",
-                    "fa": "در همکاری در یک پروژه عظیم ساختمانی، به عنوان نماینده پیمانکار سیستم های تهویه وظیفه نظارت بر پیشبرد نصب سیستم های تهویه بر طبق نقشه های تدوین شده را داشتم. مهارت های کسب شده: مدیریت بحران"
+                    "en": "With the rising severity of the COVID-19 pandemic in Iran, I made the decision to start working from home. Being solely responsible to manage my time and deliver to clients was an invaluable experience. Most projects I’ve delivered included blogs, Discord & Telegram Bots , and Monitoring Bots connected to crypto exchanges.  Skills developed: Node.js, MongoDB, Prisma, PostgreSQL, REST APIs",
+                    "fa": "مهارت های کسب شده: مدیریت زمان، اصول زبان Javascript;  اصول برنامه نویسی مانند پارادایم های OOP و Functional Programming; انتخاب تکنولوژی های درست با توجه به خواسته های پروژه; متودولوژی های توسعه نرم افزار مانند Test Driven Development"
+                }
+            },
+            {
+                "dates": {
+                    "en": "October 2021 - Present",
+                    "fa": "تیر 1400 تا حال حاضر"
+                },
+                "type": { "en": "Contract", "fa": "قراردادی" },
+                "company": { "en": "Raybod", "fa": "فرادید پرداز رایبد" },
+                "companyURL": "https://www.raybod.net/",
+                "position": {
+                    "en": "Back-End Developer",
+                    "fa": "توسعه دهنده بک اند"
+                },
+                "description": {
+                    "en": {
+                        "Abidi Pharmaceuticals": "Production and development of an enterprise central management system for patients, doctors, visitors and employees. Providing reports on the status and performance of drugs and the recovery process of patients. Setting up a central reporting system.",
+                        "RAI - The Railways of Iran": "Setting up the 5149 ( VoIP number ) system complaints registration system, managing the services provided to the passengers of the whole country and all the subsidiary companies from the agency, station, train owners, etc., managing requests and complaints via phone, application, website, email and SMS. ",
+                        "Tadbir IT Group": "Production and development of the service center system (managing requests, sales and services), setting up an advisory system for online sales of products and providing services. Implementation of internal automation processes."
+                    },
+                    "fa": {
+                        "پروژه شرکت عبیدی": "تولید و توسعه سیستم مرکزی مدیریت بیماران، دکتر ها، ویزیتور ها و کارکنان. ارائه گزارشات از وضعیت و عملکرد داروها و روند بهبود بیماران. راه اندازی سامانه مرکزی گزارشات.",
+                        "پروژه شرکت راه آهن": "راه اندازی سیستم ثبت شکایات سامانه 5149، مدیریت خدمات ارائه شده به مسافران کل کشور و تمامی شرکت های زیرمجموعه از آژانس، ایستگاه، مالکین قطار و... مدیریت درخواست ها و شکایات از طریق تلفن، اپلیکیشن، وب سایت، ایمیل و پیامک. ارائه گزارشات هوش تجاری",
+                        "پروژه شرکت تدبیر پرداز ( زیر شاخه آی تی کارگزاری مفید)": "تولید و توسعه سامانه مرکز خدمات (مدیریت درخواست ها، فروش و خدمات)، راه اندازی سیستم تدبیرپی برای فروش آنلاین محصولات و ارائه خدمات. پیاده سازی فرآیند های اتوماسیون داخلی "
+                    }
                 }
             }
         ],

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTheme } from 'next-themes'
 
-const Button = ({ children, type, onClick, classes }) => {
+export default function Button({ children, type, onClick, classes }) {
     const { theme } = useTheme()
     if (type === 'primary') {
         return (
@@ -32,5 +32,3 @@ const Button = ({ children, type, onClick, classes }) => {
         </button>
     )
 }
-
-export default Button

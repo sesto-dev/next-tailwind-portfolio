@@ -70,10 +70,14 @@ function Experiences({ experiences, locale }) {
                                 {dates[locale]} - {type[locale]}
                             </p>
                             <h5
-                                className={`mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white `}
+                                className={`mb-4 text-2xl font-bold tracking-tight text-gray-900 dark:text-white `}
                             >
                                 <a
-                                    className="text-slate-00"
+                                    className={
+                                        locale == 'en'
+                                            ? `underline underline-offset-6`
+                                            : ''
+                                    }
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     href={companyURL}
@@ -82,11 +86,39 @@ function Experiences({ experiences, locale }) {
                                 </a>{' '}
                                 - {position[locale]}
                             </h5>
-                            <p
-                                className={`mb-3 font-normal text-gray-700 dark:text-gray-400 `}
-                            >
-                                {description[locale]}
-                            </p>
+                            {typeof description[locale] == 'string' ? (
+                                <p
+                                    style={
+                                        locale == 'fa' && { direction: 'rtl' }
+                                    }
+                                    className="mb-3 font-normal text-gray-700 dark:text-gray-400 "
+                                >
+                                    {description[locale]}
+                                </p>
+                            ) : (
+                                Object.keys(description[locale]).map((item) => {
+                                    return (
+                                        <div
+                                            key={Math.random()}
+                                            className="w-full h-full border border-neutral-200 rounded-lg dark:border-neutral-700 transition-all duration-300 p-4 my-2"
+                                        >
+                                            <h2 className="mb-4 font-bold">
+                                                {item}
+                                            </h2>
+                                            <p
+                                                style={
+                                                    locale == 'fa' && {
+                                                        direction: 'rtl',
+                                                    }
+                                                }
+                                                className="text-gray-700 dark:text-gray-400"
+                                            >
+                                                {description[locale][item]}
+                                            </p>
+                                        </div>
+                                    )
+                                })
+                            )}
                         </div>
                     </div>
                 )
