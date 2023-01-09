@@ -15,7 +15,7 @@ export default function Home() {
             title="Accretence"
             canonical="https://accretence.com"
             description="Personal Portfolio of Amirhossein Mohammadi"
-            image="http://localhost:3000/_next/image?url=https%3A%2F%2Fexternal-content.duckduckgo.com%2Fiu%2F%3Fu%3Dhttp%253A%252F%252Fstatic1.squarespace.com%252Fstatic%252F5e1421011232b71c373a8668%252F5e3fa37d4b6b8940ee976e5e%252F6124fd3261af794b407e8eb1%252F1629922151158%252FScreenshot%252B2021-08-25%252Bat%252B12.23.07.png%253Fformat%253D1500w%26f%3D1%26nofb%3D1%26ipt%3D96bc090821c53ca8583497d7b8d1aa8153812f2e0240ab5014f413f87ec44699%26ipo%3Dimages&w=2048&q=75"
+            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F4840%2F1*_eltQNfCM1xfi3MXK2rMJg.png&f=1&nofb=1&ipt=22209d08cb442adb015524f81b5f61e580ca9afcfa58cc21b568b48cddf5d7e3&ipo=images"
         >
             <div
                 className={`mt-10 laptop:text-7xl mob:text-6xl tablet:text-6xl text-bold ${
@@ -60,6 +60,7 @@ export default function Home() {
                     {Data.projects.map((project) => (
                         <WorkCard
                             key={project.title}
+                            category="projects"
                             img={project.imageSrc}
                             name={project.title}
                             description={project.description}
@@ -78,14 +79,15 @@ export default function Home() {
                     {locale == 'fa' ? 'بلاگ ها' : 'Blogs.'}
                 </h1>
                 <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-                    {Data.blogs.map((project) => (
+                    {Data.blogs.map((blog) => (
                         <WorkCard
-                            key={project.title}
-                            img={project.imageSrc}
-                            name={project.title}
-                            description={project.description}
-                            slug={project.slug}
-                            createdAt={project.createdAt}
+                            key={blog.title}
+                            category="blogs"
+                            img={blog.imageSrc}
+                            name={blog.title}
+                            description={blog.description}
+                            slug={blog.slug}
+                            createdAt={blog.createdAt}
                         />
                     ))}
                 </div>

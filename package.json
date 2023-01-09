@@ -5,6 +5,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
+        "postbuild": "next-sitemap",
         "update": "npx npm-check-updates -u"
     },
     "dependencies": {

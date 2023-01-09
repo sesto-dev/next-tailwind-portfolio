@@ -3,11 +3,18 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Data from '../data/data.json'
 
-export default function WorkCard({ img, name, description, slug, createdAt }) {
+export default function WorkCard({
+    category,
+    img,
+    name,
+    description,
+    slug,
+    createdAt,
+}) {
     const { locale = Data['defaultLocale'] } = useRouter()
 
     return (
-        <Link href={`/projects/${slug}`}>
+        <Link href={`/${category}/${slug}`}>
             <div className="w-full h-full border border-neutral-200 rounded-lg  dark:border-neutral-700 dark:hover:border-white hover:border-black transition-all duration-300">
                 <Image
                     className="rounded-t-lg"
