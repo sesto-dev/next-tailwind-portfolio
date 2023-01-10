@@ -3,6 +3,7 @@ import Footer from './Footer'
 import Header from './Header'
 import { NextSeo } from 'next-seo'
 import Data from '../data/data.json'
+import { useRouter } from 'next/router'
 
 const { handle } = Data
 
@@ -13,12 +14,19 @@ export default function Container({
     image,
     children,
 }) {
+    const { locale = Data['defaultLocale'] } = useRouter()
+
     return (
-        <div className="container mx-auto max-w-screen-laptop px-6 laptop:px-0">
+        <div
+            className={`container mx-auto max-w-screen-laptop px-6 laptop:px-0 ${
+                locale == 'fa' && 'rtl'
+            }`}
+        >
             <Head>
                 <title>{title}</title>
                 <NextSeo
                     title={title}
+                    defaultTitle="Amirhossein Mohammadi's Website"
                     description={description}
                     canonical={canonical}
                     openGraph={{
@@ -34,7 +42,15 @@ export default function Container({
                                 type: 'image/jpeg',
                             },
                         ],
-                        siteName: 'SiteName',
+                        siteName: 'Accretence',
+                        article: {
+                            tags: [
+                                'blog',
+                                'developer',
+                                'blockchain',
+                                'bitcoin',
+                            ],
+                        },
                     }}
                     twitter={{
                         handle,

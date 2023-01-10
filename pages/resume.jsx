@@ -20,7 +20,7 @@ export default function Page() {
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F4840%2F1*_eltQNfCM1xfi3MXK2rMJg.png&f=1&nofb=1&ipt=22209d08cb442adb015524f81b5f61e580ca9afcfa58cc21b568b48cddf5d7e3&ipo=images"
         >
             <div
-                className={`mt-6 w-full border border-neutral-200 py-20 px-12 laptop:px-32 rounded-lg dark:border-neutral-700 ${
+                className={`mt-6 w-full border border-neutral-200 py-5 px-6 laptop:px-32 rounded-lg dark:border-neutral-700 ${
                     locale == 'fa' && 'text-right'
                 }`}
             >
@@ -30,7 +30,7 @@ export default function Page() {
                     <h1 className="text-2xl">
                         {locale == 'fa' ? 'تحصیلات' : 'Education'}
                     </h1>
-                    <h2 className={`mt-2 ${locale == 'fa' && 'text-right'}`}>
+                    <h2 className="mt-2 dark:text-neutral-300 text-neutral-200">
                         {Data.resume.education.institution[locale]} -{' '}
                         {Data.resume.education.course[locale]} -{' '}
                         {Data.resume.education.years[locale]}
@@ -87,13 +87,7 @@ function Experiences({ experiences, locale }) {
                                 - {position[locale]}
                             </h5>
                             {typeof description[locale] == 'string' ? (
-                                <p
-                                    style={{
-                                        direction:
-                                            locale == 'fa' ? 'rtl' : 'ltr',
-                                    }}
-                                    className="mb-3 font-normal text-gray-700 dark:text-gray-400 "
-                                >
+                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                                     {description[locale]}
                                 </p>
                             ) : (
@@ -106,15 +100,7 @@ function Experiences({ experiences, locale }) {
                                             <h2 className="mb-4 font-bold">
                                                 {item}
                                             </h2>
-                                            <p
-                                                style={{
-                                                    direction:
-                                                        locale == 'fa'
-                                                            ? 'rtl'
-                                                            : 'ltr',
-                                                }}
-                                                className="text-gray-700 dark:text-gray-400"
-                                            >
+                                            <p className="text-gray-700 dark:text-gray-400">
                                                 {description[locale][item]}
                                             </p>
                                         </div>

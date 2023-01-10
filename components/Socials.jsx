@@ -4,11 +4,7 @@ import Link from 'next/link'
 
 export default function Socials({ locale, className }) {
     return (
-        <div
-            className={`${className} flex flex-wrap mob:flex-nowrap link gap-2 ${
-                locale == 'fa' && 'justify-end'
-            }`}
-        >
+        <div className={`${className} flex flex-wrap link gap-2 `}>
             {Data.socials.map((social, index) => {
                 return (
                     <Link

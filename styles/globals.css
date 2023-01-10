@@ -84,3 +84,7 @@ body {
     background: inherit;
     border-radius: inherit;
 }
+
+.rtl {
+    direction: rtl;
+}
