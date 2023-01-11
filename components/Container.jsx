@@ -17,11 +17,7 @@ export default function Container({
     const { locale = Data['defaultLocale'] } = useRouter()
 
     return (
-        <div
-            className={`container mx-auto max-w-screen-laptop px-6 laptop:px-0 ${
-                locale == 'fa' && 'rtl'
-            }`}
-        >
+        <div className="container mx-auto max-w-screen-laptop px-6 laptop:px-0">
             <Head>
                 <title>{title}</title>
                 <NextSeo
@@ -60,7 +56,7 @@ export default function Container({
                 />
             </Head>
             <Header />
-            {children}
+            <div className={`${locale == 'fa' && 'rtl'}`}>{children}</div>
             <Footer />
         </div>
     )
