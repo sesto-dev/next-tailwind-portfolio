@@ -7,7 +7,7 @@
     },
     "headerTaglineOne": {
         "en": "Hello 👋",
-        "fa": "👋 درود"
+        "fa": "درود 👋"
     },
     "headerTaglineTwo": {
         "en": "I'm Amirhossein",
@@ -81,8 +81,8 @@
         },
         {
             "title": {
-                "en": "Angra, Send transactional emails with a single function",
-                "fa": "کتابخانه انگرا، ارسال ایمیل های سازمانی با یک تابع"
+                "en": "Angra",
+                "fa": "کتابخانه انگرا"
             },
             "description": {
                 "en": "Compose and send transactional email templates using Nodemailer.",
@@ -94,15 +94,15 @@
         },
         {
             "title": {
-                "en": "Metaverse Gallery",
-                "fa": "گالری متاورس"
+                "en": "Andia",
+                "fa": "اندیا"
             },
             "description": {
-                "en": "3D presentation space to display virtual artworks. Open-Source web-native starting point to create metaverse experiences.",
-                "fa": "ارائه 3 بعدی قطعات هنری در بستر وب"
+                "en": "Discord V14 Bot with parallel Express.js server, built with Typescript and Prisma.",
+                "fa": "بات دیسکورد با سرور موازی Express.js، ساخته شده با Typescript و Prisma."
             },
-            "imageSrc": "https://i.imgur.com/dCwKw8B.jpg",
-            "slug": "metaverse_gallery",
+            "imageSrc": "https://i.imgur.com/rqUGy7D.jpg",
+            "slug": "andia",
             "createdAt": "2022-10-31"
         }
     ],
@@ -130,7 +130,7 @@
                 "fa": "ارائه 3 بعدی سازه معماری در بستر وب با قابلیت خاموش و یا روشن کردن قطعات مختلف سازه"
             },
             "imageSrc": "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic1.squarespace.com%2Fstatic%2F5e1421011232b71c373a8668%2F5e3fa37d4b6b8940ee976e5e%2F6124fd3261af794b407e8eb1%2F1629922151158%2FScreenshot%2B2021-08-25%2Bat%2B12.23.07.png%3Fformat%3D1500w&f=1&nofb=1&ipt=96bc090821c53ca8583497d7b8d1aa8153812f2e0240ab5014f413f87ec44699&ipo=images",
-            "slug": "on-chain_nfts",
+            "slug": "on_chain_nfts",
             "createdAt": "2022-10-01"
         }
     ],

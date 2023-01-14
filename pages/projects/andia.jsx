@@ -4,14 +4,14 @@ import Container from '../../components/Container'
 export default function Page() {
     return (
         <Container
-            title="Accretence"
-            canonical="https://accretence.com"
+            title="Andia"
+            canonical="https://accretence.com/projects/andia"
             description="Personal Portfolio of Amirhossein Mohammadi"
-            image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F4840%2F1*_eltQNfCM1xfi3MXK2rMJg.png&f=1&nofb=1&ipt=22209d08cb442adb015524f81b5f61e580ca9afcfa58cc21b568b48cddf5d7e3&ipo=images"
+            image="https://i.imgur.com/rqUGy7D.jpg"
         >
             <div className="mt-8 p-12 rounded-lg bg-neutral-100 dark:bg-neutral-900">
                 <Image
-                    src="https://cdn.dribbble.com/users/182336/screenshots/17411058/media/7e83030186c76a1b04b0c1e50800ebfb.png"
+                    src="https://i.imgur.com/rqUGy7D.jpg"
                     className="rounded-md"
                     style={{ maxHeight: 400, objectFit: 'cover' }}
                     width="1080"

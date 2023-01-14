@@ -34,7 +34,7 @@ export default function WorkCard({
                             locale == 'fa' ? 'fa-ir' : 'en-us',
                             {
                                 year: 'numeric',
-                                month: 'numeric',
+                                month: 'long',
                                 day: 'numeric',
                             }
                         )}
