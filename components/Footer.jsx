@@ -6,7 +6,8 @@ export default function Footer() {
             <hr className="my-6 border-neutral-200 dark:border-neutral-700" />
             <div className="flex items-center justify-between">
                 <span className="text-sm text-neutral-500 sm:text-center dark:text-neutral-400">
-                    © 2022 Accretence . All Rights Reserved.
+                    © {new Date().getFullYear()} Accretence . All Rights
+                    Reserved.
                 </span>
                 <div class="flex space-x-6 sm:justify-center ">
                     <a

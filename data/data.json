@@ -237,9 +237,9 @@
                 },
                 "description": {
                     "en": {
-                        "Abidi Pharmaceuticals": "Production and development of an enterprise central management system for patients, doctors, visitors and employees. Providing reports on the status and performance of drugs and the recovery process of patients. Setting up a central reporting system.",
-                        "RAI - The Railways of Iran": "Setting up the 5149 ( VoIP number ) system complaints registration system, managing the services provided to the passengers of the whole country and all the subsidiary companies from the agency, station, train owners, etc., managing requests and complaints via phone, application, website, email and SMS. ",
-                        "Tadbir IT Group": "Production and development of the service center system (managing requests, sales and services), setting up an advisory system for online sales of products and providing services. Implementation of internal automation processes."
+                        "Client: Abidi Pharmaceuticals": "Production and development of an enterprise central management system for patients, doctors, visitors and employees. Providing reports on the status and performance of drugs and the recovery process of patients. Setting up a central reporting system.",
+                        "Client: RAI - The Railways of Iran": "Setting up the 5149 ( VoIP number ) system complaints registration system, managing the services provided to the passengers of the whole country and all the subsidiary companies from the agency, station, train owners, etc., managing requests and complaints via phone, application, website, email and SMS. ",
+                        "Client: Tadbir IT Group": "Production and development of the service center system (managing requests, sales and services), setting up an advisory system for online sales of products and providing services. Implementation of internal automation processes."
                     },
                     "fa": {
                         "پروژه شرکت عبیدی": "تولید و توسعه سیستم مرکزی مدیریت بیماران، دکتر ها، ویزیتور ها و کارکنان. ارائه گزارشات از وضعیت و عملکرد داروها و روند بهبود بیماران. راه اندازی سامانه مرکزی گزارشات.",
