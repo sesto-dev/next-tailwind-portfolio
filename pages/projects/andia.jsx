@@ -14,6 +14,7 @@ export default function Page() {
                     src="https://i.imgur.com/rqUGy7D.jpg"
                     className="rounded-md"
                     style={{ maxHeight: 400, objectFit: 'cover' }}
+                    alt="Blog Post Cover"
                     width="1080"
                     height="100"
                 />

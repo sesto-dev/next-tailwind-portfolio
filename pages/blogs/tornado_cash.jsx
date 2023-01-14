@@ -13,6 +13,7 @@ export default function Page() {
                 <Image
                     src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F4840%2F1*_eltQNfCM1xfi3MXK2rMJg.png&f=1&nofb=1&ipt=22209d08cb442adb015524f81b5f61e580ca9afcfa58cc21b568b48cddf5d7e3&ipo=images"
                     className="mb-8 rounded-md"
+                    alt="Blog Post Cover"
                     style={{ maxHeight: 400, objectFit: 'cover' }}
                     width="1080"
                     height="100"

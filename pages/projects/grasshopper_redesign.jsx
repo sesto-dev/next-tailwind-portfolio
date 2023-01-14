@@ -21,6 +21,7 @@ export default function Page() {
                     form generators from the simple to the awe-inspiring.
                 </p>
                 <Image
+                    alt="Blog Post Cover"
                     src="https://i.imgur.com/FWdfcmV.png"
                     className="rounded-md my-4"
                     style={{
@@ -30,6 +31,7 @@ export default function Page() {
                     width="1000"
                 />
                 <Image
+                    alt="Blog Post Cover"
                     src="https://i.imgur.com/2LoQw9M.png"
                     className="rounded-md my-4"
                     style={{

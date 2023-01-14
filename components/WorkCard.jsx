@@ -19,7 +19,7 @@ export default function WorkCard({
                 <Image
                     className="rounded-t-lg"
                     src={img}
-                    alt=""
+                    alt={name + description}
                     style={{
                         objectFit: 'cover',
                         maxHeight: '300px',

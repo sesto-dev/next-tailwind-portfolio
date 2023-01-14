@@ -14,6 +14,7 @@ export default function Page() {
                     src="https://cdn.dribbble.com/users/182336/screenshots/17411058/media/7e83030186c76a1b04b0c1e50800ebfb.png"
                     className="rounded-md"
                     style={{ maxHeight: 400, objectFit: 'cover' }}
+                    alt="Blog Post Cover"
                     width="1080"
                     height="100"
                 />

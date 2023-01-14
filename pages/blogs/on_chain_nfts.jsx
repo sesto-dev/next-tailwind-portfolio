@@ -12,6 +12,7 @@ export default function Page() {
             <div className="mt-8 p-12 rounded-lg bg-neutral-100 dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300">
                 <Image
                     src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Foriginal%2F000%2F041%2F316%2F8675309.jpg&f=1&nofb=1&ipt=d8dbe6753bece8cfb84fc589842d97a45d67fa4a3acabd38d3a820a714692671&ipo=images"
+                    alt="Blog Post Cover"
                     className="mb-8 rounded-md"
                     style={{ maxHeight: 400, objectFit: 'cover' }}
                     width="1080"
@@ -66,6 +67,7 @@ export default function Page() {
                 <Image
                     src="https://i.redd.it/39t72w1i8wn61.jpg"
                     className="my-10 rounded-md"
+                    alt="Blog Post Cover"
                     style={{ maxHeight: 400, objectFit: 'cover' }}
                     width="1080"
                     height="100"
