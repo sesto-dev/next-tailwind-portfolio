@@ -4,8 +4,8 @@ import Container from '../../components/Container'
 export default function Page() {
     return (
         <Container
-            title="Accretence"
-            canonical="https://accretence.com"
+            title="On-Chain NFTs"
+            canonical="https://accretence.com/blogs/on_chain_nfts"
             description="Personal Portfolio of Amirhossein Mohammadi"
             image="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmiro.medium.com%2Fmax%2F4840%2F1*_eltQNfCM1xfi3MXK2rMJg.png&f=1&nofb=1&ipt=22209d08cb442adb015524f81b5f61e580ca9afcfa58cc21b568b48cddf5d7e3&ipo=images"
         >
