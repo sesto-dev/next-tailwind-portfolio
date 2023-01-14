@@ -1,7 +1,15 @@
 import Image from 'next/image'
 import Container from '../../components/Container'
+import Code from '../../components/Code'
+import Github from '../../components/Github'
+import InlineCode from '../../components/InlineCode'
+import { useRouter } from 'next/router'
+import Data from '../../data/data.json'
 
 export default function Page() {
+    const { locale = Data['defaultLocale'] } = useRouter()
+    console.log({ locale })
+
     return (
         <Container
             title="Angra"
@@ -18,108 +26,114 @@ export default function Page() {
                     width="1080"
                     height="100"
                 />
-                <h2 className="text-2xl my-4">Introduction to Discord Bots</h2>
+                <h2 className="text-2xl my-8">Introduction to Discord Bots</h2>
                 <p className="text-neutral-700 dark:text-neutral-300">
-                    Discord is a popular communication platform for online
-                    communities and gamers, and it has a thriving ecosystem of
-                    bots that can enhance the user experience. These bots can
-                    perform a variety of tasks, from playing music and games to
-                    providing useful information and tools. One of the most
-                    popular uses for Discord bots is to play music within a
-                    server. Bots like Rythm and FredBoat allow users to play
-                    music from a variety of sources, including YouTube, Spotify,
-                    and SoundCloud. They also provide features like lyrics and
-                    queue management, making them an easy and convenient way to
-                    listen to music with friends. Another popular use case for
-                    Discord bots is to provide useful information and tools. For
-                    example, bots like TriviaBot can host trivia games, while
-                    bots like WeatherBot can provide current weather
-                    information. Some bots, like MEE6 and Tatsumaki, also have
-                    leveling and reward systems, allowing users to earn points
-                    and level up based on their activity within the server.
-                    Discord bots can also be used for moderation and
-                    administrative tasks. Bots like Dyno and Carl-bot can
-                    perform a variety of tasks, such as managing roles, banning
-                    users, and enforcing server rules. This can save server
-                    administrators a lot of time and effort, as they can
-                    automate many of the tasks that would otherwise need to be
-                    done manually. Innovative use cases for Discord bots are
-                    constantly being developed, and the possibilities are
-                    endless. Some examples include: Language bots that can
-                    translate text from one language to another. Virtual
-                    assistants that can help users schedule appointments, set
-                    reminders, and more. Bots that can help users with mental
-                    health and self-care, such as providing meditation exercises
-                    or journal prompts. Bots that can help users learn new
-                    languages, by providing practice exercises and flashcards.
-                    Bots that can help users with their finances, by providing
-                    budgeting tools and investment advice. In conclusion,
-                    Discord bots are powerful tools that can enhance the user
-                    experience on the platform in many ways, from playing music
-                    and games to providing useful information and tools. As
-                    developers continue to create new and innovative bots, the
-                    possibilities for how they can be used are endless. Whether
-                    you're a server administrator, a gamer, or just someone
-                    looking for a way to enhance your Discord experience,
-                    there's likely a bot out there that can help.
+                    Introducing Angra - the Javascript NPM library that
+                    simplifies the process of composing and sending
+                    transactional emails. With Angra, developers can easily send
+                    emails such as registration confirmations, verification
+                    codes, and order confirmations without having to write any
+                    additional code. The library is available for installation
+                    via npm or yarn, and once installed, users simply need to
+                    provide their SMTP credentials for the library to take care
+                    of the rest. This means that developers no longer have to
+                    spend time writing and testing email-sending code, and can
+                    instead focus on building the core functionality of their
+                    application. One of the key features of Angra is its ease of
+                    use. With just a few lines of code, developers can send an
+                    email with a custom template and variables.
                 </p>
-                <h2 className="text-2xl my-4">
-                    Setting up a Discord V14 Typescript Bot
-                </h2>
-                <p className="text-neutral-700 dark:text-neutral-300">
-                    Setting up a TypeScript Discord bot involves several steps:
-                    First, you will need to create a new Discord bot. You can do
-                    this by visiting the Discord Developer Portal and creating a
-                    new application. Once your application is created, navigate
-                    to the "Bot" section and create a new bot. You will then be
-                    presented with a token, which you will use to authenticate
-                    your bot with the Discord API. Next, you will need to
-                    install Node.js and npm (Node Package Manager) on your
-                    computer. These can be downloaded from the official Node.js
-                    website. After Node.js and npm are installed, you can create
-                    a new directory for your bot and navigate to it in your
-                    terminal. Run the command "npm init" to initialize a new npm
-                    project, and follow the prompts to set up your package.json
-                    file. Now, you will need to install the necessary packages
-                    for your bot. These include the Discord.js library, which
-                    allows you to interact with the Discord API, and the
-                    TypeScript compiler. You can install these packages by
-                    running the following commands in your terminal:
-                    <pre className="my-4 p-4 rounded-md bg-white dark:bg-black">
-                        <code>npm install --save discord.js</code>
-                    </pre>
-                    npm install --save-dev typescript Once the packages are
-                    installed, you will need to set up your TypeScript
-                    configuration file. This file, called tsconfig.json, tells
-                    the TypeScript compiler how to build your project. You can
-                    create this file by running the command "tsc --init" in your
-                    terminal. In your tsconfig.json file, you will need to set
-                    the "target" to "es6" and the "module" to "commonjs". This
-                    will ensure that your code is transpiled to the correct
-                    version of JavaScript for Node.js. Now, you can create a new
-                    file called "index.ts" in your project directory. This will
-                    be the main file for your bot. In this file, you will need
-                    to import the necessary modules from the Discord.js library,
-                    as well as any other modules you may need for your bot. To
-                    authenticate your bot with the Discord API, you will need to
-                    use the token you obtained from the Discord Developer Portal
-                    in step 1. You can do this by passing the token to the
-                    client.login() method, like so: Copy code
-                    client.login("YOUR_TOKEN_HERE"); Next, you can set up event
-                    handlers for your bot. These event handlers will be called
-                    when certain events occur, such as when a user sends a
-                    message or when a user joins a voice channel. Finally, you
-                    can write the logic for your bot in the event handlers. This
-                    can include commands that users can run, as well as any
-                    other functionality you want your bot to have. To start the
-                    bot, run tsc and then node dist/index.js in the terminal,
-                    this will transpile your typescript code to javascript and
-                    execute it with node.js You can test your bot by inviting it
-                    to a Discord server and interacting with it in the server.
-                    Note that this is just a basic tutorial and there are many
-                    more things you can do with a Discord bot written in
-                    TypeScript, like using a framework or using decorators for
-                    better handling events and commands.
+                <Github
+                    href="https://github.com/accretence/angra"
+                    title="github.com / accretence / angra"
+                    description="Compose and send transactional email templates using Nodemailer."
+                />
+                <p className="text-neutral-700 dark:text-neutral-300 my-6">
+                    The library also supports sending emails in bulk, which is
+                    useful for sending out large numbers of emails, such as
+                    order confirmations, at once. Another great feature of Angra
+                    is its support for dynamic templates. This allows developers
+                    to create email templates that can be easily updated and
+                    reused, without having to make changes to the codebase. This
+                    is particularly useful for businesses that need to send out
+                    emails on a regular basis, such as for promotions or
+                    updates. In addition to its ease of use and template
+                    support, Angra also provides robust error handling. It will
+                    automatically handle any errors that may occur during the
+                    sending process, such as invalid credentials or a failure to
+                    connect to the SMTP server. This ensures that emails are
+                    sent successfully and that any issues are quickly identified
+                    and resolved. Overall, Angra is a powerful and easy-to-use
+                    Javascript NPM library that simplifies the process of
+                    composing and sending transactional emails. Whether you're a
+                    developer working on a small personal project or a business
+                    looking to streamline your email sending process, Angra is
+                    an excellent choice.
+                </p>
+                <p className="text-neutral-700 dark:text-neutral-300 my-6">
+                    With its easy installation, simple usage, and robust
+                    features, Angra is a must-have for any developer looking to
+                    send transactional emails in their JavaScript application.
+                    So go ahead, give it a try and see the difference it can
+                    make in your workflow. In conclusion, Angra is a Javascript
+                    NPM library that simplifies the process of composing and
+                    sending transactional emails. With Angra, developers can
+                    easily send emails such as registration confirmations,
+                    verification codes, and order confirmations without having
+                    to write any additional code.
+                </p>
+                <p className="text-neutral-700 dark:text-neutral-300 my-6">
+                    The library is available for installation via npm or yarn,
+                    and once installed, users simply need to provide their SMTP
+                    credentials for the library to take care of the rest, and
+                    focus on the core functionality of their application.
+                    <Code>yarn add angra</Code>
+                </p>
+                <p className="text-neutral-700 dark:text-neutral-300 my-6">
+                    Angra exposes several functions that let you send
+                    transctional emails with minimum setup:
+                    <Code>
+                        await sendVerifyMail() <br />
+                        await sendForgotPassword() <br />
+                        await sendResetPassword() <br />
+                        await sendSubscribe() <br />
+                        await sendUnsubscribe()
+                    </Code>
+                </p>
+                <p className="text-neutral-700 dark:text-neutral-300 my-6">
+                    You need to provide SMTP credentials obtained from your
+                    Email provider in <InlineCode>.env</InlineCode>:
+                    <Code>
+                        MAIL_SMTP_HOST = <br />
+                        MAIL_SMTP_USER = <br />
+                        MAIL_SMTP_PASS = <br />
+                        MAIL_SMTP_PORT = <br />
+                        MAIL_SMTP_SECURE = // Boolean
+                        <br />
+                        MAIL_SMTP_TLS_REJECT_UNAUTHORIZED = // Boolean
+                        <br />
+                        MAIL_SMTP_TLS_CIPHER = <br />
+                        MAIL_SMTP_SERVICE = <br />
+                        MAIL_SMTP_VERBOSE = // Boolean, Nodemailer will log
+                        details if true
+                    </Code>
+                </p>
+                <p className="text-neutral-700 dark:text-neutral-300 my-6">
+                    Not all of these parameters are required. For example if
+                    you're using Gmail you only need these parameters:
+                    <Code>
+                        MAIL_SMTP_USER = // Your Gmail Address <br />
+                        MAIL_SMTP_PASS = // Google App Password <br />
+                        MAIL_SMTP_SERVICE = 'Gmail'
+                    </Code>
+                </p>
+                <p className="text-neutral-700 dark:text-neutral-300 my-6">
+                    Each of the exposed function require a certain set of
+                    parameters passed into the function, For example:
+                    <Code>
+                        await sendVerifyMail( sender_title, recipient_address,
+                        email_verification_code, verify_url, unsubscribe_url )
+                    </Code>
                 </p>
             </div>
         </Container>
