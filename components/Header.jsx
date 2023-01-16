@@ -3,6 +3,7 @@ import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import Button from './Button'
+
 // Local Data
 import Data from '../data/data.json'
 import Link from 'next/link'
@@ -30,9 +31,7 @@ export default function Header() {
     }, [])
 
     return (
-        <div
-            className={`py-2 text-lg mt-2 items-center justify-between dark:text-white z-10 flex`}
-        >
+        <div className="py-2 text-lg mt-2 items-center justify-between dark:text-white z-10 flex">
             <Link href="/" className="text-lg">
                 {Data['name'][locale]}
             </Link>

@@ -85,8 +85,8 @@
                 "fa": "کتابخانه انگرا"
             },
             "description": {
-                "en": "Compose and send transactional email templates using Nodemailer.",
-                "fa": "ساخت و ارسال ایمیل های سازمانی با استفاده از کتابخانه نودمیلر"
+                "en": "Compose and send transactional email templates using Nodemailer by importing a single Javascript.",
+                "fa": "ساخت و ارسال ایمیل های سازمانی با استفاده از یک فانکشن، قدرت گرفته از کتابخانه امن Nodemailer"
             },
             "imageSrc": "https://cdn.dribbble.com/users/182336/screenshots/17411058/media/7e83030186c76a1b04b0c1e50800ebfb.png",
             "slug": "angra",
@@ -99,7 +99,7 @@
             },
             "description": {
                 "en": "Discord V14 Bot with parallel Express.js server, built with Typescript and Prisma.",
-                "fa": "بات دیسکورد با سرور موازی Express.js، ساخته شده با Typescript و Prisma."
+                "fa": "بات دیسکورد با سرور موازی Express.js، ساخته شده با Typescript و Prisma و قابلیت تعامل با مدل های هوش مصنوعی OpenAI."
             },
             "imageSrc": "https://i.imgur.com/rqUGy7D.jpg",
             "slug": "andia",

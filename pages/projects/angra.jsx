@@ -8,7 +8,6 @@ import Data from '../../data/data.json'
 
 export default function Page() {
     const { locale = Data['defaultLocale'] } = useRouter()
-    console.log({ locale })
 
     return (
         <Container
