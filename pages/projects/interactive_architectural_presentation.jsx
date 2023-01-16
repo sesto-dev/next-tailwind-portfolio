@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import Scene from '../../components/three/Thesis'
 import Container from '../../components/Container'
+import { useRouter } from 'next/router'
+import Data from '../../data/data.json'
 
 export default function Page() {
+    const { locale = Data['defaultLocale'] } = useRouter()
     const [visibilities, setVisibilities] = useState({
         floor: true,
         ceiling: true,
@@ -27,21 +30,26 @@ export default function Page() {
                 width="100%"
             >
                 <Scene visibilities={visibilities} />
-                <div className="p-12">
+                <div className="mob:px-12 tablet:px-24 laptop:px-40 py-12">
+                    <h1 className="mb-6 text-2xl text-bold">
+                        {locale == 'fa'
+                            ? 'ارائه تعاملی معماری در بستر وب'
+                            : 'Interactive Architectural Presentation'}
+                    </h1>
                     <p>
-                        You can interact with the 3D Model above 👆 using your
-                        mouse or touch-screen!
-                        <br />
-                        ... or turn parts On/ Off ⚡🔌 in the model using this
-                        👇 menu!
+                        {locale == 'fa'
+                            ? 'مدل بالا 👆 کاملا تعاملی بوده و میتوانید مانند یک مدل در نرم افزار 3 بعدی با آن تعامل داشته باشید. همچنین میتوانید با استفاده از منوی پایین 👇 قسمت های مختلف سازه را پنهان کنید تا زیرساخت سازه قابل مشاهده باشد.'
+                            : 'You can interact with the 3D Model above 👆 using your mouse or touch-screen! ... or turn parts On/ Off ⚡🔌 in the model using this 👇 menu!'}
                     </p>
-                    <div className="my-6 grid grid-cols-3 gap-4">
+                    <div className="my-8 grid laptop:grid-cols-3 mob:grid-cols-1 tablet:grid-cols-2 gap-4">
                         {Object.keys(visibilities).map((option) => (
                             <label
+                                style={{ direction: 'ltr' }}
                                 key={option}
                                 className="inline-flex relative items-center mr-5 cursor-pointer"
                             >
                                 <input
+                                    style={{ direction: 'ltr' }}
                                     type="checkbox"
                                     className="sr-only peer"
                                     checked={visibilities[option]}
@@ -52,24 +60,45 @@ export default function Page() {
                                         })
                                     }
                                 />
-                                <div className="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-600" />
-                                <span className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+                                <div
+                                    style={{ direction: 'ltr' }}
+                                    className="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-focus:ring-4 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-yellow-600"
+                                />
+                                <span
+                                    style={{ direction: 'ltr' }}
+                                    className="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300"
+                                >
                                     {toTitleCase(option)}
                                 </span>
                             </label>
                         ))}
                     </div>
-                    <p type="secondary">
-                        You can read the full presentation documentation{' '}
-                        <a
-                            className="text-yellow-500"
-                            href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            here.
-                        </a>
-                    </p>
+                    {locale == 'fa' ? (
+                        <p type="secondary">
+                            میتوانید مستندات کامل این پروژه را در{' '}
+                            <a
+                                className="text-yellow-500"
+                                href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                این لینک
+                            </a>{' '}
+                            مشاهده کنید.
+                        </p>
+                    ) : (
+                        <p type="secondary">
+                            You can read the full presentation documentation{' '}
+                            <a
+                                className="text-yellow-500"
+                                href="https://drive.google.com/file/d/1L14SigVJXECHbRlG4yqt_H056ij_nsxV/view"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                here.
+                            </a>
+                        </p>
+                    )}
                 </div>
             </div>
         </Container>

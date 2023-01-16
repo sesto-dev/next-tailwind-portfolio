@@ -1,14 +1,12 @@
 import Image from 'next/image'
 import Container from '../../components/Container'
 import Code from '../../components/Code'
-import InlineCode from '../../components/InlineCode'
 import Github from '../../components/Github'
 import { useRouter } from 'next/router'
 import Data from '../../data/data.json'
 
 export default function Page() {
     const { locale = Data['defaultLocale'] } = useRouter()
-    console.log({ locale })
 
     return (
         <Container
