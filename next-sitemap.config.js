@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://accretence.com',
+    siteUrl: 'https://iqoror.com',
     generateRobotsTxt: true, // (optional)
     // ...other options
 }

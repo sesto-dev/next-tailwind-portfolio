@@ -11,8 +11,8 @@ export default function Page() {
     return (
         <Container
             title="Andia"
-            canonical="https://accretence.com/projects/andia"
-            description="Personal Portfolio of Amirhossein Mohammadi"
+            canonical="https://iqoror.com/projects/andia"
+            description="Personal Portfolio of Homayoun Barooji"
             image="https://i.imgur.com/rqUGy7D.jpg"
         >
             <div className="mt-8 p-12 rounded-lg bg-neutral-100 dark:bg-neutral-900">
@@ -40,8 +40,8 @@ export default function Page() {
                         : "Innovative use cases for Discord bots are constantly being developed, and the possibilities are endless. Some examples include: Language bots that can translate text from one language to another. Virtual assistants that can help users schedule appointments, set reminders, and more. Bots that can help users with mental health and self-care, such as providing meditation exercises or journal prompts. Bots that can help users learn new languages, by providing practice exercises and flashcards. Bots that can help users with their finances, by providing budgeting tools and investment advice. In conclusion, Discord bots are powerful tools that can enhance the user experience on the platform in many ways, from playing music and games to providing useful information and tools. As developers continue to create new and innovative bots, the possibilities for how they can be used are endless. Whether you're a server administrator, a gamer, or just someone looking for a way to enhance your Discord experience, there's likely a bot out there that can help."}
                 </p>
                 <Github
-                    href="https://github.com/accretence/andia"
-                    title="github.com / accretence / andia"
+                    href="https://github.com/iqoror/andia"
+                    title="github.com / iqoror / andia"
                     description="Discord v14 bot with parallel Express.js Server, built with
                     Typescript and Prisma"
                 />

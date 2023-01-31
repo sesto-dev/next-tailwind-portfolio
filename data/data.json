@@ -1,8 +1,8 @@
 {
-    "handle": "@accretence",
+    "handle": "@iqoror",
     "defaultLocale": "fa",
     "name": {
-        "en": "Amirhossein Mohammadi",
+        "en": "Homayoun Barooji",
         "fa": "امیرحسین محمدی"
     },
     "headerTaglineOne": {
@@ -10,8 +10,8 @@
         "fa": "درود 👋"
     },
     "headerTaglineTwo": {
-        "en": "I'm Amirhossein",
-        "fa": "پورتفولیو امیرحسین محمدی"
+        "en": "I'm Homayoun",
+        "fa": "پورتفولیو همایون باروجی"
     },
     "headerTaglineThree": {
         "en": "a designer and developer",
@@ -27,21 +27,21 @@
                 "en": "Github",
                 "fa": "گیتهاب"
             },
-            "link": "https://github.com/accretence"
+            "link": "https://github.com/iqoror"
         },
         {
             "title": {
                 "en": "Linkedin",
                 "fa": "لینکدین"
             },
-            "link": "https://www.linkedin.com/in/accretence/"
+            "link": "https://www.linkedin.com/in/iqoror/"
         },
         {
             "title": {
                 "en": "Twitter",
                 "fa": "توییتر"
             },
-            "link": "https://twitter.com/accretence"
+            "link": "https://twitter.com/iqoror"
         },
 
         {
@@ -49,7 +49,7 @@
                 "en": "Email",
                 "fa": "ایمیل"
             },
-            "link": "mailto:accretence@gmail.com"
+            "link": "mailto:iqoror@gmail.com"
         }
     ],
     "projects": [

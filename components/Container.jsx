@@ -22,7 +22,7 @@ export default function Container({
                 <title>{title}</title>
                 <NextSeo
                     title={title}
-                    defaultTitle="Amirhossein Mohammadi's Website"
+                    defaultTitle="Homayoun Barooji's Website"
                     description={description}
                     canonical={canonical}
                     openGraph={{
@@ -38,7 +38,7 @@ export default function Container({
                                 type: 'image/jpeg',
                             },
                         ],
-                        siteName: 'Accretence',
+                        siteName: 'Iqoror',
                         article: {
                             tags: [
                                 'blog',

@@ -1,4 +1,5 @@
 import React from 'react'
+Config
 
 export default function Footer() {
     return (
@@ -6,12 +7,11 @@ export default function Footer() {
             <hr className="my-6 border-neutral-200 dark:border-neutral-700" />
             <div className="flex items-center justify-between">
                 <span className="text-sm text-neutral-500 sm:text-center dark:text-neutral-400">
-                    © {new Date().getFullYear()} Accretence . All Rights
-                    Reserved.
+                    © {new Date().getFullYear()} Iqoror . All Rights Reserved.
                 </span>
                 <div className="flex space-x-6 sm:justify-center ">
                     <a
-                        href="https://instagram.com/accretence"
+                        href="https://instagram.com/iamiqoror"
                         className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
                     >
                         <svg
@@ -29,7 +29,7 @@ export default function Footer() {
                         <span className="sr-only">Instagram page</span>
                     </a>
                     <a
-                        href="https://twitter.com/accretence"
+                        href="https://twitter.com/iqoror"
                         className="text-neutral-500 hover:text-neutral-900 dark:hover:text-white"
                     >
                         <svg
