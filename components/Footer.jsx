@@ -1,5 +1,4 @@
 import React from 'react'
-Config
 
 export default function Footer() {
     return (
