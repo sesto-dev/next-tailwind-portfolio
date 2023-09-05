@@ -6,6 +6,7 @@ import {
     useGLTF,
     Html,
     MeshReflectorMaterial,
+    Stage,
 } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { getPhongMaterial, getPhysicalMaterial } from '../../lib/three'
@@ -22,7 +23,10 @@ const Scene = ({ visibilities }) => {
             >
                 <Suspense fallback={null}>
                     <Model visibilities={visibilities} />
-                    <Environment preset="sunset" />
+                    <Stage
+                        environment={{ files: '/hdr/venice_sunset_1k.hdr' }}
+                        center
+                    />
                     <mesh position={[0, 0, 0]} rotation={[-Math.PI / 2, 0, 0]}>
                         <planeGeometry args={[70, 50]} />
                         <MeshReflectorMaterial
