@@ -5,7 +5,6 @@ import { GeistMono } from "geist/font/mono";
 import { Toaster } from "@/components/ui/toaster";
 import Provider from "@/lib/provider";
 import { Link, ViewTransitions } from "next-view-transitions";
-import TextHeader from "./_components/section-text-header";
 import About from "./_components/section-about";
 import AvatarSocials from "./_components/section-avatar-socials";
 import Skills from "./_components/section-skills";
