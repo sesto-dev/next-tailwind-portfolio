@@ -1,17 +1,14 @@
 /** @type {import('next').NextConfig} */
-
 module.exports = {
-    reactStrictMode: true,
-    i18n: {
-        locales: ['en', 'fa'],
-        defaultLocale: 'fa',
-    },
     images: {
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: '**',
-            },
-        ],
+      formats: ["image/avif", "image/webp"],
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "avatars.githubusercontent.com",
+          port: "",
+          pathname: "/**",
+        },
+      ],
     },
-}
+  };
