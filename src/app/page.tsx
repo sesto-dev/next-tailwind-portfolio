@@ -166,7 +166,7 @@ export default function Page() {
                   target="_blank"
                 >
                   <Button size="sm">
-                    <Icons.telegram className="fill-white mr-2 size-4" />
+                    <Icons.telegram className="mr-2 size-4" />
                     Telegram
                   </Button>
                 </Link>{" "}
